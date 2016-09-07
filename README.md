@@ -1,11 +1,17 @@
-**HAAKD**
-*DREAMER APP*
+#HAAKD
+##DREAMER APP
 
-*stuff used*:
+###stuff used:
 
-*jquery ui*
+####jquery ui
 https://jqueryui.com/
 
-*phaser*
+####phaser
 http://phaser.io/
+
+####react
+https://facebook.github.io/react/
+
+####d3.js
+https://d3js.org/
 
