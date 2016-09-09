@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //panoramic function
 
 (function() {
@@ -66,3 +67,8 @@
     $('#pano_viewer').toggleClass('icon-eye-open');
   });
 })();
+=======
+$document.ready(function(){
+  console.log("Hello World");
+});
+>>>>>>> 0cb249b833926c5a0566c6507101471fa23f6980

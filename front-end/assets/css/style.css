@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "compass/css3";
 @import "compass/reset";
 @import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
@@ -136,3 +137,8 @@ body {
     &.bottom { @include transform(rotate3d(1, 0, 0, 90deg) translate3d(0, 0, -$z_offset)); }
   }
 }
+=======
+p{
+  color:red;
+}
+>>>>>>> 0cb249b833926c5a0566c6507101471fa23f6980
