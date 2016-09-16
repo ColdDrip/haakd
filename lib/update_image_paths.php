@@ -135,12 +135,18 @@ if($conn === false){
 
 // Escape user inputs for security
 $orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
-$Image_Path_1 = mysqli_real_escape_string($conn, $_POST['Image_Path_1']);
-$Image_Path_2 = mysqli_real_escape_string($conn, $_POST['Image_Path_2']);
+//$Image_Path_1 = mysqli_real_escape_string($conn, $_POST['Image_Path_1']);
+//$Image_Path_2 = mysqli_real_escape_string($conn, $_POST['Image_Path_2']);
 
-//needs to be edited
-$sql = "UPDATE Orb SET Image_Path_1 = '".$Image_Path_1."' WHERE orbID = '".$orbID."'";
-$sql = "UPDATE Orb SET Image_Path_2 = '".$Image_Path_2."' WHERE orbID = '".$orbID."'";
+//update the database
+//$sql = "UPDATE Orb SET Image_Path_1 = '".$Image_Path_1."' WHERE orbID = '".$orbID."'";
+//$sql = "UPDATE Orb SET Image_Path_2 = '".$Image_Path_2."' WHERE orbID = '".$orbID."'";
+
+//$sql = "UPDATE Orb SET Image_Path_1 = LoadedImages[0] WHERE orbID = '".$orbID."'";
+//$sql = "UPDATE Orb SET Image_Path_2 = LoadedImages[1] WHERE orbID = '".$orbID."'";
+
+$sql = "UPDATE Orb SET Image_Path_1 = LoadedImages[0] WHERE orbID = '"1"'";
+$sql = "UPDATE Orb SET Image_Path_2 = LoadedImages[1] WHERE orbID = '"1"'";
 
 
 if(mysqli_query($conn, $sql)){
