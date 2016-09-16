@@ -56,7 +56,7 @@
         var apiKey = "jsk1qqntnrj7qbvf";
 
         //create searh query
-        var url = "http://api.trove.nla.gov.au/result?key=" + apiKey + "&l-availability=y%2Ff&encoding=json&zone=picture" + "&sortby=relevance&n=100&q=" + searchTerm + "&callback=?";
+        var url = "http://api.trove.nla.gov.au/result?key=" + apiKey + "&l-availability=y%2Ff&l-format=Art+work&encoding=json&zone=picture" + "&sortby=relevance&n=100&q=" + searchTerm + "&callback=?";
 
         //get the JSON information we need to display the images
         $.getJSON(url, function(data) {
