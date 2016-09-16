@@ -73,7 +73,7 @@
 			var imageNum2= Math.floor((Math.random()*datalength));
 
 			//if (imageNum =! imageNum2){
-		    loadedImages.push(data.response.zone[0].records.work[imageNum].identifier[1].value);
+			loadedImages.push(data.response.zone[0].records.work[imageNum].identifier[1].value);
 			loadedImages.push(data.response.zone[0].records.work[imageNum2].identifier[1].value);
 
 

@@ -8,12 +8,12 @@ if($conn === false){
 }
 
 // Escape user inputs for security
-$itemid = mysqli_real_escape_string($conn, $_POST['itemID']);
-$photo = mysqli_real_escape_string($conn, $_POST['photo']);
+$orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
+$Story = mysqli_real_escape_string($conn, $_POST['Story']);
 
-//needs to be edited
-$sql = "UPDATE Orb SET Image_Path_1 = '".$photo."' WHERE orbID = '".$orbID."'";
-
+$sql = "UPDATE Orb SET Des = '".$Story."' WHERE orbID = '".$orbID."'";
+//echo $orbID;
+//echo $Story;
 
 if(mysqli_query($conn, $sql)){
     echo "Records added successfully.";
