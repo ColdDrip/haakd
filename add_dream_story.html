@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dreamer</title>
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+
+<form action="lib/add_dream_story.php" method="post" name="addnewdream" enctype="multipart/form-data" id="newDreamForm">
+	      <div>
+		        <br>
+		        <label for="Story">Dream Story:</label>
+						<textarea rows="5" cols="50" name="Story" id="Story"></textarea>
+			      <br>
+		        <label for="Emotion">Emotion:</label>
+	                <select name="Emotion" id="Emotion" >
+											<option name="Unknown" value="Unknown">Unknown</option>
+	                    <option name="Joy" value="Joy">Joy</option>
+	                    <option name="Surprise" value="Surprise">Surprise</option>
+	                    <option name="Anger" value="Anger">Anger</option>
+	                    <option name="Fear" value="Fear">Fear</option>
+	                    <option name="Sadness" value="Sadness">Sadness</option>
+	                    <option name="Disgust" value="Disgust">Disgust</option>
+	                    <option name="Other" value="Other">Other</option>
+									</select>
+	            <br>
+
+		        	<input type="submit" id="newDreamSubmit" value="Add Dream" data-dismiss="modal">
+
+	      </div>
+	      </form>
+
+
+			</body>
+
+
+			<script type="text/javascript">
+
+
+				$('#newDreamSubmit').on('click', function(e){
+
+				    e.preventDefault();
+
+				    $('#newDreamForm').submit();
+				});
+
+			</script>
+
+			</html>
