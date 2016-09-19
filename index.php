@@ -1,7 +1,6 @@
 <?php
 
 require "lib/mysql.php";
-require "lib/queries.php";
 require "lib/Toro.php";
 
 ToroHook::add("404", function() {
