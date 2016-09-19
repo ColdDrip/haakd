@@ -16,8 +16,7 @@ jQuery(document).ready(function($){
     });
 });
 
-//outputting the dream data for the html page
-//edit here to change the css for view_dream.html
+//populating index with the orbs
 function populate(orbs) {
 	for (i=0; i<orbs.length; i++)  {
 
