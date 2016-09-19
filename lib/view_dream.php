@@ -11,7 +11,7 @@ if($conn === false){
 //getting the story and emotion values the user inputted
 $orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
 
-$stmt = $db->prepare("SELECT `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'");
+$stmt = $db->prepare("SELECT `orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'");
 $stmt->execute();
 
 $result = $stmt->fetchALL();

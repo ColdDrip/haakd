@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
             display_dream(dream_data);
         },
         error: function (err){
-            console.log("error:"+err)
+            console.log("error:"+err);
         }
     });
 });
@@ -17,6 +17,7 @@ jQuery(document).ready(function($){
 function display_dream(dream_data) {
 	var page_element = "";
 	page_element += "<div>";
+	page_element += "<p>" + dream_data.orbID + "</p>";
 	page_element += "<p>" + dream_data.Story + "</p>";
 	page_element += "<p>" + dream_data.Emotion + "</p>";
 	page_element += "<p>" + "<img src=" + dream_data.Image_Path_1 + ">" + "</p>";
@@ -26,4 +27,4 @@ function display_dream(dream_data) {
 	var html = $.parseHTML(page_element);
 	$('#dream').append(html);
 
-};
+}
