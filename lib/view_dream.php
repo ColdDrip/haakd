@@ -1,7 +1,5 @@
 <?php
 
-//require_once "utils.php";
-
 $conn = mysqli_connect("localhost", "root", "51648e01a6b8b836", "Dreamer");
 
 // Check connection
