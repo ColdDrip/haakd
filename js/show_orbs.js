@@ -28,7 +28,7 @@ function populate(orbs) {
 		page_element += "</div>";
 
 		var orb_display = $.parseHTML(page_element);
-		$('#orb_display').append(html);
+		$('#orb_display').append(orb_display);
 	}
 
 
