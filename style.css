@@ -1,3 +1,6 @@
+a,a:focus,textarea,button,input[type=submit],div{
+  outline: none;
+}
 .center-block {
   display: block;
   margin-left: auto;
@@ -10,6 +13,7 @@ footer{
   width: 100%;
   position:fixed;
   bottom:0;
+  left:0;
 }
 nav{
   background-color: #000000;
@@ -55,7 +59,7 @@ label{
 /** Everything related to shelf itself **/
 .shelf{
   margin-left: 20px;
-  margin-top: 20%;
+  margin-top: 200px;
   display: inline-block;
   position: relative;
 }
@@ -135,10 +139,10 @@ label{
 
 .triangle{
   border-bottom: 8px solid #1F1F1F;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   height: 0;
-  width: 10px;
+  width: 20px;
   position: relative;
   top:24px;
   left: 2px;
@@ -147,12 +151,12 @@ label{
 /** Large orb when viewing dream or creating dream **/
 .large_triangle{
   border-bottom: 80px solid #000000;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  width: 250px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  width: 200px;
   position: absolute;
   top:280px;
-  left:40px;
+  left:60px;
 
 }
 
@@ -195,12 +199,19 @@ label{
 
 .add_triangle{
   border-bottom: 8px solid #000000;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   height: 0;
-  width: 8px;
+  width: 20px;
   position: absolute;
-  top:30px;
-  left: 6px;
+  top:33px;
+  left: 8px;
   z-index: 0;
+}
+
+.img-circle{
+
+  width: 50px;
+  height: 350px;
+  display: block;
 }
