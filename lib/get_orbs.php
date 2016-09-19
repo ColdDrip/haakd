@@ -10,9 +10,9 @@ if($conn === false){
 $sql = "SELECT `orbID` FROM `Orb`";
 
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_row($result);
+$all = mysqli_fetch_all($result);
 
-echo json_encode($row);
+echo json_encode($all);
 
 //close connection
 mysqli_close($conn);
