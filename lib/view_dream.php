@@ -11,16 +11,14 @@ if($conn === false){
 //getting the story and emotion values the user inputted
 $orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
 
-$sql = "SELECT `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'";
+$stmt = $db->prepare("SELECT `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'");
+$stmt->execute();
 
-if(mysqli_query($conn, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-}
+$result = $stmt->fetchALL();
+
+echo json_encode($result);
 
 // close connection
 mysqli_close($conn);
-
 
 ?>
