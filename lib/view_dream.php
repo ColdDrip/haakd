@@ -1,5 +1,7 @@
 <?php
 
+//require_once "utils.php";
+
 $conn = mysqli_connect("localhost", "root", "51648e01a6b8b836", "Dreamer");
 
 // Check connection
@@ -8,17 +10,18 @@ if($conn === false){
 }
 
 // Escape user inputs for security
-//getting the story and emotion values the user inputted
-$orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
+//$orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
 
-$stmt = $db->prepare("SELECT `orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'");
-$stmt->execute();
+$orbID = 1;
 
-$result = $stmt->fetchALL();
+$sql = "SELECT `orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'";
 
-echo json_encode($result);
 
-// close connection
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_row($result);
+
+echo json_encode($row);
+
+//close connection
 mysqli_close($conn);
-
 ?>
