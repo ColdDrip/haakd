@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
 
 //outputting the dream data for the html page
 //edit here to change the css for view_dream.html
-function display_dream(dream_data) {
+function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
 	var page_element = "";
 	page_element += "<div>";
 	page_element += "<p>" + orbID + "</p>";
