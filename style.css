@@ -243,6 +243,28 @@ label{
   margin-left: 15%;
 }
 
+/** Button for confirming a dream **/
+#newDreamImageSubmit{
+  color:#ffffff;
+  position:absolute;
+vertical-align: middle;
+font-size: 20pt;
+background-color: transparent;
+border:none;
+font-family: "Gloria Hallelujah",cursive;
+}
+
+#newDreamImageSubmit:hover{
+  color:darkgrey;
+  text-decoration: none;
+}
+
+/** Style for search image bar **/
+.searchbox{
+  padding:10px;
+  background:black;
+  border-radius: 25px;
+}
 .toprow{
   margin-top: 50px;
 }
