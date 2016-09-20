@@ -193,6 +193,12 @@ label{
   z-index: 1000;
   margin-left: 30%;
 }
+.orb-margin{
+  margin-left:18%;
+}
+.orb-margin2{
+  margin-left:10%;
+}
 .large_triangle{
   border-bottom: 80px solid #000000;
   border-left: 50px solid transparent;
@@ -201,7 +207,6 @@ label{
   position: absolute;
   top:280px;
   left:60px;
-  margin-left: 30%
 
 }
 
