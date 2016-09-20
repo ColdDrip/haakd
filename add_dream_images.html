@@ -13,6 +13,8 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/show_orbs.js"></script>
+	<script src="js/get_dream_story.js"></script>
+
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300" rel="stylesheet">
 </head>
@@ -22,57 +24,49 @@
 </nav>
 <body>
 	<div class="container">
-		<div id="dream_story" class="dream_story">
-			<h2>Dream data from previous page</h2>
-		</div>
-
-		<div class="site-main" id="main">
-
-			<div class="entry-content wide">
-
-
-
-				<form action="#" id="searchTrove">
-					<input id="searchTerm" type="text" />
-
-
-
-					<button type="submit" id="searchbtn">Search</button>
-
-				</form>
-
-				<form action="#" id="changeImages">
-					<button type="submit" id="changeImage1">change1</button>
-
-
-				</form>
-
-				<form action="#" id="changeImages2">
-					<button type="submit" id="changeImage2">change2</button>
-
-
-				</form>
-
-
-
-<div class="row">
-				<div id="imgselect">
-					<div id="output1"> </div>
-					<div id="output2"> </div>
+		<div class="row">
+			<div class=" large_orb col-xs-2 col-sm-3 col-md-2 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-3 col-lg-offset-4">
+				<div id="dream_story" class="dream_story">
 				</div>
-</div>
+				<div class="large_triangle"></div>
+			</div>
 
-				<form action="lib/add_dream_images.php" method="post" name="addimages" enctype="multipart/form-data" id="newDreamImageForm">
-					<input type="hidden" name="Image_Path_1" id="Image_Path_1" value="" />
-					<input type="hidden" name="Image_Path_2" id="Image_Path_2" value="" />
-					<input type="submit" id="newDreamImageSubmit" value="Submit Dream" data-dismiss="modal">
+			<!--Searching Trove Inputs-->
+			<div>
+			<form action="#" id="searchTrove">
+				<input id="searchTerm" type="text" />
+				<button type="submit" id="searchbtn">Search</button>
+			</form>
+
+
+			<!--Image holders-->
+							<span class="glyphicon glyphicon-referesh" aria-hidden="true"></span>
+			<div id="imgselect">
+				<!--Change Image-->
+			<!--	<form action="#" id="changeImage1">
+					<a href="#" id="changeImages1"><i class="glyphicon glyphicon-referesh" aria-hidden="true"></i></a>
+				</form> -->
+				<span class="glyphicon glyphicon-referesh" aria-hidden="true"></span>
+				<a href="#" id="changeImages1">hi</a>
+
+				<div id="output1"></div>
+				<!--Change Image-->
+				<form action="#" id="changeImages2">
+					<button type="submit" id="changeImage2"><i class="glyphicon glyphicon-referesh" aria-hidden="true"></i></button>
 				</form>
-
+				<div id="output2"> </div>
 			</div>
 		</div>
+
+		<!--Confirming the imgaes-->
+		<form action="lib/add_dream_images.php" method="post" name="addimages" enctype="multipart/form-data" id="newDreamImageForm">
+			<input type="hidden" name="Image_Path_1" id="Image_Path_1" value="" />
+			<input type="hidden" name="Image_Path_2" id="Image_Path_2" value="" />
+			<input type="submit" id="newDreamImageSubmit" value="Submit Dream" data-dismiss="modal">
+		</form>
+
 	</div>
 	<footer></footer>
-
 
 
 	<script type="text/JavaScript">
@@ -128,7 +122,7 @@
 				printImages();
 
 				//when refreshing image1
-				$("form#changeImages").submit(function changeImages(event) {
+				$("a#changeImages1").click(function changeImages(event) {
 					event.preventDefault();
 					$('#output1').empty();
 
