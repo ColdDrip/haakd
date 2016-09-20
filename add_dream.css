@@ -22,7 +22,19 @@ textarea {
 nav{
   display:block;
 }
+.orb-margin{
+  margin-left:18%;
+}
 
+.emotion-control{
+  position: relative;
+  margin-top: 10%;
+  color:black;
+}
+
+.emotion-control label{
+  color:white;
+}
 /**Back button**/
 #back, #newDreamSubmit{
   color:#ffffff;

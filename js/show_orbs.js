@@ -14,22 +14,111 @@ jQuery(document).ready(function($){
             console.log("error:"+err);
         }
     });
-});
 
-//populating index with the orbs
-	function populate(orbs) {
-		for (i=0; i<orbs.length; i++)  {
+		console.log("trial");
+
+		function populate(orbs) {
+		var taken_orbs = [];
+		for (var i=0; i<orbs.length; i++)  {
+			console.log(i);
+			console.log("the length",orbs.length);
 			//orb generation needs to go here -- call the orb by orbs[i][0]
-			var taken_orbs = [];
-			var shelf_spot = String(Math.floor((Math.random() * 120) + 1));
-			console.log(shelf_spot);
-			while ($.inArray(shelf_spot, taken_orbs) != -1) {
-				shelf_spot = String(Math.floor((Math.random() * 120) + 1));
-				console.log(shelf_spot);
-			}
-			document.getElementByClassName(shelf_spot).attr("id", orbs[i][0]);
-			taken_orbs.push(shelf_spot);
-			$("#none").hide();
-	}
+			var shelf_spot = (Math.floor((Math.random() * 120) + 1));
+			//console.log(shelf_spot);
+			while (taken_orbs.includes(shelf_spot) === true) {
+			 shelf_spot = (Math.floor((Math.random() * 120) + 1));
+			 //console.log(shelf_spot);
+			 }
+			 taken_orbs.push(shelf_spot);
+			//document.getElementsByClassName(shelf_spot).attr("id", orbs[i][0]);
 
-}
+		}
+
+		console.log("taken orbs", taken_orbs);
+
+			var orbs_to_hide = [];
+			 	for (var j=0; j<121; j++) {
+			 		orbs_to_hide.push((j));
+				}
+
+			for (var m in orbs_to_hide) {
+				for (var k in taken_orbs) {
+					//console.log(k);
+					//console.log(m);
+					if ((taken_orbs[k]) == (orbs_to_hide[m])) {
+					 	delete orbs_to_hide[m];
+					}
+				}
+			}
+
+			console.log("orbs to hide", orbs_to_hide);
+
+			var orbs_to_hide1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+			for (var y=0; y<6; y++) {
+				delete orbs_to_hide1[y];
+			}
+
+			for (var p in orbs_to_hide1) {
+			 		$("." + orbs_to_hide1[p]).css();
+					console.log(orbs_to_hide1[p], "was hidden");
+				}  
+				//$(".2").hide();
+
+
+			// for (var m in taken_orbs) {
+			// 	var orbs_to_hide = [];
+			// 	for (var j=0; j<121; j++) {
+			// 		orbs_to_hide.push(j);
+			// 		//console.log(orbs_to_hide);
+			// 	}
+			// 	taken_orbs.splice(m,1);
+			// 	console.log(taken_orbs);
+			// 	for (var k in orbs_to_hide) {
+			// 		$("." + orbs_to_hide[k]).hide;
+			// 	}
+
+			}
+			//}
+
+		});
+
+
+
+//
+// $(document).ready(function(orbs){
+// 			for (var i=0; i<orbs.length; i++)  {
+// 				console.log(i);
+// 				//orb generation needs to go here -- call the orb by orbs[i][0]
+// 				var taken_orbs = [];
+// 				var shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+// 				console.log(shelf_spot);
+// 				while (taken_orbs.includes(shelf_spot) === true) {
+// 				 shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+// 				 console.log(shelf_spot);
+// 				 }
+// 				taken_orbs.push(shelf_spot);
+// 				document.getElementsByClassName(shelf_spot).attr("id", orbs[i][0]);
+// 		}
+// 			$("#none").hide();
+// });
+
+
+
+
+// //populating index with the orbs
+// 	function populate(orbs) {
+// 		console.log(orbs.length);
+// 		for (var i=0; i<orbs.length; i++)  {
+// 			console.log(i);
+// 			//orb generation needs to go here -- call the orb by orbs[i][0]
+// 			var taken_orbs = [];
+// 			var shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+// 			console.log(shelf_spot);
+// 		  while (taken_orbs.includes(shelf_spot) == true) {
+// 			 shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+// 			 console.log(shelf_spot);
+// 			 }
+// 			taken_orbs.push(shelf_spot);
+// 			//document.getElementsByClassName(shelf_spot).attr("id", orbs[i][0]);
+// 	}
