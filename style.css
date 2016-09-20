@@ -209,9 +209,15 @@ label{
   z-index: 0;
 }
 
-.img-circle{
-
-  width: 50px;
-  height: 350px;
+#output1,#output2{
+  width: 150px;
+  height: 150px;
+  border: 2px solid red;
+  border-radius: 50%;
   display: block;
+  overflow: hidden;
+}
+
+#output1:img{
+  position:absolute;
 }
