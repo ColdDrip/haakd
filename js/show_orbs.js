@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
 			for (var p in orbs_to_hide1) {
 			 		$("." + orbs_to_hide1[p]).css();
 					console.log(orbs_to_hide1[p], "was hidden");
-				} 
+				}  
 				//$(".2").hide();
 
 
