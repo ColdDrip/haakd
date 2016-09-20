@@ -17,18 +17,19 @@ jQuery(document).ready(function($){
 });
 
 //populating index with the orbs
-function populate(orbs) {
-	for (i=0; i<orbs.length; i++)  {
-
-		var page_element = "";
-
-		page_element += "<div>";
-		//html for orb generation needs to go here -- call the orb by orbs[i][0]
-		page_element += "</div>";
-
-		var orb_display = $.parseHTML(page_element);
-		$('#orb_display').append(orb_display);
+	function populate(orbs) {
+		for (i=0; i<orbs.length; i++)  {
+			//orb generation needs to go here -- call the orb by orbs[i][0]
+			var taken_orbs = [];
+			var shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+			console.log(shelf_spot);
+			while ($.inArray(shelf_spot, taken_orbs) != -1) {
+				shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+				console.log(shelf_spot);
+			}
+			document.getElementByClassName(shelf_spot).attr("id", orbs[i][0]);
+			taken_orbs.push(shelf_spot);
+			$("#none").hide();
 	}
-
 
 }
