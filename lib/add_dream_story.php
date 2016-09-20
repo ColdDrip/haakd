@@ -29,7 +29,7 @@ $sql = "INSERT INTO `Orb` (`orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Pa
 
 
 if(mysqli_query($conn, $sql)){
-    echo "Records added successfully.";
+    echo "";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }

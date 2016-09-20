@@ -20,8 +20,8 @@ jQuery(document).ready(function($){
 		function populate(orbs) {
 		var taken_orbs = [];
 		for (var i=0; i<orbs.length; i++)  {
-			console.log(i);
-			console.log("the length",orbs.length);
+			//console.log(i);
+			//console.log("the length",orbs.length);
 			//orb generation needs to go here -- call the orb by orbs[i][0]
 			var shelf_spot = (Math.floor((Math.random() * 120) + 1));
 			//console.log(shelf_spot);
@@ -30,7 +30,9 @@ jQuery(document).ready(function($){
 			 //console.log(shelf_spot);
 			 }
 			 taken_orbs.push(shelf_spot);
-			document.getElementsByClassName(shelf_spot).attr("id", orbs[i][0]);
+			 //console.log("the orb id was", orbs[i][0]);
+			$("#" + shelf_spot).attr("id", orbs[i][0]);
+
 
 		}
 
