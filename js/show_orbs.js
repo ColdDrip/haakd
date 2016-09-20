@@ -22,6 +22,7 @@ jQuery(document).ready(function($){
 			//orb generation needs to go here -- call the orb by orbs[i][0]
 			var taken_orbs = [];
 			var shelf_spot = String(Math.floor((Math.random() * 120) + 1));
+			console.log(shelf_spot);
 			while ($.inArray(shelf_spot, taken_orbs) != -1) {
 				shelf_spot = String(Math.floor((Math.random() * 120) + 1));
 				console.log(shelf_spot);
