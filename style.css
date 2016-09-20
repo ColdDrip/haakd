@@ -212,10 +212,11 @@ label{
 #output1,#output2{
   width: 150px;
   height: 150px;
-  border: 2px solid red;
   border-radius: 50%;
   display: block;
   overflow: hidden;
+  background-color: #000000;
+vertical-align: middle;
 }
 
 #output1:img{
