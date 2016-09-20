@@ -3,6 +3,12 @@ a,a:focus,textarea,button,input[type=submit],div{
   outline: none;
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer{
   height: 100px;
   background: black;
@@ -15,7 +21,7 @@ nav{
   background-color: #000000;
   padding:5px;
 }
-#dreamer{
+#dreamer a{
   font-size: 2em;
   color: rgba(255,255,255,1);
   text-decoration: normal;
@@ -35,6 +41,14 @@ nav{
   margin-left: 20px;
 }
 
+#dreamer a:hover{
+  text-decoration: none;
+  text-shadow: 0 0 20px rgba(255,255,255,1) , 0 0 25px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #66ffff , 0 0 50px #66ffff , 0 0 70px #66ffff , 0 0 90px #66ffff ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
 body{
   background-color: #000000;
   margin: 0;
@@ -54,16 +68,20 @@ label{
   font-weight: normal;
 }
 
-
+.testing{
+  background: green;
+}
+.margin-top{
+  margin-top:5%;
+}
 /** Everything related to shelf itself **/
 .shelf{
-  margin-left: 20px;
-  margin-top: 200px;
+  margin-top: 15%;
   display: inline-block;
   position: relative;
 }
 .top-shelf{
-  width: 250px;
+  width: 100%;
   position:relative;
   z-index: 1;
   border-bottom: 10px solid #1A1A1A;
@@ -73,7 +91,7 @@ label{
 }
 
 .top-shelf-edge {
-  width: 250px;
+  width: 100%;
   height: 15px;
   z-index: 99;
   position: relative;
@@ -83,7 +101,7 @@ label{
 }
 
 .bottom-shelf {
-  width: 250px;
+  width: 100%;
   z-index: 99;
   position:relative;
   top: -25px;
@@ -94,7 +112,7 @@ label{
 }
 
 .bottom-shelf-edge {
-  width: 250px;
+  width: 100%;
   height: 15px;
   background: #0F0F0F;
   position: relative;
@@ -112,15 +130,28 @@ label{
     box-sizing: border-box;
 }
 
+.listed{
+  width: 100%;
+}
+.listed li{
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  margin-right: 4.1%;
+}
+.listed li:first-child{
+  margin-left: 4.1%;
+}
+
 
 /** Orb on shelves **/
 .button{
-  border-radius: 1000px;
-  width: 25px;
-  height: 25px;
+  border-radius: 50%;
+  width: 100%;
+  padding-bottom: 100%;
   text-align: center;
   display: inline-block;
-  margin: 10px;
+  position: relative;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
   background: rgb(255,255,255); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 89%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
@@ -129,8 +160,8 @@ label{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
   box-shadow: 0px 0px 30px #ffffff;
   z-index: 1000;
-
 }
+
 
 .button:hover{
   background: darkgrey;
@@ -143,9 +174,8 @@ label{
   height: 0;
   width: 20px;
   position: relative;
-  top:24px;
-  left: 2px;
-
+  margin-top: -15%;
+  left: 15%;
 }
 /** Large orb when viewing dream or creating dream **/
 .large_orb{
@@ -177,20 +207,20 @@ label{
 
 /** Adding a dream button **/
 .add_button{
-  border-radius: 1000px;
+  border-radius: 100%;
   width: 35px;
   height: 35px;
   text-align: center;
   position:fixed;
-  top:12%;
-  left:50%;
+  top:10%;
+  right:5%;
   margin: 10px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
-  background: rgb(60,60,60); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(35,35,35,1) 0%,rgba(30,30,30,1) 89%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  background: black; /* Old browsers */
+  background: -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 0px 30px #0f0f0f;
   z-index: 10;
   font-size:17pt;
@@ -203,10 +233,10 @@ label{
   background: #ffffff;
   color:#000000;
   background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 89%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  background: -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 0px 30px #ffffff;
   text-decoration: none;
 
@@ -223,6 +253,7 @@ label{
   left: 8px;
   z-index: 0;
 }
+
 
 #output1,#output2{
   width: 150px;

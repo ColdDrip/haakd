@@ -1,3 +1,4 @@
+
 a,a:focus,textarea,button,input[type=submit],div{
   outline: none;
 }
@@ -50,7 +51,7 @@ nav{
 }
 
 body{
-  background-color: #3F3F3F;
+  background-color: #000000;
   margin: 0;
   height:1vh;
   overflow: hidden;
@@ -58,6 +59,9 @@ body{
   white-space: nowrap;
   display: block;
   font-family: "Open Sans",sans-serif;
+  background-image:url("black.jpeg");
+  background-size:cover;
+  background-repeat: repeat-x;
 }
 
 label{
@@ -73,7 +77,6 @@ label{
 }
 /** Everything related to shelf itself **/
 .shelf{
-  
   margin-top: 15%;
   display: inline-block;
   position: relative;
@@ -121,7 +124,7 @@ label{
 
 .shelf-background {
   height: 10px;
-  width: 100%;
+  width: 200px;
   position: relative;
   background: transparent;
   left: 25px;
@@ -141,9 +144,6 @@ label{
   margin-left: 4.1%;
 }
 
-.col-lg-4 .listed li:first-child{
-  margin-left:-2%;
-}
 /** Orb on shelves **/
 .button{
   border-radius: 50%;
@@ -154,20 +154,16 @@ label{
   position: relative;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
   background: rgb(255,255,255); /* Old browsers */
-  background:-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 89%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
   box-shadow: 0px 0px 30px #ffffff;
   z-index: 1000;
-
 }
 
 .button:hover{
-  background:-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  background: darkgrey;
 }
 
 .triangle{
@@ -177,10 +173,25 @@ label{
   height: 0;
   width: 20px;
   position: relative;
-  margin-top: -10%;
-  left: 25%;
+  margin-top: -15%;
+  left: 15%;
 }
 /** Large orb when viewing dream or creating dream **/
+.large_orb{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 89%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 89%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0px 0px 30px #ffffff;
+  z-index: 1000;
+  margin-left: 30%;
+}
 .large_triangle{
   border-bottom: 80px solid #000000;
   border-left: 50px solid transparent;
@@ -189,6 +200,7 @@ label{
   position: absolute;
   top:280px;
   left:60px;
+  margin-left: 30%
 
 }
 
@@ -247,10 +259,49 @@ label{
   border-radius: 50%;
   display: block;
   overflow: hidden;
-  background-color: #000000;
-vertical-align: middle;
+  background-color: #0F0F0F;
 }
 
-#output1:img{
+
+/** Buttons for refereshing a dream **/
+#changeImages2, #changeImages1{
+  color:black;
+  background: transparent;
+  border:none;
+  margin-top: 20px;
+  margin-left: 15%;
+}
+
+/** Button for confirming a dream **/
+#newDreamImageSubmit{
+  color:#ffffff;
   position:absolute;
+vertical-align: middle;
+font-size: 20pt;
+background-color: transparent;
+border:none;
+font-family: "Gloria Hallelujah",cursive;
+}
+
+#newDreamImageSubmit:hover{
+  color:darkgrey;
+  text-decoration: none;
+}
+
+/** Style for search image bar **/
+.searchbox{
+  padding:10px;
+  background:black;
+  border-radius: 25px;
+}
+.toprow{
+  margin-top: 50px;
+}
+
+.debug{
+  background-color: red;
+}
+
+.debug2{
+  background-color: green;
 }
