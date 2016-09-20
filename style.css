@@ -236,15 +236,19 @@ label{
 
 /** Buttons for refereshing a dream **/
 #changeImages2, #changeImages1{
-  color:black;
+  color:#ffffff;
   background: transparent;
   border:none;
   margin-top: 20px;
   margin-left: 15%;
 }
 
+#changeImages2:hover, #changeImages1:hover{
+  color:darkgrey;
+}
+
 /** Button for confirming a dream **/
-#newDreamImageSubmit{
+#newDreamImageSubmit, #searchbtn{
   color:#ffffff;
   position:absolute;
 vertical-align: middle;
@@ -254,7 +258,7 @@ border:none;
 font-family: "Gloria Hallelujah",cursive;
 }
 
-#newDreamImageSubmit:hover{
+#newDreamImageSubmit:hover,#searchbtn:hover{
   color:darkgrey;
   text-decoration: none;
 }
@@ -264,6 +268,9 @@ font-family: "Gloria Hallelujah",cursive;
   padding:10px;
   background:black;
   border-radius: 25px;
+}
+#searchbtn{
+  font-size: 12pt;
 }
 .toprow{
   margin-top: 50px;
