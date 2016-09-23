@@ -7,7 +7,7 @@ if($conn === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$sql = "SELECT `orbID`, `Emotion` FROM `Orb`";
+$sql = "SELECT `orbID`, `Emotion`, `Image_Path_1`  FROM `Orb`";
 
 $result = mysqli_query($conn, $sql);
 $all = mysqli_fetch_all($result);
