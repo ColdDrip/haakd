@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
 
 		function populate(orbs) {
 		var taken_orbs = [];
+		//var orbs_map=[];
 		for (var i=0; i<orbs.length; i++)  {
 			var shelf_spot = (Math.floor((Math.random() * 120) + 1));
 			while (taken_orbs.includes(shelf_spot) === true) {
@@ -29,8 +30,11 @@ jQuery(document).ready(function($){
 			 taken_orbs.push([shelf_spot, orbs[i][1], orbs[i][2]]);
 			$("#" + shelf_spot).attr("id", orbs[i][0]);
 
+			//orbs_map.push([i,orbs[i][0]]);
 
 		}
+		//console.log("orbs map",orbs_map);
+
 
 		console.log("taken orbs", taken_orbs);
 
@@ -92,17 +96,21 @@ function colors() {
 
 				colors();
 
-//trying to make hover work, but it isn't working yet
-for (var y in taken_orbs) {
-	$(".button." + taken_orbs[y][0]).hover(function() {
-		$(this).css("background-image", "url("+taken_orbs[y][2]+")");
-	},
-	function() {
-		$(this).css("background-image", "");
-		colors();
+
+$(".button").hover(function(){
+	var position = $(this).attr("class").split(' ')[1];
+	for (var x in taken_orbs) {
+		if (taken_orbs[x][0] == position) {
+			$(this).css("background-image", "url("+taken_orbs[x][2]+")");
+			$(this).css("background-size", "30px");
+		}
 	}
-	);
-}
+},
+function() {
+$(this).css("background-image", "");
+colors();
+
+});
 
 
 				}
