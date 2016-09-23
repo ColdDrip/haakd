@@ -92,6 +92,7 @@ function colors() {
 
 				colors();
 
+//trying to make hover work, but it isn't working yet
 for (var y in taken_orbs) {
 	$(".button." + taken_orbs[y][0]).hover(function() {
 		$(this).css("background-image", "url("+taken_orbs[y][2]+")");
