@@ -175,7 +175,7 @@ label{
   width: 20px;
   position: relative;
   margin-top: -15%;
-  left: 15%;
+  left: 7%;
 }
 /** Large orb when viewing dream or creating dream **/
 .large_orb{
@@ -308,6 +308,13 @@ font-family: "Gloria Hallelujah",cursive;
 #searchbtn{
   font-size: 12pt;
 }
+/**Chute**/
+.chute{
+  width:10px;
+  height: 40px;
+  background-color: red;
+}
+
 .toprow{
   margin-top: 50px;
 }
