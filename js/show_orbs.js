@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 			while (taken_orbs.includes(shelf_spot) === true) {
 			 shelf_spot = (Math.floor((Math.random() * 120) + 1));
 			 }
-			 taken_orbs.push([shelf_spot, orbs[i][1]]);
+			 taken_orbs.push([shelf_spot, orbs[i][1], orbs[i][2]]);
 			$("#" + shelf_spot).attr("id", orbs[i][0]);
 
 
@@ -51,51 +51,58 @@ jQuery(document).ready(function($){
 
 			console.log(orbs_to_hide);
 
+
 			for (var p in orbs_to_hide) {
 			 		$("." + orbs_to_hide[p]).css("opacity", "0");
 					$("." + orbs_to_hide[p]).attr("onclick", "return false");
 					}
 
+function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fffdb7");
+							$(".button." + taken_orbs[h][0]).css("background", "#fffdb7");
 						}
 						if (taken_orbs[h][1] == "Surprise") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffceff");
+							$(".button." + taken_orbs[h][0]).css("background", "#ffceff");
 						}
 						if (taken_orbs[h][1] == "Anger") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffc4c4");
+							$(".button." + taken_orbs[h][0]).css("background", "#ffc4c4");
 						}
 						if (taken_orbs[h][1] == "Fear") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ddb4ff");
+							$(".button." + taken_orbs[h][0]).css("background", "#ddb4ff");
 						}
 						if (taken_orbs[h][1] == "Sadness") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b7d1ff");
+							$(".button." + taken_orbs[h][0]).css("background", "#b7d1ff");
 						}
 						if (taken_orbs[h][1] == "Disgust") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
+							$(".button." + taken_orbs[h][0]).css("background", "#b4ffd8");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fdddff");
-							$(".button." + taken_orbs[h][0]).css("background", "rgba(12,34,158,1)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
+							$(".button." + taken_orbs[h][0]).css("background", "#ffffff");
 						}
-
-
-
-
-
-
-
-
-
-
-
 					}
+				}
+
+				colors();
+
+for (var y in taken_orbs) {
+	$(".button." + taken_orbs[y][0]).hover(function() {
+		$(this).css("background-image", "url("+taken_orbs[y][2]+")");
+	},
+	function() {
+		$(this).css("background-image", "");
+		colors();
+	}
+	);
+}
+
+
 				}
 		});
