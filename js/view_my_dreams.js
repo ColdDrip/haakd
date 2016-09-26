@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var dream_data = [];
-
+ 
 //getting the dream data from the php file
     $.ajax({
         type: "GET",
