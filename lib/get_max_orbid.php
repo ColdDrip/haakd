@@ -7,17 +7,16 @@ if($conn === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+//getting the orb id for this orb -- will be the highest since it was just created
 $sql = "SELECT MAX(orbID) FROM Orb";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_row($result);
-$orbID = $row[0];
-
-$sql = "SELECT `orbID`, `Story`, `Emotion`, `Image_Path_1`, `Image_Path_2` FROM `Orb` ORDER BY `orbID` DESC LIMIT 6";
+//$orbID = $row[0];
 
 $result = mysqli_query($conn, $sql);
-$all = mysqli_fetch_all($result);
+$row = mysqli_fetch_row($result);
 
-echo json_encode($all);
+echo json_encode($row);
 
 //close connection
 mysqli_close($conn);
