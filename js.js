@@ -4,12 +4,18 @@ $(document).ready(function(){
   //initialise draggables
   $(".button").draggable({revert:true});
   $(".button").draggable({snap:".chute"});
+  $(".button").draggable("option","snapMode","inner");
+
   //initialise droppable
   $(".chute").droppable({drop:function(event,ui){
     $(this).addClass("debug");
+    $('#myModal').modal({keyboard: false});
+
     $(".button").draggable({revert:false});}
   });
 
+
+//initalise modal
 
   //prevent form submit on adding a dream
   $('#newDreamForm').submit(function (e) {

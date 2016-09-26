@@ -115,12 +115,13 @@ label{
 .inside-cont{
   overflow-x: scroll;
   width: 100%;
+  height:100%;
   position: absolute;
-  
+
 }
 
-.inside-cont::-webkit-scrollbar { 
-    display: none; 
+.inside-cont::-webkit-scrollbar {
+    display: none;
 }
 html, body{
   height: 100%;
@@ -357,30 +358,22 @@ font-family: "Gloria Hallelujah",cursive;
 /**Chute**/
 .chute{
   padding: 20px 20px 20px 20px;
-  top:100px;
+  bottom:100px;
   z-index: 1000;
   position:fixed;
   border:1px solid white;
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-/*.chute2{
-  width:50px;
-  height: 50px;
-  z-index: 1000;
-  position:fixed;
-  top:125px;
-  left:1054px;
-  background-color: rgba(0,0,0,0.5) ;
-  border-radius: 50%;
-  border: 8px solid black;
-  align-content: center;
+/**modal for view dream**/
+.modal-header, .modal-footer, .modal-body{
+  background-color: black;
+  color:white;
 }
 
-.chute2 a{
-  margin-left: 14px;
-  margin-top: 10px;
-}*/
+.modal-backdrop{
+  background-color: white;
+}
 .toprow{
   margin-top: 50px;
 }
