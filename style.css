@@ -324,7 +324,7 @@ font-family: "Gloria Hallelujah",cursive;
   top:100px;
   z-index: 1000;
   position:fixed;
-  border-bottom:1px solid #000000;
+  border:1px solid white;
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
