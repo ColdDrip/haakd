@@ -320,15 +320,15 @@ font-family: "Gloria Hallelujah",cursive;
 }
 /**Chute**/
 .chute{
-  width:30px;
-  height: 130px;
+  padding: 20px 20px 20px 20px;
+  top:100px;
   z-index: 1000;
   position:fixed;
   border-bottom:1px solid #000000;
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.chute2{
+/*.chute2{
   width:50px;
   height: 50px;
   z-index: 1000;
@@ -344,7 +344,7 @@ font-family: "Gloria Hallelujah",cursive;
 .chute2 a{
   margin-left: 14px;
   margin-top: 10px;
-}
+}*/
 .toprow{
   margin-top: 50px;
 }

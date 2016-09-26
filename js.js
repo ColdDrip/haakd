@@ -3,6 +3,13 @@ $(document).ready(function(){
 
   //initialise draggables
   $(".button").draggable({revert:true});
+  $(".button").draggable({snap:".chute"});
+  //initialise droppable
+  $(".chute").droppable({drop:function(event,ui){
+    $(this).addClass("debug");
+    $(".button").draggable({revert:false});}
+  });
+
 
   //prevent form submit on adding a dream
   $('#newDreamForm').submit(function (e) {
