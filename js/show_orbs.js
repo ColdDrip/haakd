@@ -134,7 +134,7 @@ function special() {
 					}
 				}
 			}
-
+//yo
 $(".button").hover(function(){
 	var position = $(this).attr("class").split(' ')[1];
 	for (var x in taken_orbs) {
