@@ -33,8 +33,8 @@ $(document).ready(function(){
       page_element += "<p>" + orbID + "</p>";
       page_element += "<p>" + Story + "</p>";
       page_element += "<p>" + Emotion + "</p>";
-      page_element += "<p>" + "<img class='"'col-xs-6 col-xs-offset-3'"'src=" + Image_Path_1 + ">" + "</p>";
-      page_element += "<p>" + "<img class='"'col-xs-6 col-xs-offset-3'"'src=" + Image_Path_2 + ">" + "</p>";
+      page_element += "<p>" + '<img class="col-xs-6 col-xs-offset-3" src="'+ Image_Path_1 + '>' + "</p>";
+      page_element += "<p>" + '<img class="col-xs-6 col-xs-offset-3" src="'+ Image_Path_2 + '>' + "</p>";
       page_element += "</div>";
 
       var html = $.parseHTML(page_element);
