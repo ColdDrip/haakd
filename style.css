@@ -1,5 +1,4 @@
-/* ---- particles.js container ---- */
-
+/* ---- particles.js  ---- */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -356,6 +355,7 @@ font-family: "Gloria Hallelujah",cursive;
 #searchbtn{
   font-size: 12pt;
 }
+
 /**Chute**/
 .chute{
   padding: 20px 20px 20px 20px;
@@ -379,10 +379,6 @@ font-family: "Gloria Hallelujah",cursive;
   margin-top: 50px;
 }
 
-.debug{
-  background-color: red;
-}
-
-.debug2{
-  background-color: green;
-}
+/**Debug classes**/
+.debug{background-color: red;}
+.debug2{background-color: green;}
