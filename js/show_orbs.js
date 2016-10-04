@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
 			}
 			 taken_orbs.push([shelf_spot, orbs[i][1], orbs[i][2], orbs[i][0]]);
 			 //console.log(taken_orbs.includes(shelf_spot));
-			$("#" + shelf_spot).attr("id", orbs[i][0]);
+			$("." + shelf_spot).attr("id", orbs[i][0]);
 
 			//console.log(orbs);
 
@@ -75,7 +75,6 @@ jQuery(document).ready(function($){
 			}
 
 			//console.log("orbs to hide", orbs_to_hide);
-
 			//console.log(orbs_to_hide);
 
 
