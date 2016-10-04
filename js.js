@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   //initialise droppable
   $(".chute").droppable({drop:function(event,ui){
-    var draggableId = $(ui.draggable).attr("class").split(' ')[1];
+    var draggableId = $(ui.draggable).attr("id");
     console.log(draggableId);
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
