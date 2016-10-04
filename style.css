@@ -1,18 +1,18 @@
-/* ---- particles.js container ---- */
-
+/* ---- particles.js  ---- */
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
     background: url('background1.png');
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2e80+0,3f2e80+100&0.6+0,0+100 */
- -webkit-filter: blur(5px); /* Chrome, Opera, etc. */
+ -webkit-filter: blur(7px); /* Chrome, Opera, etc. */
   filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
-  filter: blur(5px); /* Firefox 35+, eventually all */
+  filter: blur(7px); /* Firefox 35+, eventually all */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 50%;
 }
+
 
 #particles-js2 {
     position: absolute;
@@ -28,18 +28,10 @@
 
 }
 
-footer{
-  height: 100px;
-  background: black;
-  width: 100%;
-  position:fixed;
-  bottom:0;
-  left:0;
+.navbar{
+  margin: 50px;
 }
-nav{
-  background-color: #000000;
-  padding:5px;
-}
+
 #dreamer a{
   font-size: 2em;
   color: rgba(255,255,255,1);
@@ -49,20 +41,18 @@ nav{
   text-overflow: clip;
   white-space: pre;
   font-family: "Gloria Hallelujah",cursive;
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 15px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 40px #66ffff , 0 0 50px #66ffff , 0 0 70px #66ffff , 0 0 90px #66ffff ;
-  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  text-shadow: 0 0 10px rgba(120,205,249,0.4) , 0 0 15px rgba(120,205,249,0.4) , 0 0 20px rgba(120,205,249,0.4) , 0 0 40px #78cdf9 , 0 0 50px #78cdf9 , 0 0 70px #78cdf9 , 0 0 90px #78cdf9 ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 0.4);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 0.4);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 0.4);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 0.4);
   /**padding: 20px 0px 30px 30px;**/
   z-index:1000;
-  margin-top: 10px;
-  margin-left: 20px;
 }
 
 #dreamer a:hover{
   text-decoration: none;
-  text-shadow: 0 0 20px rgba(255,255,255,1) , 0 0 25px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #66ffff , 0 0 50px #66ffff , 0 0 70px #66ffff , 0 0 90px #66ffff ;
+  text-shadow: 0 0 20px rgba(120,205,249,1) , 0 0 25px rgba(120,205,249,1) , 0 0 30px rgba(120,205,249,1) , 0 0 40px #78cdf9 , 0 0 50px #78cdf9 , 0 0 70px #78cdf9 , 0 0 90px #78cdf9 ;
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -71,7 +61,7 @@ nav{
 body{
   background-color: #000000;
   margin: 0;
-  height:1vh;
+
   overflow: hidden;
   overflow-x: scroll;
   white-space: nowrap;
@@ -98,6 +88,9 @@ label{
   margin-top: 15%;
   display: inline-block;
   position: relative;
+  width:23.333%;
+  padding-right: 10px;
+  padding-right: 10px;
 }
 .top-shelf{
   width: 100%;
@@ -119,6 +112,38 @@ label{
     box-sizing: border-box;
 }
 
+.inside-cont{
+  overflow-x: scroll;
+  width: 100%;
+  height:100%;
+  position: absolute;
+
+}
+
+.inside-cont::-webkit-scrollbar {
+    display: none;
+}
+html, body{
+  height: 100%;
+}
+.right-cont{
+  position: relative;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+60 */
+background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+  margin-top: -50px;
+  padding: 16% 10% 15% 20%;
+  float: right;
+  height: 1200px;
+  width: 40%;
+  z-index: 1000;
+}
+.right-cont p{
+  color: white;
+  font-size: 2em;
+}
 .bottom-shelf {
   width: 100%;
   z-index: 99;
@@ -184,6 +209,7 @@ label{
 
 .button:hover{
   background: darkgrey;
+
 }
 
 .triangle{
@@ -241,17 +267,18 @@ label{
   right:5%;
   margin: 10px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
-  background: black; /* Old browsers */
+  background: white; /* Old browsers */
   background: -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 0px 30px #0f0f0f;
-  z-index: 10;
+  z-index: 1001;
   font-size:17pt;
   text-decoration: none;
   vertical-align: middle;
-  color:#ffffff;
+  color:black;
+  font-weight: bold;
 }
 
 .add_button:hover{
@@ -268,7 +295,7 @@ label{
 }
 
 .add_triangle{
-  border-bottom: 8px solid #000000;
+  border-bottom: 8px solid white;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   height: 0;
@@ -328,41 +355,30 @@ font-family: "Gloria Hallelujah",cursive;
 #searchbtn{
   font-size: 12pt;
 }
+
 /**Chute**/
 .chute{
-  width:30px;
-  height: 130px;
+  padding: 20px 20px 20px 20px;
+  bottom:100px;
   z-index: 1000;
   position:fixed;
-  border-bottom:1px solid #000000;
+  border:1px solid white;
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.chute2{
-  width:50px;
-  height: 50px;
-  z-index: 1000;
-  position:fixed;
-  top:125px;
-  left:1054px;
-  background-color: rgba(0,0,0,0.5) ;
-  border-radius: 50%;
-  border: 8px solid black;
-  align-content: center;
+/**modal for view dream**/
+.modal-header, .modal-footer, .modal-body{
+  background-color: black;
+  color:white;
 }
 
-.chute2 a{
-  margin-left: 14px;
-  margin-top: 10px;
+.modal-backdrop{
+  background-color: white;
 }
 .toprow{
   margin-top: 50px;
 }
 
-.debug{
-  background-color: red;
-}
-
-.debug2{
-  background-color: green;
-}
+/**Debug classes**/
+.debug{background-color: red;}
+.debug2{background-color: green;}
