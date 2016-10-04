@@ -12,11 +12,11 @@ $(document).ready(function(){
 
   //initialise droppable
   $(".chute").droppable({drop:function(event,ui){
+    var draggableId = ui.draggable.attr("id");
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
 
-    $.get(
-      "../lib/view_dream.php",function(data,status){
+    $.post("../lib/view_dream.php",{orbID:draggableId},function(data,status){
         dream_data = JSON.parse(data, ",");
         orbID = dream_data[0];
         Story = dream_data[1];
