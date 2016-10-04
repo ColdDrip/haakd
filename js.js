@@ -2,20 +2,59 @@ $(document).ready(function(){
   console.log("test");
 
   //initialise draggables
-  $(".button").draggable({revert:true});
+  $(".button").draggable({revert:"invalid"});
   $(".button").draggable({snap:".chute"});
   $(".button").draggable("option","snapMode","inner");
+  $(".button").data({
+    'originalLeft': $(".button").css('left'),
+    'origionalTop': $(".button").css('top')
+});
 
   //initialise droppable
   $(".chute").droppable({drop:function(event,ui){
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
+    //getting the dream data from the php file
+    $.get("../lib/view_dream.php", function(data,status){
+      dream_data = JSON.parse(data, ",");
+      orbID = dream_data[0];
+      Story = dream_data[1];
+      Emotion = dream_data[2];
+      Image_Path_1 = dream_data[3];
+      Image_Path_2 = dream_data[4];
+      consol(orbID, Story, Emotion, Image_Path_1, Image_Path_2);
+      display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2);
+    });
 
-    $(".button").draggable({revert:false});}
+
+    //outputting the dream data for the html page
+    //edit here to change the css for view_dream.html
+    function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
+    	var page_element = "";
+    	page_element += "<div>";
+    	page_element += "<p>" + orbID + "</p>";
+    	page_element += "<p>" + Story + "</p>";
+    	page_element += "<p>" + Emotion + "</p>";
+    	page_element += "<p>" + "<img src=" + Image_Path_1 + ">" + "</p>";
+    	page_element += "<p>" + "<img src=" + Image_Path_2 + ">" + "</p>";
+    	page_element += "</div>";
+
+    	var html = $.parseHTML(page_element);
+    	//console.log(html);
+    	$('#myModal .modal-body').append(html);
+
+    }
+
   });
 
-
-//initalise modal
+//revert orb to original position on modal close
+  $('#myModal').on('hidden.bs.modal', function () {
+    console.log('close');
+    $(".button").animate({
+        'left': $(".button").data('originalLeft'),
+        'top': $(".button").data('origionalTop')
+    });
+});
 
   //prevent form submit on adding a dream
   $('#newDreamForm').submit(function (e) {
@@ -44,7 +83,7 @@ particlesJS("particles-js", {
             }
         }
         , "opacity": {
-            "value":0.4, "random":true, "anim": {
+            "value":0.2, "random":true, "anim": {
                 "enable": true, "speed": 0.2, "opacity_min": 0, "sync": false
             }
         }
@@ -119,7 +158,7 @@ particlesJS("particles-js2", {
             }
         }
         , "opacity": {
-            "value":1, "random":true, "anim": {
+            "value":0.6, "random":true, "anim": {
                 "enable": true, "speed": 1, "opacity_min": 0, "sync": false
             }
         }

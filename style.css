@@ -6,13 +6,14 @@
     height: 100%;
     background: url('background1.png');
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2e80+0,3f2e80+100&0.6+0,0+100 */
- -webkit-filter: blur(5px); /* Chrome, Opera, etc. */
+ -webkit-filter: blur(7px); /* Chrome, Opera, etc. */
   filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
-  filter: blur(5px); /* Firefox 35+, eventually all */
+  filter: blur(7px); /* Firefox 35+, eventually all */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 50%;
 }
+
 
 #particles-js2 {
     position: absolute;
