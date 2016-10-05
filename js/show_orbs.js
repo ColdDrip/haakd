@@ -30,9 +30,6 @@ jQuery(document).ready(function($){
 				}
 		});
 
-
-
-
 		console.log("trial");
 
 		function populate(orbs) {

@@ -29,16 +29,18 @@ $(document).ready(function(){
     });
     function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
       var page_element = "";
+      var title = "";
+      title = "<p> Orb ID: #" + orbID + "</p>";
       page_element += "<div>";
-      page_element += "<p>" + orbID + "</p>";
       page_element += "<p>" + Story + "</p>";
       page_element += "<p>" + Emotion + "</p>";
       page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_1 + ">" + "</p>";
       page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_2 + ">" + "</p>";
       page_element += "</div>";
 
+      var title = $.parseHTML(title);
       var html = $.parseHTML(page_element);
-      console.log(html);
+      $('#myModal .modal-header').append(title);
       $('#myModal .modal-body').append(html);
 
     }
