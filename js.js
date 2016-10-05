@@ -30,7 +30,7 @@ $(document).ready(function(){
     function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
       var page_element = "";
       var title = "";
-      title = "<p> Orb ID: #" + orbID + "</p>";
+      title = "<p> Orb Number: #" + orbID + "</p>";
       page_element += "<div>";
       page_element += "<p>" + Story + "</p>";
       page_element += "<p>" + Emotion + "</p>";
