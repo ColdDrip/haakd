@@ -56,6 +56,7 @@ $('#myModal').on('hidden.bs.modal', function () {
   });
 
   //reset view dream modal content
+  $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
 });
 
