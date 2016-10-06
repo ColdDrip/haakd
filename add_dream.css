@@ -26,6 +26,10 @@ nav{
   margin-left:18%;
 }
 
+#image_section{
+  display:none;
+
+}
 .emotion-control{
   position: relative;
   margin-top: 10%;
@@ -52,4 +56,57 @@ font-family: "Gloria Hallelujah",cursive;
 #newDreamSubmit{
   background-color: transparent;
   border:none;
+}
+
+/*-----------------Add dream story page---------------------*/
+
+
+#output1,#output2{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+
+/** Buttons for refereshing a dream **/
+#changeImages2, #changeImages1{
+  color:#ffffff;
+  background: transparent;
+  border:none;
+  margin-top: 20px;
+  margin-left: 15%;
+}
+
+#changeImages2:hover, #changeImages1:hover{
+  color:darkgrey;
+}
+
+/** Button for confirming a dream **/
+#newDreamImageSubmit, #searchbtn{
+  color:#ffffff;
+  position:absolute;
+vertical-align: middle;
+font-size: 20pt;
+background-color: transparent;
+border:none;
+font-family: "Gloria Hallelujah",cursive;
+}
+
+#newDreamImageSubmit:hover,#searchbtn:hover{
+  color:darkgrey;
+  text-decoration: none;
+}
+
+/** Style for search image bar **/
+.searchbox{
+  padding:10px;
+  background:#1f1f1f;
+  border-radius: 25px;
+  color: black;
+}
+#searchbtn{
+  font-size: 12pt;
 }

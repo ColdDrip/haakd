@@ -3,6 +3,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    /*background-color: grey;*/
     background: url('background1.png');
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2e80+0,3f2e80+100&0.6+0,0+100 */
  -webkit-filter: blur(7px); /* Chrome, Opera, etc. */
@@ -28,6 +29,7 @@
 
 }
 
+/* Navbar*/
 .navbar{
   margin: 50px;
 }
@@ -58,6 +60,8 @@
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
+
+
 body{
   background-color: #000000;
   margin: 0;
@@ -83,6 +87,7 @@ label{
 .margin-top{
   margin-top:5%;
 }
+
 /** Everything related to shelf itself **/
 .shelf{
   margin-top: 15%;
@@ -186,7 +191,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .listed li:first-child{
   margin-left: 4.1%;
 }
-
 
 /** Orb on shelves **/
 .button{
@@ -307,55 +311,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 
-#output1,#output2{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  overflow: hidden;
-  background-color: #0F0F0F;
-}
-
-
-/** Buttons for refereshing a dream **/
-#changeImages2, #changeImages1{
-  color:#ffffff;
-  background: transparent;
-  border:none;
-  margin-top: 20px;
-  margin-left: 15%;
-}
-
-#changeImages2:hover, #changeImages1:hover{
-  color:darkgrey;
-}
-
-/** Button for confirming a dream **/
-#newDreamImageSubmit, #searchbtn{
-  color:#ffffff;
-  position:absolute;
-vertical-align: middle;
-font-size: 20pt;
-background-color: transparent;
-border:none;
-font-family: "Gloria Hallelujah",cursive;
-}
-
-#newDreamImageSubmit:hover,#searchbtn:hover{
-  color:darkgrey;
-  text-decoration: none;
-}
-
-/** Style for search image bar **/
-.searchbox{
-  padding:10px;
-  background:black;
-  border-radius: 25px;
-}
-#searchbtn{
-  font-size: 12pt;
-}
-
 /**Chute**/
 .chute{
   padding: 20px 20px 20px 20px;
@@ -379,6 +334,9 @@ font-family: "Gloria Hallelujah",cursive;
   margin-top: 50px;
 }
 
-/**Debug classes**/
+/*--------------------Debug classes---------------------*/
 .debug{background-color: red;}
 .debug2{background-color: green;}
+
+/*--------------------Hidden------------------*/
+.hidden{display:none;}

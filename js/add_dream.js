@@ -1,30 +1,50 @@
-document.getElementById('picture_stuff').style.display = "none"
+//document.getElementById('picture_stuff').style.display = "none"
+
+$(document).ready(function(){
+  $("#user_dream_orb").fadeIn(1000);
+
+  var loadedImages = [];
+  var selectImages =[];
+
+  var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
+  var found = 0;
+
+  //Initialise var for storing dream
+  var user_dream_story="";
+  var user_dream_emotion="";
+  var user_dream_image1="";
+  var user_dream_image2="";
+  var finished_orb=false;
+
+  //store story when click next
+  $("#newDreamSubmit").click(function(){
+    $("#newDreamSubmit").fadeOut(1000)
+    $("#back").fadeOut(1000)
+    $(".emotion-control").hide(1000,function(){
+      $("#image_section") .fadeIn(1000);
+    });
+    $("#Story").attr("disabled","disabled");
+    user_dream_story=$("#Story").val();
+    user_dream_emotion=$("#Emotion").val();
+    finished_orb=true;//tracks if the user has completed the orb contents
+    $("#user_dream_orb").draggable({revert:"invalid",cancel:''});
+  });
 
 
+  //(function($){
 
+  //  $("#newDreamSubmit").click(function changeImages(event) {
+  //  document.getElementById('image_section').style.display = "none"
 
-var loadedImages = [];
-var selectImages =[];
+  //}
 
-var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
-var found = 0;
-(function($){
-
-  $("#newDreamSubmit").click(function changeImages(event) {
-  document.getElementById('image_section').style.display = "none"
-
-}
-
-  $("form#searchTrove").submit(function searchTrove(event) {
+  $("#searchbtn").click(function searchTrove(event) {
+    console.log("click");
     event.preventDefault();
-
-
-
 
     loadedImages = [];
     var url1;
     var url2;
-
 
     //get input values
     var searchTerm = $("#searchTerm").val().trim();
@@ -34,9 +54,6 @@ var found = 0;
 
     //create searh query
     var url = "http://api.trove.nla.gov.au/result?key=" + apiKey + "&l-availability=y%2Ff&l-format=Art+work&encoding=json&zone=picture" + "&sortby=relevance&n=100&q=" + searchTerm + "&callback=?";
-
-
-
 
     //get the JSON information we need to display the images
     $.getJSON(url, function(data) {
@@ -54,51 +71,51 @@ var found = 0;
       console.log("first search image1-1",imageNum);
       console.log("first search image2-2",imageNum2);
 
+      updateURL(imageNum,imageNum2);
+      printImages();
+    });
+  });
 
+  //when refreshing image1
+  $("a#changeImages1").click(function changeImages(event) {
+    event.preventDefault();
+    $('#output1').empty();
+
+    imageNum = Math.floor((Math.random()*loadedImages.length));
+    if (imageNum == imageNum2){
+      imageNum = imageNum + 1;
+      console.log("change1-image1",imageNum);
+      console.log("change1-image2",imageNum2);
+      printImages();
+    }else{
+      console.log("change1-1-image1",imageNum);
+      console.log("change1-1-image2",imageNum2);
       updateURL(imageNum,imageNum2);
       printImages();
 
-      //when refreshing image1
-      $("a#changeImages1").click(function changeImages(event) {
-        event.preventDefault();
-        $('#output1').empty();
+    }
 
-        imageNum = Math.floor((Math.random()*loadedImages.length));
-        if (imageNum == imageNum2){
-          imageNum = imageNum + 1;
-          console.log("change1-image1",imageNum);
-          console.log("change1-image2",imageNum2);
-          printImages();
-        }else{
-          console.log("change1-1-image1",imageNum);
-          console.log("change1-1-image2",imageNum2);
-          updateURL(imageNum,imageNum2);
-          printImages();
-
-        }
-
-      });
-
-
-      //when refreshing image2
-      $("a#changeImages2").click(function changeImages2(event) {
-        event.preventDefault();
-        $('#output2').empty();
-        imageNum2 = Math.floor((Math.random()*loadedImages.length));
-        if (imageNum == imageNum2){
-          imageNum2 = imageNum2+1;
-          console.log("change2-image1",imageNum);
-          console.log("change2-image2",imageNum2);
-          printImages();
-        }else{
-          console.log("change2-1-image1",imageNum);
-          console.log("change2-1-image2",imageNum2);
-          updateURL(imageNum,imageNum2);
-          printImages();
-        }
-      });
-    });
   });
+
+
+  //when refreshing image2
+  $("a#changeImages2").click(function changeImages2(event) {
+    event.preventDefault();
+    $('#output2').empty();
+    imageNum2 = Math.floor((Math.random()*loadedImages.length));
+    if (imageNum == imageNum2){
+      imageNum2 = imageNum2+1;
+      console.log("change2-image1",imageNum);
+      console.log("change2-image2",imageNum2);
+      printImages();
+    }else{
+      console.log("change2-1-image1",imageNum);
+      console.log("change2-1-image2",imageNum2);
+      updateURL(imageNum,imageNum2);
+      printImages();
+    }
+  });
+
   //add two images URL into array and print them out
   function updateURL(imageNum,imageNum2){
     url1 = loadedImages[imageNum];
@@ -107,8 +124,6 @@ var found = 0;
     var Image_Path_2 = url2;
     console.log(Image_Path_1);
     console.log(Image_Path_2);
-    document.getElementById('Image_Path_1').value = Image_Path_1;
-    document.getElementById('Image_Path_2').value = Image_Path_2;
   }
 
   function processImages(index, troveItem) {
@@ -204,4 +219,5 @@ var found = 0;
     return (false);
   }
 
-}(jQuery));
+  //}(jQuery));
+});

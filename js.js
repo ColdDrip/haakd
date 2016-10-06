@@ -184,7 +184,7 @@ particlesJS("particles-js2", {
   , "interactivity": {
     "detect_on":"canvas", "events": {
       "onhover": {
-        "enable": true, "mode": "bubble"
+        "enable": false, "mode": "bubble"
       }
       , "onclick": {
         "enable": false, "mode": "repulse"
