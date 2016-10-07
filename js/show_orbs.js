@@ -46,7 +46,6 @@ jQuery(document).ready(function($){
 			 taken_orbs.push([shelf_spot, orbs[i][1], orbs[i][2], orbs[i][0]]);
 			 //console.log(taken_orbs.includes(shelf_spot));
 			$("." + shelf_spot).attr("id", orbs[i][0]);
-
 			//console.log(orbs);
 
 			//orbs_map.push([i,orbs[i][0]]);
@@ -61,7 +60,6 @@ jQuery(document).ready(function($){
 			$("."+taken_orbs[j][0]).css("opacity","1")
 			$("."+taken_orbs[j][0]).css("cursor","pointer");
 			$("."+taken_orbs[j][0]).attr("onclick","");
-
 		}
 
 		/*	var orbs_to_hide = [];
