@@ -6,6 +6,9 @@ $(document).ready(function(){
   var loadedImages = [];
   var selectImages =[];
 
+  var ImageNum;
+  var ImageNum2;
+
   var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
   var found = 0;
 
@@ -64,8 +67,8 @@ $(document).ready(function(){
       console.log(loadedImages.length);
 
       $.each(data.response.zone[0].records.work, processImages);
-      var imageNum = Math.floor((Math.random()*loadedImages.length));
-      var imageNum2 = imageNum + 1;
+       imageNum = Math.floor((Math.random()*loadedImages.length));
+       imageNum2 = imageNum + 1;
 
       console.log(loadedImages.length);
       console.log("first search image1-1",imageNum);

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+console.log("js.js ready");
   //initialise draggable orb
   $(".button").draggable({revert:"invalid"});
   $(".button").draggable({snap:".chute"});
