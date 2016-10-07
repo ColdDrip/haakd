@@ -240,6 +240,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   margin-top: -15%;
   left: 7%;
   z-index: 1000;
+  cursor:default;
 }
 /** Large orb when viewing dream or creating dream **/
 .large_orb{
