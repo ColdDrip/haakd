@@ -2,7 +2,7 @@ $(document).ready(function(){
   $(".inside-cont").fadeIn(3000);
 console.log("js.js ready");
   //initialise draggable orb
-  for (var m=1; m<121;m++){
+/*  for (var m=1; m<121;m++){
   $("."+m).draggable({revert:"invalid"});
   $("."+m).draggable({snap:".chute"});
   $("."+m).draggable("option","snapMode","inner");
@@ -10,7 +10,7 @@ console.log("js.js ready");
     'originalLeft': $("."+m).css('left'),
     'originalTop': $("."+m).css('top')
   });
-}
+}*/
 
   /**------------------------------------------------------------------------**/
   //initialise droppable area for orbs -- "pensieve"
