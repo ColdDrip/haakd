@@ -61,14 +61,6 @@ jQuery(document).ready(function($){
 			$("."+taken_orbs[j][0]).css("opacity","1")
 			$("."+taken_orbs[j][0]).css("cursor","pointer");
 			$("."+taken_orbs[j][0]).attr("onclick","");
-			//initialise draggable
-			$("."+taken_orbs[j][0]).draggable({revert:"invalid"});
-			$("."+taken_orbs[j][0]).draggable({snap:".chute"});
-			$("."+taken_orbs[j][0]).draggable("option","snapMode","inner");
-			$("."+taken_orbs[j][0]).data({
-				'originalLeft': $("."+taken_orbs[j][0]).css('left'),
-				'originalTop': $("."+taken_orbs[j][0]).css('top')
-			});
 
 		}
 
