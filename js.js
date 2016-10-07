@@ -69,7 +69,7 @@ $('#newDreamForm').submit(function (e) {
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value":50, "density": {
+      "value":40, "density": {
         "enable": true, "value_area": 946.9771699587272
       }
     }
@@ -88,8 +88,8 @@ particlesJS("particles-js", {
       }
     }
     , "opacity": {
-      "value":0.2, "random":true, "anim": {
-        "enable": true, "speed": 0.2, "opacity_min": 0, "sync": false
+      "value":0.7, "random":true, "anim": {
+        "enable": true, "speed": 0.4, "opacity_min": 0, "sync": false
       }
     }
     , "size": {
