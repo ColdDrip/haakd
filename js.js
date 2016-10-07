@@ -2,12 +2,13 @@ $(document).ready(function(){
   $(".inside-cont").fadeIn(3000);
 console.log("js.js ready");
   //initialise draggable orb
-  $(".button").draggable({revert:"invalid"});
-  $(".button").draggable({snap:".chute"});
-  $(".button").draggable("option","snapMode","inner");
-  $(".button").data({
-    'originalLeft': $(".button").css('left'),
-    'origionalTop': $(".button").css('top')
+  for (var m=1; m<121;m++){
+  $("."+m).draggable({revert:"invalid"});
+  $("."+m).draggable({snap:".chute"});
+  $("."+m).draggable("option","snapMode","inner");
+  $("."+m).data({
+    'originalLeft': $("."+m).css('left'),
+    'originalTop': $("."+m).css('top')
   });
 
   /**------------------------------------------------------------------------**/
