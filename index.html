@@ -312,6 +312,13 @@
                     <div class="bottom-shelf-edge col-xs-12"></div>
                 </div>
             </div>
+            <script>
+            $(".inside-cont").hide();
+            for (var m=1; m<121;m++){
+              $("."+m).css("opacity","0");
+              $("."+m).attr("onclick","return false");
+            }
+            </script>
             <div class="right-cont">
             </div>
             <div class="left-cont">
@@ -320,13 +327,7 @@
         </div>
     </div>
     <footer class="footer"><div></div></footer>
-    <script>
-    $(".inside-cont").hide();
-    for (var m=1; m<121;m++){
-      $("."+m).css("opacity","0");
-      $("."+m).attr("onclick","return false");
-    }
-    </script>
+
     <script src="js.js" type="text/javascript"></script>
   </body>
 </html>
