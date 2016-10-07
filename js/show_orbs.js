@@ -57,8 +57,12 @@ jQuery(document).ready(function($){
 		console.log(taken_orbs);
 
 		//console.log("taken orbs", taken_orbs);
+		for (var j in taken_orbs){
+			$("."+taken_orbs[j][0]).css("opacity","1");
+			$("."+taken_orbs[j][0]).attr("onclick","");
+		}
 
-			var orbs_to_hide = [];
+		/*	var orbs_to_hide = [];
 			 	for (var j=1; j<121; j++) {
 			 		orbs_to_hide.push(j);
 				}
@@ -79,9 +83,8 @@ jQuery(document).ready(function($){
 			 		$("." + orbs_to_hide[p]).css("opacity", "0");
 					$("." + orbs_to_hide[p]).attr("onclick", "return false");
 					}
-
+					*/
 					special();
-
 function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
