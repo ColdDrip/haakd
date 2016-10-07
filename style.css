@@ -149,6 +149,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   color: white;
   font-size: 2em;
 }
+.left-cont{
+  position: relative;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+60 */
+background: -moz-linear-gradient(right,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+  margin-top: -50px;
+  padding: 16% 10% 15% 20%;
+  float: left;
+  height: 1200px;
+  width: 40%;
+  z-index: 1000;
+}
 .bottom-shelf {
   width: 100%;
   z-index: 99;
