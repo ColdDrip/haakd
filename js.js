@@ -10,6 +10,7 @@ console.log("js.js ready");
     'originalLeft': $("."+m).css('left'),
     'originalTop': $("."+m).css('top')
   });
+}
 
   /**------------------------------------------------------------------------**/
   //initialise droppable area for orbs -- "pensieve"
