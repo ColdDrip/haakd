@@ -1,16 +1,6 @@
 $(document).ready(function(){
   $(".inside-cont").fadeIn(3000);
 console.log("js.js ready");
-  //initialise draggable orb
-/*  for (var m=1; m<121;m++){
-  $("."+m).draggable({revert:"invalid"});
-  $("."+m).draggable({snap:".chute"});
-  $("."+m).draggable("option","snapMode","inner");
-  $("."+m).data({
-    'originalLeft': $("."+m).css('left'),
-    'originalTop': $("."+m).css('top')
-  });
-}*/
 
   /**------------------------------------------------------------------------**/
   //initialise droppable area for orbs -- "pensieve"

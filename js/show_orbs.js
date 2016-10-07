@@ -58,7 +58,8 @@ jQuery(document).ready(function($){
 
 		//console.log("taken orbs", taken_orbs);
 		for (var j in taken_orbs){
-			$("."+taken_orbs[j][0]).css("opacity","1");
+			$("."+taken_orbs[j][0]).css("opacity","1")
+			$("."+taken_orbs[j][0]).css("cursor","pointer");
 			$("."+taken_orbs[j][0]).attr("onclick","");
 			//initialise draggable
 			$("."+taken_orbs[j][0]).draggable({revert:"invalid"});
