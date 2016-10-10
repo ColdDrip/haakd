@@ -118,7 +118,7 @@ function colors() {
 						if (taken_orbs[h][1] == "Dreamtime") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #D9CA47");
 							//$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
-							$(".button." + taken_orbs[h][0]).css("background", "url(abstract.jpg)");
+							$(".button." + taken_orbs[h][0]).css("background", "url(icy2.png)");
 
 						}
 					}
