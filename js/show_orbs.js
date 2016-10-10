@@ -118,7 +118,7 @@ function colors() {
 						if (taken_orbs[h][1] == "Dreamtime") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b3ffff");
 							//$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
-							$(".button." + taken_orbs[h][0]).css("background", "radial-gradient(ellipse at center, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%)");
+							$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, rgba(58,132,195,1) 18%,rgba(65,154,214,1) 38%,rgba(75,184,240,1) 55%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%)");
 
 
 						}
