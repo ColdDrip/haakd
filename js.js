@@ -75,7 +75,7 @@ particlesJS("particles-js", {
       }
     }
     , "color": {
-      "value": "#f1d7f7"
+      "value": "#ffffff"
     }
     , "shape": {
       "type":"circle", "stroke": {
@@ -89,7 +89,7 @@ particlesJS("particles-js", {
       }
     }
     , "opacity": {
-      "value":0.7, "random":true, "anim": {
+      "value":0.4, "random":true, "anim": {
         "enable": true, "speed": 0.4, "opacity_min": 0, "sync": false
       }
     }
@@ -102,7 +102,7 @@ particlesJS("particles-js", {
       "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
     }
     , "move": {
-      "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
+      "enable":true, "speed":1, "direction":"bottom", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
         "enable": false, "rotateX": 600, "rotateY": 600
       }
     }
@@ -154,7 +154,7 @@ particlesJS("particles-js2", {
     }
     , "shape": {
       "type":"circle", "stroke": {
-        "width": 0, "color": "#000000"
+        "width": 0, "color": "#ffffff"
       }
       , "polygon": {
         "nb_sides": 5
@@ -164,7 +164,7 @@ particlesJS("particles-js2", {
       }
     }
     , "opacity": {
-      "value":0.6, "random":true, "anim": {
+      "value":1, "random":true, "anim": {
         "enable": true, "speed": 1, "opacity_min": 0, "sync": false
       }
     }
@@ -177,7 +177,7 @@ particlesJS("particles-js2", {
       "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
     }
     , "move": {
-      "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
+      "enable":true, "speed":1, "direction":"bottom", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
         "enable": false, "rotateX": 600, "rotateY": 600
       }
     }
