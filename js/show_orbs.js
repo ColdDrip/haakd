@@ -89,35 +89,35 @@ function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fffdb7");
-							$(".button." + taken_orbs[h][0]).css("background", "#fffdb7");
+							//$(".button." + taken_orbs[h][0]).css("background", "#fffdb7");
 						}
 						if (taken_orbs[h][1] == "Surprise") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffceff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffceff");
+							//$(".button." + taken_orbs[h][0]).css("background", "#ffceff");
 						}
 						if (taken_orbs[h][1] == "Anger") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffc4c4");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffc4c4");
+							//$(".button." + taken_orbs[h][0]).css("background", "#ffc4c4");
 						}
 						if (taken_orbs[h][1] == "Fear") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ddb4ff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ddb4ff");
+							//$(".button." + taken_orbs[h][0]).css("background", "#ddb4ff");
 						}
 						if (taken_orbs[h][1] == "Sadness") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b7d1ff");
-							$(".button." + taken_orbs[h][0]).css("background", "#b7d1ff");
+						//	$(".button." + taken_orbs[h][0]).css("background", "#b7d1ff");
 						}
 						if (taken_orbs[h][1] == "Disgust") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
-							$(".button." + taken_orbs[h][0]).css("background", "#b4ffd8");
+							//$(".button." + taken_orbs[h][0]).css("background", "#b4ffd8");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffffff");
+							//$(".button." + taken_orbs[h][0]).css("background", "#ffffff");
 						}
 						if (taken_orbs[h][1] == "Dreamtime") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #D9CA47");
-							$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
+							//$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
 						}
 					}
 				}
