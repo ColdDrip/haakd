@@ -89,31 +89,31 @@ function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fffdb7");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#fffdb7  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#fffdb7  100%)");
 						}
 						if (taken_orbs[h][1] == "Surprise") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffceff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#ffceff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffceff  100%)");
 						}
 						if (taken_orbs[h][1] == "Anger") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffc4c4");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#ffc4c4  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffc4c4  100%)");
 						}
 						if (taken_orbs[h][1] == "Fear") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ddb4ff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#ddb4ff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ddb4ff  100%)");
 						}
 						if (taken_orbs[h][1] == "Sadness") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b7d1ff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#b7d1ff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b7d1ff  100%)");
 						}
 						if (taken_orbs[h][1] == "Disgust") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#b4ffd8  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b4ffd8  100%)");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle ,#ffffff  0%,#ffffff  59%,#ffffff  66%,#ffffff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffffff  100%)");
 						}
 						if (taken_orbs[h][1] == "Dreamtime") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #D9CA47");
