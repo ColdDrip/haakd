@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     /*background-color: grey;*/
-    background: url('abstract.jpg');
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2e80+0,3f2e80+100&0.6+0,0+100 */
  -webkit-filter: blur(10px); /* Chrome, Opera, etc. */
   filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
@@ -61,6 +60,11 @@
 
 
 body{
+  background:  linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),url('abstract.jpg');
+
   background-color: #000000;
   margin: 0;
 
