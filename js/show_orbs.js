@@ -136,7 +136,12 @@ function special() {
 						console.log("the array id", taken_orbs[b][3]);
 						console.log("the max", maximum_id);
 						//make the css change you want here
-						$(".button." + taken_orbs[b][0]).css("opacity", ".2");
+						$(".button." + taken_orbs[b][0]).animate({"border", "1px solid white"},200,function(){});
+						$(".button." + taken_orbs[b][0]).animate({"content", "new"},200,function(){});
+						$(".button." + taken_orbs[b][0]).css("color":"blue");
+
+
+
 					}
 				}
 			}
