@@ -344,6 +344,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .modal p {
     word-wrap: break-word;
+    white-space: normal;
 }
 .toprow{
   margin-top: 50px;
