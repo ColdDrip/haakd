@@ -337,6 +337,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   background-color: black;
   color:white;
   height:auto;
+  border-radius: 1000%;
 }
 
 .modal-backdrop{
