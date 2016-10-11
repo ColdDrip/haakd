@@ -1,6 +1,7 @@
 body{
   display:block;
     color:#ffffff;
+    overflow: hidden;
 }
 textarea {
     width: 300px;
@@ -112,4 +113,17 @@ font-family: "Gloria Hallelujah",cursive;
 
 #add_dream_stuff{
   z-index: 100000000;
+}
+
+/** pensieve **/
+.pensieve_add_dream{
+  z-index: 0;
+  padding: 100px 100px 100px 100px;
+  bottom:100px;
+  position:fixed;
+  border:1px dashed white;
+  border-radius: 50%;
+  background: rgba(50,50,50,0.5);
+
+
 }
