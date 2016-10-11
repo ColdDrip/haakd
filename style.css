@@ -3,30 +3,16 @@
     width: 100%;
     height: 100%;
     /*background-color: grey;*/
-    background: url('background1.png');
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2e80+0,3f2e80+100&0.6+0,0+100 */
- -webkit-filter: blur(7px); /* Chrome, Opera, etc. */
+ -webkit-filter: blur(10px); /* Chrome, Opera, etc. */
   filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
-  filter: blur(7px); /* Firefox 35+, eventually all */
-    background-repeat:no-repeat;;
-    background-size:auto;
+  filter: blur(10px); /* Firefox 35+, eventually all */
+    /*background-repeat:no-repeat;*/
+    background-size:cover;
     background-position: 50% 50%;
 }
 
-
-#particles-js2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 50%;
-    -webkit-filter: blur(2px); /* Chrome, Opera, etc. */
-  filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
-  filter: blur(2px); /* Firefox 35+, eventually all */
-
-}
+#particles-js2{ position:absolute; width: 100%; height: 100%; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 /* Navbar*/
 .navbar{
@@ -61,6 +47,12 @@
 
 
 body{
+  background:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),url('abstract.jpg');
+
+    background-size: cover;
   background-color: #000000;
   margin: 0;
 
@@ -68,14 +60,15 @@ body{
   white-space: nowrap;
   display: block;
   font-family: "Open Sans",sans-serif;
-
-  background-size:cover;
-  background-repeat: repeat-x;
 }
 
 label{
   font-family: "Open Sans",sans-serif;
   font-weight: normal;
+}
+
+textarea,input,a{
+  outline:none;
 }
 
 .testing{
@@ -115,6 +108,7 @@ label{
 }
 
 .inside-cont{
+  overflow: hidden;
   overflow-x: scroll;
   width:100%;
   height:100%;
@@ -131,9 +125,9 @@ html, body{
 .right-cont{
   position: relative;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+60 */
-background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(50,50,50,0.3) 40%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.3) 40%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.3) 40%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
   margin-top: -50px;
 
@@ -149,13 +143,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .left-cont{
   position: relative;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+60 */
-background: -moz-linear-gradient(right,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+background: -moz-linear-gradient(right,  rgba(0,0,0,0) 0%, rgba(50,50,50,0.3) 40%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(right,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.3) 40%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to left,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.3) 40%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endCo4orstr='#000000',GradientType=1 ); /* IE6-9 */
   margin-top: -50px;
-
-  float: left;
+  float:4;
+  left:4;
   height: 1200px;
   width: 3%;
   z-index: 1000;
@@ -165,7 +159,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   z-index: 99;
   position:relative;
   top: -25px;
-  border-bottom: 10px solid #ACACAC;
+  border-bottom: 10px solid #2f2f2f;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
     box-sizing: border-box;
@@ -173,8 +167,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .bottom-shelf-edge {
   width: 100%;
-  height: 15px;
-  background: #464646;
+  height: 8px;
+  background: #0f0f0f;
   position: relative;
   z-index: 99;
   top: -25px;
@@ -231,17 +225,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .triangle{
   opacity:0;
-  border-bottom: 8px solid #1F1F1F;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+  border-bottom: 10px solid #1F1F1F;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
   height: 0;
-  width: 20px;
+  width: 100%;
   position: relative;
   margin-top: -15%;
-  left: 7%;
   z-index: 1000;
   cursor:default;
 }
+
 /** Large orb when viewing dream or creating dream **/
 .large_orb{
   border-radius: 50%;
@@ -328,13 +322,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 /**Chute**/
 .chute{
-  padding: 20px 20px 20px 20px;
+  border-radius: 50px;
+  padding: 30px 30px 30px 30px;
   bottom:100px;
   z-index: 1000;
   position:fixed;
-  border:1px solid white;
+  border:1px dashed white;
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
 
 /**modal for view dream**/
 .modal-header, .modal-footer, .modal-body{
@@ -350,7 +346,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 /*--------------------Debug classes---------------------*/
-.debug{background-color: red;}
+.debug{background-color: white;}
 .debug2{background-color: green;}
 
 /*------------------------Hidden------------------*/

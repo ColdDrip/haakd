@@ -46,7 +46,6 @@ jQuery(document).ready(function($){
 			 taken_orbs.push([shelf_spot, orbs[i][1], orbs[i][2], orbs[i][0]]);
 			 //console.log(taken_orbs.includes(shelf_spot));
 			$("." + shelf_spot).attr("id", orbs[i][0]);
-
 			//console.log(orbs);
 
 			//orbs_map.push([i,orbs[i][0]]);
@@ -61,7 +60,6 @@ jQuery(document).ready(function($){
 			$("."+taken_orbs[j][0]).css("opacity","1")
 			$("."+taken_orbs[j][0]).css("cursor","pointer");
 			$("."+taken_orbs[j][0]).attr("onclick","");
-
 		}
 
 		/*	var orbs_to_hide = [];
@@ -91,35 +89,38 @@ function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fffdb7");
-							$(".button." + taken_orbs[h][0]).css("background", "#fffdb7");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#fffdb7  100%)");
 						}
 						if (taken_orbs[h][1] == "Surprise") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffceff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffceff");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffceff  100%)");
 						}
 						if (taken_orbs[h][1] == "Anger") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffc4c4");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffc4c4");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffc4c4  100%)");
 						}
 						if (taken_orbs[h][1] == "Fear") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ddb4ff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ddb4ff");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ddb4ff  100%)");
 						}
 						if (taken_orbs[h][1] == "Sadness") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b7d1ff");
-							$(".button." + taken_orbs[h][0]).css("background", "#b7d1ff");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b7d1ff  100%)");
 						}
 						if (taken_orbs[h][1] == "Disgust") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
-							$(".button." + taken_orbs[h][0]).css("background", "#b4ffd8");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b4ffd8  100%)");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
-							$(".button." + taken_orbs[h][0]).css("background", "#ffffff");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffffff  100%)");
 						}
 						if (taken_orbs[h][1] == "Dreamtime") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #D9CA47");
-							$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b3ffff");
+							//$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
+							$(".button." + taken_orbs[h][0]).css("background", "radial-gradient(ellipse at center, rgba(253,255,255,1) 12%,rgba(230,248,253,1) 30%,rgba(200,238,251,1) 54%,rgba(190,228,248,1) 75%,rgba(177,216,245,1) 100%)");
+
+
 						}
 					}
 				}

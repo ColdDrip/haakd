@@ -9,14 +9,15 @@ $(document).ready(function(){
   var ImageNum;
   var ImageNum2;
 
+
   var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
   var found = 0;
 
   //Initialise var for storing dream
   var user_dream_story="";
   var user_dream_emotion="";
-  var user_dream_image1="";
-  var user_dream_image2="";
+  var Image_Path_1;
+  var Image_Path_2;
   var finished_orb=false;
 
   //store story when click next
@@ -30,17 +31,14 @@ $(document).ready(function(){
     user_dream_story=$("#Story").val();
     user_dream_emotion=$("#Emotion").val();
     finished_orb=true;//tracks if the user has completed the orb contents
-    $("#user_dream_orb").draggable({revert:"invalid",cancel:''});
+    $("#user_dream_orb").draggable({revert:"invalid",cancel:'',snap:".pensieve_add_dream",zindex:10000});
+
+    //show pensieve
+    $(".pensieve_add_dream").fadeIn(2000);
   });
 
 
-  //(function($){
-
-  //  $("#newDreamSubmit").click(function changeImages(event) {
-  //  document.getElementById('image_section').style.display = "none"
-
-  //}
-
+  //When clicking the search image button
   $("#searchbtn").click(function searchTrove(event) {
     console.log("click");
     event.preventDefault();
@@ -123,8 +121,8 @@ $(document).ready(function(){
   function updateURL(imageNum,imageNum2){
     url1 = loadedImages[imageNum];
     url2 = loadedImages[imageNum2];
-    var Image_Path_1 = url1;
-    var Image_Path_2 = url2;
+    Image_Path_1 = url1;
+    Image_Path_2 = url2;
     console.log(Image_Path_1);
     console.log(Image_Path_2);
   }
@@ -185,11 +183,7 @@ $(document).ready(function(){
   }
 
   function printImages() {
-
-    //$("#output").append("<h3>Image Search Results</h3>");
-
     // Print out all images
-
     var image1 = new Image();
     image1.src = url1;
     image1.style.display = "inline-block";
@@ -222,5 +216,22 @@ $(document).ready(function(){
     return (false);
   }
 
-  //}(jQuery));
+  //drag to add dream
+  $(".pensieve_add_dream").droppable({drop:function(event,ui){
+    $(this).addClass("debug2");
+    console.log("drop");
+    $("#Story").animate({"width":"10%","height":"10px"},200,function(){});
+    $("#Story").animate({"color":"#000000","background-color":"#ffffff"},200,function(){});
+
+    $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
+    $(".large_triangle").hide(200);
+    $("#image_section").fadeOut(1000);
+
+       //send dream contents via ajax post
+    $.post("../lib/add_dream_story.php",{
+      Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2});
+}
+});
+
+
 });
