@@ -230,7 +230,7 @@ $(document).ready(function(){
        //send dream contents via ajax post
     $.post("../lib/add_dream_story.php",{
       Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2});
-      window.location.href = "http://www.deco1800-pg6.uqcloud.net";
+      window.location.href = "http://deco1800-pg6.uqcloud.net/index.html";
 
 }
 });

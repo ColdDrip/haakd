@@ -225,7 +225,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .triangle{
   opacity:0;
-  border-bottom: 10px solid #1F1F1F;
+  border-bottom: 8px solid #1F1F1F;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   height: 0;
@@ -340,6 +340,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .modal-backdrop{
   background-color: white;
+}
+
+.modal-body p {
+    word-wrap: break-word;
 }
 .toprow{
   margin-top: 50px;
