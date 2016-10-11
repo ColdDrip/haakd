@@ -109,7 +109,7 @@ function colors() {
 						}
 						if (taken_orbs[h][1] == "Disgust") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, #DFFBE2 0%, #F2FDF3 40%,#B9F8C0 65%, #A0F6A9 100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
