@@ -113,7 +113,7 @@ function colors() {
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#9f9f9f 65%, #8f8f8f 100%);");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)");
 						}
 						if (taken_orbs[h][1] == "Dreamtime") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
