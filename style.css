@@ -61,8 +61,8 @@
 
 body{
   background:  linear-gradient(
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
     ),url('abstract.jpg');
 
   background-color: #000000;
