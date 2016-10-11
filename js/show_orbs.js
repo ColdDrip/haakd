@@ -89,36 +89,36 @@ function colors() {
 					for (var h in taken_orbs) {
 						if (taken_orbs[h][1] == "Joy") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #fffdb7");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#fffdb7  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #FFEF8D 100%)");
 						}
 						if (taken_orbs[h][1] == "Surprise") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffceff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffceff  100%)");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #66F1FB");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #66F1FB 100%)");
 						}
 						if (taken_orbs[h][1] == "Anger") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffc4c4");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffc4c4  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #FF959C 100%)");
 						}
 						if (taken_orbs[h][1] == "Fear") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ddb4ff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ddb4ff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #C3ABFF 100%)");
 						}
 						if (taken_orbs[h][1] == "Sadness") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b7d1ff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b7d1ff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #7EC7FF 100%)");
 						}
 						if (taken_orbs[h][1] == "Disgust") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b4ffd8");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#b4ffd8  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #A0F6A9 100%)");
 						}
 						if (taken_orbs[h][1] == "Not Sure") {
 							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
-							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(circle, #ffffff  0%,#ffffff  59%,#ffffff  60%,#ffffff  100%)");
+							$(".button." + taken_orbs[h][0]).css("background","radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, #9f9f9f 100%);");
 						}
 						if (taken_orbs[h][1] == "Dreamtime") {
-							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #b3ffff");
+							$(".button." + taken_orbs[h][0]).css("box-shadow", "0px 0px 30px #ffffff");
 							//$(".button." + taken_orbs[h][0]).css("background", "linear-gradient(135deg, #fceabb  0%,#fccd4d  59%,#f8b500  66%,#fbdf93  100%)");
-							$(".button." + taken_orbs[h][0]).css("background", "radial-gradient(ellipse at center, rgba(253,255,255,1) 12%,rgba(230,248,253,1) 30%,rgba(200,238,251,1) 54%,rgba(190,228,248,1) 75%,rgba(177,216,245,1) 100%)");
+							$(".button." + taken_orbs[h][0]).css("background", " linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%)");
 
 
 						}
@@ -140,7 +140,7 @@ function special() {
 					}
 				}
 			}
-//yo
+
 $(".button").hover(function(){
 	var position = $(this).attr("class").split(' ')[1];
 	for (var x in taken_orbs) {
