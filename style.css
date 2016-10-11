@@ -342,7 +342,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   background-color: white;
 }
 
-.modal-body, .modal-body div p {
+.modal p {
     word-wrap: break-word;
 }
 .toprow{
