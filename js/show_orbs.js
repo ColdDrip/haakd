@@ -137,15 +137,6 @@ function special() {
 						console.log("the max", maximum_id);
 						//make the css change you want here
 						$(".button." + taken_orbs[b][0]).css("border", "1px dashed #000000");
-						$('.button').animate({"bottom":"+=10px"},200,function(){
-							$('.button').animate({"top":"+=10px"},200,function(){
-								$('.button').animate({"bottom":"+=10px"},200,function(){
-									$('.button').animate({"top":"+=10px"},200,function(){});
-								});
-							});
-
-						});
-
 					}
 				}
 			}
