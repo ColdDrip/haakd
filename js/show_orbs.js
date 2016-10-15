@@ -61,29 +61,6 @@ jQuery(document).ready(function($){
 			$("."+taken_orbs[j][0]).css("cursor","pointer");
 			$("."+taken_orbs[j][0]).attr("onclick","");
 		}
-
-		/*	var orbs_to_hide = [];
-			 	for (var j=1; j<121; j++) {
-			 		orbs_to_hide.push(j);
-				}
-
-			for (var m in orbs_to_hide) {
-				for (var k in taken_orbs) {
-					if ((taken_orbs[k][0]) == (orbs_to_hide[m])) {
-					 	delete orbs_to_hide[m];
-					}
-				}
-			}
-
-			//console.log("orbs to hide", orbs_to_hide);
-			//console.log(orbs_to_hide);
-
-
-			for (var p in orbs_to_hide) {
-			 		$("." + orbs_to_hide[p]).css("opacity", "0");
-					$("." + orbs_to_hide[p]).attr("onclick", "return false");
-					}
-					*/
 					special();
 function colors() {
 					for (var h in taken_orbs) {
