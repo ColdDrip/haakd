@@ -1,6 +1,8 @@
 $(document).ready(function(){
   $(".inside-cont").fadeIn(3000);
   console.log("js.js ready");
+
+var dragging = false;
   //initialise draggable orb
   $(".button").draggable({revert:"invalid"});
   $(".button").draggable({snap:".chute"});
@@ -63,14 +65,27 @@ $('#myModal').on('hidden.bs.modal', function () {
 });
 /**-------------------------------------------------------------------------**/
 //Levitation hover
+$('.button').mousedown(function(){
+  dragging=true;
+  //console.log(dragging);
+});
+
+$('.button').mouseup(function(){
+  dragging=false;
+  //console.log(dragging);
+});
+
 $('.button').mouseenter(function(){
-  console.log('hover');
-  $(this).animate({"bottom":"+=10px"},200,function(){});
+  if (dragging==false){
+    //console.log('mouse enter');
+  $(this).animate({"top":"-=10px"},200,function(){});}
 });
 
 $('.button').mouseleave(function(){
-  console.log('hover');
-  $(this).animate({"bottom":"-=10px"},200,function(){});
+  if (dragging==false){
+  //console.log('mouse leave');
+  $(this).animate({"top":"+=10px"},200,function(){});
+}
 });
 
 /**-------------------------------------------------------------------------**/
