@@ -61,6 +61,17 @@ $('#myModal').on('hidden.bs.modal', function () {
   $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
 });
+/**-------------------------------------------------------------------------**/
+//Levitation hover
+$('.button').mouseenter(function(){
+  console.log('hover');
+  $(this).animate({"bottom":"+=10px"},200,function(){});
+});
+
+$('.button').mouseleave(function(){
+  console.log('hover');
+  $(this).animate({"bottom":"-=10px"},200,function(){});
+});
 
 /**-------------------------------------------------------------------------**/
 //particles js setting
