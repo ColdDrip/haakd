@@ -131,10 +131,10 @@ $(document).ready(function(){
 					$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 				};
 			} else if(type="myorbs"){
-				for (var h=0;h<orb_data.length;h++) {
-					console.log(orb_data[h], my_shelf_spot[h]);
-					$("." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-					$("." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
+				for (h in orb_data) {
+					console.log(my_shelf_spot[orb_data.indexOf(h)], my_shelf_spot[h]);
+					$("." + my_shelf_spot[orb_data.indexOf(h)]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+					$("." + my_shelf_spot[orb_data.indexOf(h)]).css("background",emo_color[orb_data[h][1]][1]);
 				}
 			}
 		}
