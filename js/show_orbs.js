@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var maximum_id;
 	var number;
 
-var taken_orbs =[];
+	var taken_orbs =[];
 
 
 	//getting my recent dreams
@@ -81,7 +81,27 @@ var taken_orbs =[];
 		special();
 		colors(taken_orbs,"normal");
 		special();
+	}
 
+	//hover on orbs effect
+	$(".button").hover(function(){
+		var position = $(this).attr("class").split(' ')[1];
+		for (var x in taken_orbs) {
+			if (taken_orbs[x][0] == position) {
+				$(this).css("background-image", "url("+taken_orbs[x][2]+")");
+				$(this).css("background-size", "30px");
+			}
+		}
+		special();},
+		function() {
+			$(this).css("background-image", "");
+			colors(taken_orbs,"normal");
+			colors(my_dreams_data,"myorbs");
+			special();
+
+		});
+
+		//special orb
 		function special() {
 			for (var b in taken_orbs) {
 				if (taken_orbs[b][3] == maximum_id) {
@@ -93,24 +113,6 @@ var taken_orbs =[];
 			}
 		}
 
-		}
-
-		$(".button").hover(function(){
-			var position = $(this).attr("class").split(' ')[1];
-			for (var x in taken_orbs) {
-				if (taken_orbs[x][0] == position) {
-					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
-					$(this).css("background-size", "30px");
-				}
-			}
-			special();},
-			function() {
-				$(this).css("background-image", "");
-				colors(taken_orbs,"normal");
-				colors(my_dreams_data,"myorbs");
-				special();
-
-			});
 		//color function
 		function colors(orb_data,type) {
 
