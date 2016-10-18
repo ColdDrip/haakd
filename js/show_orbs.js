@@ -80,7 +80,7 @@ colors(my_dreams_data);
 			$("."+taken_orbs[j][0]).attr("onclick","");
 		}
 				special();
-				colors(orbs);
+				colors(taken_orbs);
 				special();
 
 function special() {
@@ -107,14 +107,14 @@ $(".button").hover(function(){
 special();},
 function() {
 $(this).css("background-image", "");
-colors(orbs);
+colors(taken_orbs);
 special();
 
 });
 
 
 				}
-				function colors(orb_data) {
+				function colors(orb_data,type) {
 
 					var emo_color =
 					{
@@ -124,12 +124,21 @@ special();
 						"Fear":["0px 0px 30px #ddb4ff","radial-gradient(ellipse at center, #F5F2FF 0%, #E6DCFF 40%,#CDBAFF 65%, #C3ABFF 100%)"],
 						"Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
 						"Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
-						"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"]
+						"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"],
+						"Dreamtime":["0px 0px 30px #000000","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#000000 65%, #000000 100%)"]
 					}
+					if (type="normal"){
 					for (h in orb_data) {
 						console.log(orb_data);
-						$("#" + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-						$("#" + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
+						$("." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+						$("." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 					}
+				} else if(type="myorbs"){
+					for (h in orb_data) {
+						console.log(orb_data);
+						$("." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+						$("." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
+					}
+				}
 				}
 		});
