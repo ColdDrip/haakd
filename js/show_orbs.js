@@ -130,14 +130,14 @@ special();
 					if (type="normal"){
 					for (h in orb_data) {
 						console.log(orb_data);
-						$("." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-						$("." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
+						$(".button." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+						$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 					}
 				} else if(type="myorbs"){
 					for (h in orb_data) {
 						console.log(orb_data);
-						$("." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-						$("." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
+						$(".button." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+						$(".button." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
 					}
 				}
 				}
