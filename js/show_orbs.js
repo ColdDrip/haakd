@@ -13,7 +13,7 @@ $.get('../lib/get_my_dreams.php',{function(data,status){
 	if (status=="success"){
 		my_dreams_data=JSON.parse(data,",");
 
-		for (var i=0; i<my_dreams_data.lenth;i++){
+		for (var i=0; i<my_dreams_data.length;i++){
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
 			console.log(my_dreams_data[i][0]);
 		}
