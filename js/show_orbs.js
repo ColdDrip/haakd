@@ -11,6 +11,7 @@ var my_shelf_spot = ['my1','my2','my3','my4','my5','my6']
 
 $.get('../lib/get_my_dreams.php',{function(data){
 		my_dreams_data=JSON.parse(data,",");
+		console.log(my_dreams_data);
 		for (var i=0; i<my_dreams_data.length;i++){
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
 			console.log(my_dreams_data[i][0]);
