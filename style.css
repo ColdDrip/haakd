@@ -72,9 +72,7 @@ textarea,input,a{
   outline:none;
 }
 
-.testing{
-  background: green;
-}
+
 .margin-top{
   margin-top:5%;
 }
@@ -232,7 +230,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   width: 100%;
   position: relative;
   margin-top: -15%;
-  z-index: 1000;
+  z-index: 900;
   cursor:default;
 }
 
@@ -354,6 +352,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*--------------------Debug classes---------------------*/
 .debug{background-color: white;}
 .debug2{background-color: green;}
+.debug3{background: blue;}
 
 /*------------------------Hidden------------------*/
 .hidden{display:none;}
