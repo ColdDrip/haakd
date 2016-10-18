@@ -15,7 +15,7 @@ $.get('../lib/get_my_dreams.php',{function(data,status){
 
 		for (var i=0; i<my_dreams_data.lenth;i++){
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
-			console.log(str(my_dreams_data[i][0]));
+			console.log(my_dreams_data[i][0]);
 		}
 	}
 }
