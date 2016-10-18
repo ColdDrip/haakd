@@ -128,7 +128,7 @@ $(document).ready(function(){
 				"Dreamtime":["0px 0px 30px #000000","linear-gradient(
 			      rgba(0, 0, 0, 0.3),
 			      rgba(0, 0, 0, 0.3)
-			    ),url('abstract2.jpg');"]
+			    ),url('abstract2.jpg')"]
 			}
 			if (type="normal"){
 				for (h in orb_data) {
