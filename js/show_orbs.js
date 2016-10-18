@@ -19,6 +19,8 @@ jQuery(document).ready(function($){
 			$("."+ my_shelf_spot[i]).attr("onclick","");
 		}
 	});
+	colors(my_dreams_data,"myorbs");
+	console.log("last");
 	//colors(my_dreams_data,"myorbs");
 
 	//getting the dream data from the php file
@@ -106,36 +108,37 @@ jQuery(document).ready(function($){
 				special();
 
 			});
-			//color function
+		}
 
-			function colors(orb_data,type) {
+		//color function
+		function colors(orb_data,type) {
 
-				var emo_color =
-				{
-					"Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
-					"Surprise":["0px 0px 30px #66F1FB","radial-gradient(ellipse at center, #E3FCFE 0%, #B9F8FD 40%,#8FF4FC 65%, #66F1FB 100%)"],
-					"Anger":["0px 0px 30px #ffc4c4","radial-gradient(ellipse at center, #FFF0F1 0%, #FFDBDE 40%,#FFB1B7 65%, #FF959C 100%)"],
-					"Fear":["0px 0px 30px #ddb4ff","radial-gradient(ellipse at center, #F5F2FF 0%, #E6DCFF 40%,#CDBAFF 65%, #C3ABFF 100%)"],
-					"Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
-					"Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
-					"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"],
-					"Dreamtime":["0px 0px 30px #000000","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#000000 65%, #000000 100%)"]
-				}
-				if (type="normal"){
-					for (h in orb_data) {
-						$(".button." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-						$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
-					};
-				} else if(type="myorbs"){
-					for (h in orb_data) {
-						console.log(orb_data[h], my_shelf_spot[h]);
-						$(".button#" + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-						$(".button#" + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
-					}
+			var emo_color =
+			{
+				"Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
+				"Surprise":["0px 0px 30px #66F1FB","radial-gradient(ellipse at center, #E3FCFE 0%, #B9F8FD 40%,#8FF4FC 65%, #66F1FB 100%)"],
+				"Anger":["0px 0px 30px #ffc4c4","radial-gradient(ellipse at center, #FFF0F1 0%, #FFDBDE 40%,#FFB1B7 65%, #FF959C 100%)"],
+				"Fear":["0px 0px 30px #ddb4ff","radial-gradient(ellipse at center, #F5F2FF 0%, #E6DCFF 40%,#CDBAFF 65%, #C3ABFF 100%)"],
+				"Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
+				"Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
+				"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"],
+				"Dreamtime":["0px 0px 30px #000000","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#000000 65%, #000000 100%)"]
+			}
+			if (type="normal"){
+				for (h in orb_data) {
+					$(".button." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+					$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
+				};
+			} else if(type="myorbs"){
+				for (h in orb_data) {
+					console.log(orb_data[h], my_shelf_spot[h]);
+					$(".button#" + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+					$(".button#" + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
 				}
 			}
-
 		}
-		colors(my_dreams_data,"myorbs");
-		console.log("last");
+
+
+
+
 	});
