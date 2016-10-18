@@ -18,9 +18,10 @@ jQuery(document).ready(function($){
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
 		}
+		colors(my_dreams_data,"myorbs");
+		console.log("last");
 	});
-	colors(my_dreams_data,"myorbs");
-	console.log("last");
+
 	//colors(my_dreams_data,"myorbs");
 
 	//getting the dream data from the php file
