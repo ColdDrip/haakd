@@ -1,4 +1,3 @@
-//document.getElementById('picture_stuff').style.display = "none"
 
 $(document).ready(function(){
   $("#user_dream_orb").fadeIn(1000);

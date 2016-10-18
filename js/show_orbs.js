@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(document).ready(function(){
 	var orbs = [];
 	var maximum_id;
 	var number;
@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
-		}
+		};
 		colors(my_dreams_data,"myorbs");
 		console.log("last");
 	});
@@ -133,8 +133,8 @@ jQuery(document).ready(function($){
 			} else if(type="myorbs"){
 				for (h in orb_data) {
 					console.log(orb_data[h], my_shelf_spot[h]);
-					$(".button#" + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-					$(".button#" + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
+					$(".button." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+					$(".button." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
 				}
 			}
 		}
