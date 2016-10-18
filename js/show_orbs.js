@@ -19,7 +19,7 @@ $.get("../lib/get_my_dreams.php",function(data){
 			$("."+ my_shelf_spot[i]).attr("onclick","");
 
 
-			console.log(my_dreams_data[i][0]);
+			console.log(my_dreams_data);
 }
 });
 colors(my_dreams_data);
