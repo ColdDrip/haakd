@@ -114,7 +114,7 @@ special();
 
 
 				}
-				colors(my_dreams_data,"normal");
+				colors(my_dreams_data,"myorbs");
 
 				function colors(orb_data,type) {
 
