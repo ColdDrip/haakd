@@ -1,4 +1,3 @@
-//document.getElementById('picture_stuff').style.display = "none"
 
 $(document).ready(function(){
   $("#user_dream_orb").fadeIn(1000);
@@ -20,6 +19,8 @@ $(document).ready(function(){
   var Image_Path_2;
   var finished_orb=false;
 
+  //Set focus to textarea
+  $("#Story").focus();
   //store story when click next
   $("#newDreamSubmit").click(function(){
     $("#newDreamSubmit").fadeOut(1000)
@@ -36,6 +37,29 @@ $(document).ready(function(){
     //show pensieve
     $(".pensieve_add_dream").fadeIn(2000);
   });
+
+  //change orb color
+
+
+  $("#Emotion").change(
+function(){
+      var emo_color =
+      {
+          "Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
+          "Surprise":["0px 0px 30px #66F1FB","radial-gradient(ellipse at center, #E3FCFE 0%, #B9F8FD 40%,#8FF4FC 65%, #66F1FB 100%)"],
+          "Anger":["0px 0px 30px #ffc4c4","radial-gradient(ellipse at center, #FFF0F1 0%, #FFDBDE 40%,#FFB1B7 65%, #FF959C 100%)"],
+          "Fear":["0px 0px 30px #ddb4ff","radial-gradient(ellipse at center, #F5F2FF 0%, #E6DCFF 40%,#CDBAFF 65%, #C3ABFF 100%)"],
+          "Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
+          "Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
+          "Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"]
+        }
+        $("#Story").css("background",emo_color[$("#Emotion option:selected").val()][1]);
+        $("#Story").css("box-shadow",emo_color[$("#Emotion option:selected").val()][0]);
+        $("#Story").css("color","#0f0f0f");
+
+
+    }
+  );
 
 
   //When clicking the search image button

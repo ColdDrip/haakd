@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_row($result);
 $orbID = $row[0];
 
-$sql = "SELECT `orbID`, `Story`, `Emotion`, `Image_Path_1`, `Image_Path_2` FROM `Orb` ORDER BY `orbID` DESC LIMIT 6";
+$sql = "SELECT `orbID`, `Emotion`,`Story`, `Image_Path_1`, `Image_Path_2` FROM `Orb` ORDER BY `orbID` DESC LIMIT 6";
 
 $result = mysqli_query($conn, $sql);
 $all = mysqli_fetch_all($result);
