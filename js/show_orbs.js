@@ -125,7 +125,10 @@ $(document).ready(function(){
 				"Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
 				"Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
 				"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"],
-				"Dreamtime":["0px 0px 30px #000000","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#000000 65%, #000000 100%)"]
+				"Dreamtime":["0px 0px 30px #000000","linear-gradient(
+			      rgba(0, 0, 0, 0.3),
+			      rgba(0, 0, 0, 0.3)
+			    ),url('abstract2.jpg');"]
 			}
 			if (type="normal"){
 				for (h in orb_data) {
