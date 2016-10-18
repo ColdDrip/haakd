@@ -126,7 +126,7 @@ special();
 						"Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
 						"Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"]
 					}
-					for (var h in orb_data) {
+					for (var h=0; h<orb_data.length;h++) {
 						console.log(orb_data[h][0]);
 						$("#" + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
 						$("#" + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
