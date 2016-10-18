@@ -17,12 +17,9 @@ $.get("../lib/get_my_dreams.php",function(data){
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
-
-
-			console.log(my_dreams_data);
 }
 });
-colors(my_dreams_data,"myorbs");
+//colors(my_dreams_data,"myorbs");
 //getting the dream data from the php file
     $.ajax({
         type: "GET",
@@ -49,8 +46,6 @@ colors(my_dreams_data,"myorbs");
 						console.log("error:"+err);
 				}
 		});
-
-		console.log("trial");
 
 		function populate(orbs) {
 		var taken_orbs = [];
@@ -84,7 +79,6 @@ colors(my_dreams_data,"myorbs");
 				special();
 
 function special() {
-	console.log("running");
 				for (var b in taken_orbs) {
 					if (taken_orbs[b][3] == maximum_id) {
 						console.log("the array id", taken_orbs[b][3]);
@@ -131,15 +125,14 @@ special();
 					}
 					if (type="normal"){
 						for (h in orb_data) {
-							console.log(orb_data[h]);
 							$(".button." + orb_data[h][0]).css("box-shadow", emo_color[orb_data[h][1]][0]);
 							$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 						};
 					} else if(type="myorbs"){
 						for (h in orb_data) {
-							console.log(orb_data[h]);
-							$(".button." + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-							$(".button." + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
+							console.log(orb_data[h], my_shelf_spot[h]);
+							$(".button#" + my_shelf_spot[h]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+							$(".button#" + my_shelf_spot[h]).css("background",emo_color[orb_data[h][1]][1]);
 						}
 					}
 				}
