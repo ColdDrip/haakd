@@ -17,7 +17,7 @@ $(document).ready(function(){
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
-		};
+		}
 		colors(my_dreams_data,"myorbs");
 		console.log("last");
 	});
@@ -131,10 +131,10 @@ $(document).ready(function(){
 					$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 				};
 			} else if(type="myorbs"){
-				for (h in orb_data) {
-					console.log(my_shelf_spot[orb_data.indexOf(h)], my_shelf_spot[h]);
-					$("." + my_shelf_spot[orb_data.indexOf(h)]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-					$("." + my_shelf_spot[orb_data.indexOf(h)]).css("background",emo_color[orb_data[h][1]][1]);
+				for (k in orb_data) {
+					console.log(my_shelf_spot[k], my_shelf_spot[h]);
+					$("." + my_shelf_spot[k]).css("box-shadow", emo_color[orb_data[h][1]][0]);
+					$("." + my_shelf_spot[k]).css("background",emo_color[orb_data[h][1]][1]);
 				}
 			}
 		}
