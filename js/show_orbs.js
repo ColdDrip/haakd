@@ -22,7 +22,7 @@ $.get("../lib/get_my_dreams.php",function(data){
 			console.log(my_dreams_data);
 }
 });
-colors(my_dreams_data);
+colors(my_dreams_data,"myorbs");
 //getting the dream data from the php file
     $.ajax({
         type: "GET",
@@ -80,7 +80,7 @@ colors(my_dreams_data);
 			$("."+taken_orbs[j][0]).attr("onclick","");
 		}
 				special();
-				colors(taken_orbs);
+				colors(taken_orbs,"normal");
 				special();
 
 function special() {
@@ -107,7 +107,7 @@ $(".button").hover(function(){
 special();},
 function() {
 $(this).css("background-image", "");
-colors(taken_orbs);
+colors(taken_orbs,"normal");
 special();
 
 });
