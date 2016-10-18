@@ -3,6 +3,23 @@ jQuery(document).ready(function($){
 	var maximum_id;
 	var number;
 
+
+
+//getting my recent dreams
+var my_dreams_data;
+var my_shelf_spot = ['my1','my2','my3','my4','my5','my6']
+
+$.get('../lib/get_my_dreams.php',{function(data,status){
+	if (status=="success"){
+		my_dreams_data=JSON.parse(data,",");
+
+		for (var i=0; i<my_dreams_data.lenth;i++){
+			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
+		}
+	}
+}
+});
+
 //getting the dream data from the php file
     $.ajax({
         type: "GET",
@@ -47,8 +64,6 @@ jQuery(document).ready(function($){
 			 //console.log(taken_orbs.includes(shelf_spot));
 			$("." + shelf_spot).attr("id", orbs[i][0]);
 			//console.log(orbs);
-
-			//orbs_map.push([i,orbs[i][0]]);
 
 		}
 		//console.log("orbs map",orbs_map);

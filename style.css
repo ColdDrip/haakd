@@ -15,10 +15,9 @@
 #particles-js2{ position:absolute; width: 100%; height: 100%; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 /* Navbar*/
-.navbar{
-  margin: 50px;
+#dreamer{
+  margin:50px;
 }
-
 #dreamer a{
   font-size: 2em;
   color: rgba(255,255,255,1);
