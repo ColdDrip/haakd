@@ -16,14 +16,14 @@ $(document).ready(function(){
 	$.get("../lib/get_my_dreams.php",function(data){
 		my_dreams_data = JSON.parse(data,",");
 		for (i in my_dreams_data){
+			my_dreams_dic[my_shelf_spot[i]] = [my_dreams_data[i][1],my_dreams_data[i][1],my_dreams_data[i][2],my_dreams_data[i][3],my_dreams_data[i][4]]
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
 
-			my_dreams_dic[my_dreams_data[i][0]] = [my_dreams_data[i][1],my_dreams_data[i][2],my_dreams_data[i][3],my_dreams_data[i][4]]
 		}
-		colors(my_dreams_data,"myorbs");
+		colors(my_dreams_dic,"myorbs");
 		console.log(my_dreams_dic);
 	});
 
@@ -189,10 +189,10 @@ $(document).ready(function(){
 					$(".button." + orb_data[h][0]).css("background",emo_color[orb_data[h][1]][1]);
 				};
 			} else if(type="myorbs"){
-				for (k in orb_data) {
-					console.log(my_shelf_spot[k]);
-					$("." + my_shelf_spot[k]).css("box-shadow", emo_color[orb_data[k][1]][0]);
-					$("." + my_shelf_spot[k]).css("background",emo_color[orb_data[k][1]][1]);
+				for (k in my_shelf_spot) {
+					console.log(k);
+					$("." + k).css("box-shadow", emo_color[orb_data[k][1]][0]);
+					$("." + k).css("background",emo_color[orb_data[k][1]][1]);
 				}
 			}
 		}
