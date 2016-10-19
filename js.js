@@ -17,8 +17,8 @@ var dragging = false;
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
     var draggablespot =$(ui.draggable).attr("class").split(' ')[1];
-    console.log(draggableId,draggablespot);
-    $(this).css("background",$(".button."+draggablespot).css("background")[0]);
+    console.log(draggableId,draggablespot, $(".button."+draggablespot).css("background")[0]);
+    $(".chute").css("background",$(".button."+draggablespot).css("background")[0]);
     // $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
