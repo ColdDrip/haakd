@@ -62,8 +62,11 @@ var dragging = false;
 //On modal close
 $('#myModal').on('hidden.bs.modal', function () {
   //revert orb to original position
-  $(".button."+draggablespot).animate({"opacity":"1",'left': $(".button").data('originalLeft'),
-  'top': $(".button").data('originalTop')},200);
+  $(".button."+draggablespot).animate({
+    "opacity":"1",
+    "left": $(".button").data('originalLeft'),
+    "top": $(".button").data('originalTop')},
+    slow);
   // $(".button").animate({
   //   'left': $(".button").data('originalLeft'),
   //   'top': $(".button").data('originalTop')
