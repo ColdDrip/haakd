@@ -327,7 +327,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   z-index: 10;
   position:fixed;
   border:1px dashed white;
-  background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: white;
+  /*background: linear-gradient(to right,  rgba(50,50,50,0.7) 0%,rgba(150,150,150,0.7) 89%,rgba(150,150,150,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
+}
+
+.pensieve{
+  position:fixed;
+  z-index:2000;
+  bottom:-30px;
+  height:200px;
 }
 
 
