@@ -5,8 +5,8 @@ $(document).ready(function(){
 var dragging = false;
   //initialise draggable orb
   $(".button").draggable({revert:"invalid"});
-  $(".button").draggable({snap:".chute"});
-  $(".button").draggable("option","snapMode","inner");
+  // $(".button").draggable({snap:".chute"});
+  // $(".button").draggable("option","snapMode","inner");
   $(".button").data({
     'originalLeft': $(".button").css('left'),
     'originalTop': $(".button").css('top')
@@ -23,7 +23,13 @@ var dragging = false;
     $(".chute").css("background",$(".button."+draggablespot).css("background"));
     // $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
-    $(".button."+draggablespot).animate({"opacity":"0"},100);
+    // $(".button."+draggablespot).animate({"opacity":"0"},100);
+    $(".button."+draggablespot).position({
+      my: "center",
+      at: "center",
+      of: ".chute"  
+    });
+
     $('.dragtext').animate({"opacity":"0"},200);
 
 
