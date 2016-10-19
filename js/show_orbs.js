@@ -24,7 +24,7 @@ $(document).ready(function(){
 			my_dreams_dic[my_dreams_data[i][0]] = [my_dreams_data[i][1],my_dreams_data[i][2],my_dreams_data[i][3],my_dreams_data[i][4]]
 		}
 		colors(my_dreams_data,"myorbs");
-		console.log("last");
+		console.log(my_dreams_dic);
 	});
 
 	//colors(my_dreams_data,"myorbs");
@@ -113,13 +113,13 @@ $(document).ready(function(){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
 					$(this).css("background-size", "30px");
 				}
-				for (var y in my_shelf_spot){
-					if(position==y){
-
-					console.log($("."+y).attr("id"));
-					$("."+y).css({"background-image":"url("+my_dreams_dic[position.attr("id")][3]+")",
-				"background-size":"30px"});
-				}
+				// for showing my dreams background
+				// for (var y in my_shelf_spot){
+				// 	if(position==y){
+				// 	console.log($("."+y).attr("id"));
+				// 	$("."+y).css({"background-image":"url("+my_dreams_dic[position.attr("id")][3]+")",
+				// "background-size":"30px"});
+				// }
 			}
 			}
 		}
