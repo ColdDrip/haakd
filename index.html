@@ -31,15 +31,18 @@
 			<li role="presentation"><a href="http://deco1800-pg6.uqcloud.net/">Home</a></li>
       <li role="presentation"><a href="orbs.html">Orbs</a></li>
 		  <li role="presentation"><a href="my_dreams.html">My Dreams</a></li>
-		  <li role="presentation"><a href="about.html">About</a></li>
-		  <li role="presentation"><a href="how_it_works.html">How It Works</a></li>
-		  <li role="presentation"><a href="dreamtime.html">Dreamtime</a></li>
+		  <li role="presentation"><a id="about1" href="#">About</a></li>
+		  <li role="presentation"><a id="how_it_works1" href="#">How It Works</a></li>
+		  <li role="presentation"><a id="dreamtime1" href="#">Dreamtime</a></li>
 		</ul>
 
-	</nav>
+<!-- <button id="about" onclick="about()">About</button>
+<button id="how_it_works" onclick="works()">How It Works</button>
+<button id="dreamtime" onclick="dreamtime()">Dreamtime</button> -->
+
 </header>
 
-<div class="modal custom fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal custom fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog " role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -47,8 +50,101 @@
         <h4 class="modal-title" id="myModalLabel">About</h4>
       </div>
       <div class="modal-body">
-      <p>About dreamer...</p>
+        <p>Dreamer is web-based application created by Team HAAKD as part of the course DECO7180 Design Computing Studio 1 - Interactive Technology. The application enables users to share and explore dreams in a predominantly visual manner through the incorporation of artwork from Trove, a database maintained by the National Library of Australia.</p>
 
+        <p>We were inspired to create Dreamer after recognizing the mismatch between the ways in which dreams are portrayed in film and media and the ways in which dream-related applications are designed. In film and literature, dreams are often presented in very magical ways …yet most dream-related web applications present dreams in rather boring ways. These websites look more like pinboards and forums. While they may make dream sharing and dream exploration easy and convenient, they can be quite bland both in terms of visual design and interactions. In addition to this, the photos these websites utilize do not add any additional meaning to dreams and are typically overly literal. With Dreamer, we aim to change up the experience of sharing and exploring dreams on a web-based platform. We do this by purposefully connecting Trove artwork to users’ dreams to add new dimensions to these dreams. This provides Dreamer users with with a more visually rich experience that augments their own content.</p>
+
+        <p>Dreamer’s visual design has largely been inspired by the Pixar animated movie Inside Out, J.K. Rowling’s Harry Potter series, and the website I Remember. The application draws upon dream representations in film in media in order to construct a magical user experience. The employment of exploratory navigation is intended to make users feel as if they are immersed within an actual setting with shelves of glowing orbs, freely exploring dreams like one might explore books within a library.</p>
+
+        <p>In “Art, dreams and active imagination: A post-Jungian approach to transference and the image,” Joy Schaverien writes, “[D]reams ... are ultimately elusive, transient and can only be communicated if translated into the shared medium of spoken language. There is no public manifestation of an imagined event. However visualizations and dreams can sometimes be conveyed in pictures and, unlike mental imagery or dreams, art objects have a real, concrete, existence in the public arena. A picture is an object offered for the shared gaze and therefore it may be a bridge between inner and outer, between private and public experience.” Dreamer augments users’ dream descriptions by utilizing Trove’s artwork. Since, as Schaverien states, artwork has a “real, concrete, existence,” we believe that offering users complimentary artwork can allow for more meaning-making of rather “elusive” content.</p>
+
+        <p>With Dreamer, we hope to stimulate creativity amongst our audience by creating an alluring and immersive user experience through unique interactions and aesthetic appeal augmented by the wealth of artwork present within the Trove library.</p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal custom fade" id="how_it_works" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">How It Works</h4>
+      </div>
+      <div class="modal-body">
+        <h3>Defining Dreamer's Core Aspects</h3>
+        <p>Dreamer has three core aspects: orbs, the Dream Library, and the Pensieve.</p>
+
+        <!-- <insert orb graphic><insert Dream Library graphic><insert Pensieve graphic> -->
+
+        <p>Each orb represents a unique dream created by a Dreamer user. Any dream that you create on Dreamer will manifest in the form of an orb.</p>
+
+        <p>The Dream Library, located at Dreamer’s homepage, is where all user-created dreams are stored as orbs on shelves.</p>
+
+        <p>The Pensieve serves as a device for viewing dreams within the Dream Library and saving dreams to the Dream Library. Its name is a reference to the object of the same name in the Harry Potter series, which enabled non-participants to view others memories from a third-person perspective. To view dreams and publish your own created dreams, you must drag an orb to the Pensieve.</p>
+
+        <h3>How to Use Dreamer</h3>
+        <p>Dreamer can be used for two functions: adding dreams and exploring dreams.</p>
+
+        <!-- <insert share dreams icon> <insert explore dreams icon> -->
+
+        <h4>Adding Dreams</h4>
+        <p>To add a dream, press the “add a dream” icon featured in the top right corner of the application. You will then be prompted to add a descriptive narrative of your dream, select the emotion you most associate with the dream, and choose two relevant images of artwork (sourced from Trove) based on your own selected keyword(s). Once these tasks have been completed, drag the orb to the Pensieve. This will send the orb to the Dream Library where it will emit a brighter glow than other orbs to indicate its position to you. Your dream will now be viewable by other Dreamer users.</p>
+
+        <!-- <insert add a dream graphic> -->
+
+        <h4>Exploring Dreams</h4>
+        <p>Explore the dream library by pressing your left and right arrow keys to peruse all shelves. Orbs will appear in the color associated with the dream they represent. Special orbs featuring Australian Aboriginal artwork and Dreamtime stories will appear in gold. Hovering over each orb will give you a preview of one of the images of artwork associated with the dream the orb represents.</p>
+
+        <p>To view a dream, drag any orb on the shelves to the Pensieve.</p>
+
+        <!-- <insert view a dream graphic> -->
+
+        <p>To view your own dreams, visit the My Dreams page and drag any orb on the shelves to the Pensieve.</p>
+
+        <!-- <insert view your own dream graphic> -->
+
+        <p>The Pensieve will make visible all content associated with the dream the orb represents.</p>
+
+        <h3>Use of Dreamer</h3>
+        <p>Montague Ullman, notable psychoanalyst and founder of the Dream Laboratory, posits that “dream sharing bring[s] about rationality and connectedness in a highly irrational and disconnected world.”</p>
+
+        <!-- <insert connectedness graphic> -->
+
+        <p>Dreamer is designed for people desiring to share their dreams and be inspired by the dreams of others. It can also serve as a unique method of exploring artwork for art enthusiasts.</p>
+
+        <p>In "Portents or Confessions: Authoritative Readings of a Dream Text,” Robin Wagner-Pacifici and Harold Bershady illuminate the ability of dream sharing to serve as a mechanism for fostering solidarity. They offer the perspective that dreams that are shared can in some way be viewed as “gifts.” From this perspective, Dreamer can be seen as platform for encouraging users to be both givers and receivers.</p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal custom fade" id="dreamtime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Dreamtime</h4>
+      </div>
+      <div class="modal-body">
+        <!-- References from which the text was taken directly from:
+        https://en.wikipedia.org/wiki/Dreamtime
+        https://en.wikipedia.org/wiki/Dreaming_(Australian_Aboriginal_art) -->
+        <p>In Australian Aboriginal art, a Dreaming is a totemistic design or artwork, which can be owned by a tribal group or individual.</p>
+
+        <p>A Dreaming is a story owned by different tribes and their members that explains the creation of life, people and animals. A Dreaming story (e.g. Kangaroo Dreaming, or Shark Dreaming, or Honey Ant Dreaming) is passed on protectively as it is owned and is a form of intellectual property. In the modern context, an Aborigine cannot relate, or paint someone else's dreaming or creation story without prior permission of the Dreaming's owner. Someone's dreaming story must be respected, as the individual holds the knowledge to that Dreaming story. Certain behavioural constraints are associated with dreaming ownership; for instance, if a Dreaming is painted without authorisation, such action can meet with accusations of "stealing" someone else's Dreaming.</p>
+
+        <p>Dreaming represents many Aboriginal concepts of "time out of time,” or "everywhen,” when the land was inhabited by ancestral figures, often of heroic proportions or with supernatural abilities.</p>
+
+        <p>The term "Dreaming" is based on the root of the term <em>altjira</em> (<em>alcheringa</em>) used by the Aranda people, although it has since been pointed out that the rendition is based on a mistranslation. Anthropologist William Edward Hanley Stanner introduced the derived term of "Dreamtime" in the 1970s.</p>
+
+        <p>Dreamtime is commonly used as a term for the animist creation narrative of indigenous Australians for a personal, or group, creation and for what may be understood as the "timeless time" of formative creation and perpetual creating. In addition, the term applies to places and localities on indigenous Australian traditional land (and throughout nontraditional Australia) where the uncreated creation spirits and totemic ancestors, or <em>genii loci</em>, reside.</p>
+
+        <p>In Dreamtime, an individual's entire ancestry exists as one, culminating in the idea that all worldly knowledge is accumulated through one's ancestors. Dreamtime laid down the patterns of life for the Aboriginal people.</p>
       </div>
       <div class="modal-footer">
       </div>
