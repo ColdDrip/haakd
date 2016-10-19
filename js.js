@@ -65,26 +65,6 @@ var dragging = false;
     }
   }
 });
-/**------------------------------------------------------------------------**/
-//On modal close
-$('#myModal').on('hidden.bs.modal', function () {
-  //revert orb to original position
-  $(".button").animate({
-    "opacity":"1",
-    "left": $(".button").data('originalLeft'),
-    "top": $(".button").data('originalTop')},
-    400);
-    $(".chute").css("background","");
-  // $(".button").animate({
-  //   'left': $(".button").data('originalLeft'),
-  //   'top': $(".button").data('originalTop')
-  // });
-
-  //reset view dream modal content
-  $('#myModal .modal-header').empty();
-  $('#myModal .modal-body').empty();
-});
-
 
 
 /*------------------------------------------------------*/
