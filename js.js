@@ -67,6 +67,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     "left": $(".button").data('originalLeft'),
     "top": $(".button").data('originalTop')},
     400);
+    $(".chute").css("background","");
   // $(".button").animate({
   //   'left': $(".button").data('originalLeft'),
   //   'top': $(".button").data('originalTop')
