@@ -19,7 +19,7 @@ var dragging = false;
     console.log(draggableId);
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
-    $('.dragtext').animate({"opacity":"0"},200,function(){});
+    $('.dragtext').animate({"opacity":"0"},200);
 
 
     //send orb id and get dream contents via ajax
