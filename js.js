@@ -62,16 +62,17 @@ var dragging = false;
 //On modal close
 $('#myModal').on('hidden.bs.modal', function () {
   //revert orb to original position
-  $(".button").animate({
-    'left': $(".button").data('originalLeft'),
-    'top': $(".button").data('originalTop')
-  });
+  $(".button."+draggablespot).animate({"opacity":"1",'left': $(".button").data('originalLeft'),
+  'top': $(".button").data('originalTop')},200);
+  // $(".button").animate({
+  //   'left': $(".button").data('originalLeft'),
+  //   'top': $(".button").data('originalTop')
+  // });
 
   $('.chute').removeClass('debug');
   //reset view dream modal content
   $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
-  $(".button."+draggablespot).animate({"opacity":"1"},100);
 });
 /**-------------------------------------------------------------------------**/
 //Levitation hover
