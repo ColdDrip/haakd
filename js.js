@@ -14,15 +14,13 @@ var dragging = false;
 
   /**------------------------------------------------------------------------**/
   //initialise droppable area for orbs -- "pensieve"
-  var temp_orb_spot;
   $(".chute").droppable({drop:function(event,ui){
-    temp_orb_spot = $(ui.draggable).attr("class")[1]);
     var draggableId = $(ui.draggable).attr("id");
     console.log(draggableId);
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
-    $("."+temp_orb_spot).animate({"opacity":"0"},200);
-    // $(this).css("background")=$("."+temp_orb_spot).css("background")[0];
+    $("."+$(ui.draggable).attr("class")[1])animate({"opacity":"0"},200);
+    $(this).css("background")=$(ui.draggable).css("background");
 
 
 
