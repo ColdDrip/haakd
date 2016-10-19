@@ -120,7 +120,7 @@ $(document).ready(function(){
 				// 	$("."+y).css({"background-image":"url("+my_dreams_dic[position.attr("id")][3]+")",
 				// "background-size":"30px"});
 				// }
-			}
+			//}
 			}
 		}
 	});
