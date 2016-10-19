@@ -89,41 +89,63 @@ $(document).ready(function(){
 
 	/**-------------------------------------------------------------------------**/
 	//Levitation hover
+	var dragging = false;
 	$('.button').mousedown(function(){
 	  dragging=true;
-	  //console.log(dragging);
+	  console.log(dragging);
 	});
 
 	$('.button').mouseup(function(){
 	  dragging=false;
-	  //console.log(dragging);
+	  console.log(dragging);
 	});
 
 	$('.button').mouseenter(function(){
 	  if (dragging==false){
-	    //console.log('mouse enter');
-	  $(this).animate({"top":"-=10px"},200,function(){});
-		var position = $(this).attr("class").split(' ')[1];
-		for (var x in taken_orbs) {
-			if (taken_orbs[x][0] == position) {
-				$(this).css("background-image", "url("+taken_orbs[x][2]+")");
-				$(this).css("background-size", "30px");
-				$('.dragtext').animate({"opacity":"1"},200,function(){});
+	    console.log('mouse enter');
+			$(this).animate({"top":"-=10px"},200,function(){});
+			var position = $(this).attr("class").split(' ')[1];
+			for (var x in taken_orbs) {
+				if (taken_orbs[x][0] == position){
+					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
+					$(this).css("background-size", "30px");
+					$('.dragtext').animate({"opacity":"1"},200,function(){});
+				}
 			}
 		}
-	}
 	});
 
 	$('.button').mouseleave(function(){
-	  if (dragging==false){
-	  //console.log('mouse leave');
-	  $(this).animate({"top":"+=10px"},200,function(){});
-	  $('.dragtext').animate({"opacity":"0"},200,function(){});
-		$(this).css("background-image", "");
-		colors(taken_orbs,"normal");
-		colors(my_dreams_data,"myorbs");
-		special();
-	}
+		if (dragging==false){
+			console.log('mouse leave');
+			$(this).animate({"top":"+=10px"},200,function(){});
+			$('.dragtext').animate({"opacity":"0"},200,function(){});
+			$(this).css("background-image", "");
+			colors(taken_orbs,"normal");
+			colors(my_dreams_data,"myorbs");
+			special();
+		}
+	});
+	/**-------------------------------------------------------------------------**/
+	/**------------------------------------------------------------------------**/
+	//On modal close
+	$('#myModal').on('hidden.bs.modal', function () {
+	  //revert orb to original position
+	  $(".button").animate({
+	    "opacity":"1",
+	    "left": $(".button").data('originalLeft'),
+	    "top": $(".button").data('originalTop')},
+	    400);
+	    $(".chute").css("background","");
+	  // $(".button").animate({
+	  //   'left': $(".button").data('originalLeft'),
+	  //   'top': $(".button").data('originalTop')
+	  // });
+		dragging=false;
+	  console.log(dragging);
+	  //reset view dream modal content
+	  $('#myModal .modal-header').empty();
+	  $('#myModal .modal-body').empty();
 	});
 
 		//special orb

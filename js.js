@@ -69,7 +69,7 @@ var dragging = false;
 //On modal close
 $('#myModal').on('hidden.bs.modal', function () {
   //revert orb to original position
-  $(".button."+draggablespot).animate({
+  $(".button").animate({
     "opacity":"1",
     "left": $(".button").data('originalLeft'),
     "top": $(".button").data('originalTop')},
@@ -80,37 +80,11 @@ $('#myModal').on('hidden.bs.modal', function () {
   //   'top': $(".button").data('originalTop')
   // });
 
-  $('.chute').removeClass('debug');
   //reset view dream modal content
   $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
 });
-/**-------------------------------------------------------------------------**/
-//Levitation hover
-$('.button').mousedown(function(){
-  dragging=true;
-  //console.log(dragging);
-});
 
-$('.button').mouseup(function(){
-  dragging=false;
-  //console.log(dragging);
-});
-
-$('.button').mouseenter(function(){
-  if (dragging==false){
-    //console.log('mouse enter');
-  $(this).animate({"top":"-=10px"},200,function(){});
-}
-});
-
-$('.button').mouseleave(function(){
-  if (dragging==false){
-  //console.log('mouse leave');
-  $(this).animate({"top":"+=10px"},200,function(){});
-  $('.dragtext').animate({"opacity":"0"},200,function(){});
-}
-});
 
 
 /*------------------------------------------------------*/
