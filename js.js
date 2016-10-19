@@ -25,7 +25,6 @@ var dragging = false;
     $('#myModal').modal({keyboard: false});
     // $(".button."+draggablespot).animate({"opacity":"0"},100);
 
-    $(".button."+draggablespot).animate({"height":"55px","width":"55px"});
     $(".button."+draggablespot).position({
       my: "center",
       at: "center",
