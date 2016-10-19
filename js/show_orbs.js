@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 	//getting my recent dreams
 	var my_dreams_data;
+	var my_dreams_dic={};
 	var my_shelf_spot = ['my1','my2','my3','my4','my5','my6']
 
 
@@ -16,10 +17,11 @@ $(document).ready(function(){
 		my_dreams_data = JSON.parse(data,",");
 		for (i in my_dreams_data){
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
-
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
+
+			my_dreams_dic[my_dreams_data[i][0]] = [my_dreams_data[i][1],my_dreams_data[i][2],my_dreams_data[i][3],my_dreams_data[i][4]]
 		}
 		colors(my_dreams_data,"myorbs");
 		console.log("last");
@@ -106,14 +108,16 @@ $(document).ready(function(){
 			$('.dragtext').animate({"opacity":"1"},200,function(){});
 			$(this).animate({"top":"-=10px"},200,function(){});
 			var position = $(this).attr("class").split(' ')[1];
-			$(this).css({"background-image":"url("+taken_orbs[position][2]+")",
-		"background-size":"30px"});
-			// for (var x in taken_orbs) {
-			// 	if (taken_orbs[x][0] == position){
-			// 		$(this).css("background-image", "url("+taken_orbs[x][2]+")");
-			// 		$(this).css("background-size", "30px");
-			// 	}
-			// }
+			for (var x in taken_orbs) {
+				if (taken_orbs[x][0] == position){
+					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
+					$(this).css("background-size", "30px");
+				}
+				for (var y in my_shelf_spot){
+					$(".button."+y).css({"background-image":"url("+my_dreams_dic[$(".button."+y).attr("id")][3]+")",
+				"background-size":"30px"});
+				}
+			}
 		}
 	});
 
