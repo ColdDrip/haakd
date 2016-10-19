@@ -22,7 +22,6 @@ var dragging = false;
     $('.dragtext').animate({"opacity":"0"},200);
 
 
-
     //send orb id and get dream contents via ajax
     $.post("../lib/view_dream.php",{orbID:draggableId},function(data,status){
       dream_data = JSON.parse(data, ",");
