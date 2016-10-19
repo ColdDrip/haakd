@@ -16,8 +16,9 @@ var dragging = false;
   //initialise droppable area for orbs -- "pensieve"
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
-    var draggablespot =$(ui.draggable).attr("class");
+    var draggablespot =$(ui.draggable).attr("class").split(' ')[1];
     console.log(draggableId,draggablespot);
+    $(this).css("background",$(".button."+draggablespt).css("background")[0]);
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
