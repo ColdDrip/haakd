@@ -19,6 +19,8 @@ var dragging = false;
     console.log(draggableId);
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
+    $('.dragtext').animate({"opacity":"0"},200,function(){});
+
 
     //send orb id and get dream contents via ajax
     $.post("../lib/view_dream.php",{orbID:draggableId},function(data,status){
