@@ -19,7 +19,7 @@ var dragging = false;
     var draggablespot =$(ui.draggable).attr("class").split(' ')[1];
     console.log(draggableId,draggablespot);
     $(this).css("background",$(".button."+draggablespot).css("background")[0]);
-    $(this).addClass("debug");
+    // $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
 
