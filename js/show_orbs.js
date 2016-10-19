@@ -10,6 +10,8 @@ $(document).ready(function(){
 	var my_dreams_data;
 	var my_shelf_spot = ['my1','my2','my3','my4','my5','my6']
 
+
+
 	$.get("../lib/get_my_dreams.php",function(data){
 		my_dreams_data = JSON.parse(data,",");
 		for (i in my_dreams_data){
@@ -90,6 +92,7 @@ $(document).ready(function(){
 			if (taken_orbs[x][0] == position) {
 				$(this).css("background-image", "url("+taken_orbs[x][2]+")");
 				$(this).css("background-size", "30px");
+				$('.dragtext').animate({"opacity":"1"},200,function(){});
 			}
 		}
 		special();},

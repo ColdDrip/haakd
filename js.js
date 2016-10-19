@@ -79,7 +79,6 @@ $('.button').mouseenter(function(){
   if (dragging==false){
     //console.log('mouse enter');
   $(this).animate({"top":"-=10px"},200,function(){});
-  $('.dragtext').animate({"opacity":"1"},200,function(){});
 }
 });
 
@@ -91,8 +90,10 @@ $('.button').mouseleave(function(){
 }
 });
 
+
 /*------------------------------------------------------*/
 //instruction hover
+
 $('.add_button').mouseenter(function(){
   $('.clicktoadd').animate({"opacity":"1"},200,function(){});
 });
