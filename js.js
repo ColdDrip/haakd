@@ -14,13 +14,16 @@ var dragging = false;
 
   /**------------------------------------------------------------------------**/
   //initialise droppable area for orbs -- "pensieve"
+
+  var draggablespot;
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
-    var draggablespot =$(ui.draggable).attr("class").split(' ')[1];
+     draggablespot =$(ui.draggable).attr("class").split(' ')[1];
     console.log(draggableId,draggablespot, $(".button."+draggablespot).css("background"));
     $(".chute").css("background",$(".button."+draggablespot).css("background"));
     // $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
+    $(".button."+draggablespot).animate({"opacity":"0"},100);
     $('.dragtext').animate({"opacity":"0"},200);
 
 
@@ -68,6 +71,7 @@ $('#myModal').on('hidden.bs.modal', function () {
   //reset view dream modal content
   $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
+  $(".button."+draggablespot).animate({"opacity":"1"},200);
 });
 /**-------------------------------------------------------------------------**/
 //Levitation hover
