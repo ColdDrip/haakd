@@ -71,7 +71,7 @@ $('#myModal').on('hidden.bs.modal', function () {
   //reset view dream modal content
   $('#myModal .modal-header').empty();
   $('#myModal .modal-body').empty();
-  $(".button."+draggablespot).animate({"opacity":"1"},200);
+  $(".button."+draggablespot).animate({"opacity":"1"},100);
 });
 /**-------------------------------------------------------------------------**/
 //Levitation hover
