@@ -126,9 +126,6 @@ $(document).ready(function(){
 	}
 	});
 
-	$(".button").hover(function(){
-
-
 		//special orb
 		function special() {
 			for (var b in taken_orbs) {
