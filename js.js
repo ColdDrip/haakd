@@ -17,10 +17,9 @@ var dragging = false;
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
     console.log(draggableId);
+    $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
-    $("."+$(ui.draggable).attr("class")[1])animate({"opacity":"0"},200);
-    $(this).css("background")=$(ui.draggable).css("background");
 
 
 
