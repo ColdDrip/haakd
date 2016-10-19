@@ -333,7 +333,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .pensieve{
   position:fixed;
-  z-index:2000;
+  z-index:1001;
   bottom:-30px;
   height:200px;
 }

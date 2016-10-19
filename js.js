@@ -17,9 +17,11 @@ var dragging = false;
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
     console.log(draggableId);
-    $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
+    $(ui.draggable).animate({"opacity":"0"},200);
+    $(this).css("background")=$(ui.draggable).css("background");
+
 
 
     //send orb id and get dream contents via ajax
