@@ -166,6 +166,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
     box-sizing: border-box;
+    opacity: 0;
 }
 
 .bottom-shelf-edge {
@@ -176,6 +177,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   z-index: 99;
   top: -25px;
     box-sizing: border-box;
+    opacity: 0;
+
 }
 
 .shelf-background {
@@ -185,6 +188,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   background: transparent;
   left: 25px;
     box-sizing: border-box;
+    opacity: 0;
+
 }
 
 .listed{
