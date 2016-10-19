@@ -160,6 +160,61 @@ $(document).ready(function(){
 			}
 		}
 
+		/**------------------------------------------------------------------------**/
+		//initialise droppable area for orbs -- "pensieve"
+
+		var draggablespot;
+		$(".chute").droppable({drop:function(event,ui){
+			var draggableId = $(ui.draggable).attr("id");
+			 draggablespot =$(ui.draggable).attr("class").split(' ')[1];
+			console.log(draggableId,draggablespot, $(".button."+draggablespot).css("background"));
+			// $(".chute").css("background",$(".button."+draggablespot).css("background"));
+			// $(this).addClass("debug");
+			$('#myModal').modal({keyboard: false});
+			// $(".button."+draggablespot).animate({"opacity":"0"},100);
+
+			$(".button."+draggablespot).position({
+				my: "center",
+				at: "center",
+				of: ".chute"
+			});
+
+			$('.dragtext').animate({"opacity":"0"},200);
+
+
+
+
+			//send orb id and get dream contents via ajax
+			$.post("../lib/view_dream.php",{orbID:draggableId},function(data,status){
+				dream_data = JSON.parse(data, ",");
+				orbID = dream_data[0];
+				Story = dream_data[1];
+				Emotion = dream_data[2];
+				Image_Path_1 = dream_data[3];
+				Image_Path_2 = dream_data[4];
+				display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2);
+			});
+			function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
+				var page_element = "";
+				var title = "";
+				title = "<p> Orb Number: #" + orbID + "</p>";
+				page_element += "<div>";
+				page_element += "<p>" + Story + "</p>";
+				page_element += "<p>" + Emotion + "</p>";
+				page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_1 + ">" + "</p>";
+				page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_2 + ">" + "</p>";
+				page_element += "</div>";
+
+				var title = $.parseHTML(title);
+				var html = $.parseHTML(page_element);
+				$('#myModal .modal-header').append(title);
+				$('#myModal .modal-body').append(html);
+
+			}
+		}
+	});
+
+
 		//color function
 		function colors(orb_data,type) {
 
