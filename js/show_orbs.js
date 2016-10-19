@@ -114,10 +114,13 @@ $(document).ready(function(){
 					$(this).css("background-size", "30px");
 				}
 				for (var y in my_shelf_spot){
-					console.log($(".button ."+y).attr("id"));
-					$(".button."+y).css({"background-image":"url("+my_dreams_dic[$(".button."+y).attr("id")][3]+")",
+					if(position==y){
+
+					console.log($("."+y).attr("id"));
+					$("."+y).css({"background-image":"url("+my_dreams_dic[position.attr("id")][3]+")",
 				"background-size":"30px"});
 				}
+			}
 			}
 		}
 	});
