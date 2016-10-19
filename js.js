@@ -87,29 +87,29 @@ $('#myModal').on('hidden.bs.modal', function () {
 });
 /**-------------------------------------------------------------------------**/
 //Levitation hover
-$('.button').mousedown(function(){
-  dragging=true;
-  //console.log(dragging);
-});
-
-$('.button').mouseup(function(){
-  dragging=false;
-  //console.log(dragging);
-});
+// $('.button').mousedown(function(){
+//   dragging=true;
+//   //console.log(dragging);
+// });
+//
+// $('.button').mouseup(function(){
+//   dragging=false;
+//   //console.log(dragging);
+// });
 
 $('.button').mouseenter(function(){
-  if (dragging==false){
+  // if (dragging==false){
     //console.log('mouse enter');
   $(this).animate({"top":"-=10px"},200,function(){});
-}
+// }
 });
 
 $('.button').mouseleave(function(){
-  if (dragging==false){
+  // if (dragging==false){
   //console.log('mouse leave');
   $(this).animate({"top":"+=10px"},200,function(){});
   $('.dragtext').animate({"opacity":"0"},200,function(){});
-}
+// }
 });
 
 
