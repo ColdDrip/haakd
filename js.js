@@ -22,7 +22,7 @@ var dragging = false;
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
     $("."+temp_orb_spot).animate({"opacity":"0"},200);
-    $(this).css("background")=$("."+temp_orb_spot).css("background");
+    $(this).css("background")=$("."+temp_orb_spot).css("background")[0];
 
 
 
