@@ -66,7 +66,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     "opacity":"1",
     "left": $(".button").data('originalLeft'),
     "top": $(".button").data('originalTop')},
-    slow);
+    400);
   // $(".button").animate({
   //   'left': $(".button").data('originalLeft'),
   //   'top': $(".button").data('originalTop')
