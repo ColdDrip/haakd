@@ -101,15 +101,15 @@ $(document).ready(function(){
 	});
 
 	$('.button').mouseenter(function(){
-	  if (dragging==false){
+	  if (dragging==false && $(this).attr("id")!=""){
 	    console.log('mouse enter');
+			$('.dragtext').animate({"opacity":"1"},200,function(){});
 			$(this).animate({"top":"-=10px"},200,function(){});
 			var position = $(this).attr("class").split(' ')[1];
 			for (var x in taken_orbs) {
 				if (taken_orbs[x][0] == position){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
 					$(this).css("background-size", "30px");
-					$('.dragtext').animate({"opacity":"1"},200,function(){});
 				}
 			}
 		}
