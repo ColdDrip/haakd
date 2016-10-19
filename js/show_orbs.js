@@ -191,8 +191,8 @@ $(document).ready(function(){
 			} else if(type="myorbs"){
 				for (k in my_shelf_spot) {
 					console.log(k);
-					$("." + k).css("box-shadow", emo_color[orb_data[k][1]][0]);
-					$("." + k).css("background",emo_color[orb_data[k][1]][1]);
+					$(".button." + k).css("box-shadow", emo_color[orb_data[k][1]][0]);
+					$(".button." + k).css("background",emo_color[orb_data[k][1]][1]);
 				}
 			}
 		}
