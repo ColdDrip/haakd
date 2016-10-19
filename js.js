@@ -16,10 +16,13 @@ var dragging = false;
   //initialise droppable area for orbs -- "pensieve"
   $(".chute").droppable({drop:function(event,ui){
     var draggableId = $(ui.draggable).attr("id");
-    console.log(draggableId);
+    var draggablespot =$(ui.draggable).attr("class")[0];
+    console.log(draggableId,draggablespot);
     $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     $('.dragtext').animate({"opacity":"0"},200);
+
+
 
 
     //send orb id and get dream contents via ajax
