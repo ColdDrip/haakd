@@ -86,7 +86,23 @@ $(document).ready(function(){
 	}
 
 	//hover on orbs effect
-	$(".button").hover(function(){
+
+	/**-------------------------------------------------------------------------**/
+	//Levitation hover
+	$('.button').mousedown(function(){
+	  dragging=true;
+	  //console.log(dragging);
+	});
+
+	$('.button').mouseup(function(){
+	  dragging=false;
+	  //console.log(dragging);
+	});
+
+	$('.button').mouseenter(function(){
+	  if (dragging==false){
+	    //console.log('mouse enter');
+	  $(this).animate({"top":"-=10px"},200,function(){});
 		var position = $(this).attr("class").split(' ')[1];
 		for (var x in taken_orbs) {
 			if (taken_orbs[x][0] == position) {
@@ -95,14 +111,23 @@ $(document).ready(function(){
 				$('.dragtext').animate({"opacity":"1"},200,function(){});
 			}
 		}
-		special();},
-		function() {
-			$(this).css("background-image", "");
-			colors(taken_orbs,"normal");
-			colors(my_dreams_data,"myorbs");
-			special();
+	}
+	});
 
-		});
+	$('.button').mouseleave(function(){
+	  if (dragging==false){
+	  //console.log('mouse leave');
+	  $(this).animate({"top":"+=10px"},200,function(){});
+	  $('.dragtext').animate({"opacity":"0"},200,function(){});
+		$(this).css("background-image", "");
+		colors(taken_orbs,"normal");
+		colors(my_dreams_data,"myorbs");
+		special();
+	}
+	});
+
+	$(".button").hover(function(){
+
 
 		//special orb
 		function special() {
