@@ -78,14 +78,51 @@ $('.button').mouseup(function(){
 $('.button').mouseenter(function(){
   if (dragging==false){
     //console.log('mouse enter');
-  $(this).animate({"top":"-=10px"},200,function(){});}
+  $(this).animate({"top":"-=10px"},200,function(){});
+  $('.dragtext').animate({"opacity":"1"},200,function(){});
+}
 });
 
 $('.button').mouseleave(function(){
   if (dragging==false){
   //console.log('mouse leave');
   $(this).animate({"top":"+=10px"},200,function(){});
+  $('.dragtext').animate({"opacity":"0"},200,function(){});
 }
+});
+
+/*------------------------------------------------------*/
+//instruction hover
+$('.add_button').mouseenter(function(){
+  $('.clicktoadd').animate({"opacity":"1"},200,function(){});
+});
+
+$('.add_button').mouseleave(function(){
+  $('.clicktoadd').animate({"opacity":"0"},200,function(){});
+});
+$('.control').mouseenter(function(){
+  $('.impact').animate({"opacity":"1"},200,function(){});
+});
+$('.control').mouseleave(function(){
+  $('.impact').animate({"opacity":"0"},200,function(){});
+});
+$('#searchTerm').mouseenter(function(){
+  $('.search-inst').animate({"opacity":"1"},200,function(){});
+});
+$('#searchTerm').mouseleave(function(){
+  $('.search-inst').animate({"opacity":"0"},200,function(){});
+});
+$('#changeImages1').mouseenter(function(){
+  $('.refresh-img1').animate({"opacity":"1"},200,function(){});
+});
+$('#changeImages1').mouseleave(function(){
+  $('.refresh-img1').animate({"opacity":"0"},200,function(){});
+});
+$('#changeImages2').mouseenter(function(){
+  $('.refresh-img2').animate({"opacity":"1"},200,function(){});
+});
+$('#changeImages2').mouseleave(function(){
+  $('.refresh-img2').animate({"opacity":"0"},200,function(){});
 });
 
 /**-------------------------------------------------------------------------**/

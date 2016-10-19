@@ -330,12 +330,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(50,50,50,0.7) 89%,rgba(60,60,60,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+/**Hover text**/
+.clicktoadd{
+  font-size: 1.3em;
+  color: white;
+  position:absolute;
+  margin: -20px 0px 0 150px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
+
+.dragtext{
+  font-size: 1.7em;
+  color: white;
+  position:absolute;
+  margin: -20px 0px 0 50px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
+
+.impact{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: -25px 0px 0 100px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity:0;
+}
+
+.search-inst{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: -40px 0px 0 0px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
+.refresh-img1{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: -340px 0px 0 -80px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
+.refresh-img2{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: -170px 0px 0 -80px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
 
 /**modal for view dream**/
 .modal-header, .modal-footer, .modal-body{
   background-color: black;
   color:white;
   height:auto;
+
 }
 
 .modal-backdrop{

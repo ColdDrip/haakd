@@ -61,6 +61,7 @@
           <!--Emotion Control-->
           <div class="col-md-4 emotion-control">
             <label for="Emotion">Emotion:</label>
+            <div class="control">
             <select name="Emotion" id="Emotion" >
               <option name="Not Sure" value="Not Sure">Not Sure</option>
               <option name="Joy" value="Joy">Joy</option>
@@ -70,6 +71,8 @@
               <option name="Sadness" value="Sadness">Sadness</option>
               <option name="Disgust" value="Disgust">Disgust</option>
             </select>
+            <p class="impact">Select emotional impact of the dream</p>
+            </div>
           </div>
           <!--Searching Trove Images-->
           <div id="image_section">
@@ -77,9 +80,10 @@
               <div class="row">
                 <div class="searchbox col-md-6 orb-margin">
                   <form action="#" id="searchTrove">
-                    <input id="searchTerm" type="text" class="col-md-7" />
+                    <input id="searchTerm" type="text" class="col-md-7" placeholder="search" />
                     <button type="submit" id="searchbtn" class="col-md-3">Search</button>
                   </form>
+                  <p class="search-inst">use keywords associated to your dream to search for images</p>
                 </div>
               </div>
 
@@ -98,7 +102,8 @@
                   <div id="output2"></div>
                 </div>
               </div>
-
+              <p class="refresh-img1">click to refresh image</p>
+              <p class="refresh-img2">click to refresh image</p>
             </div>
           </div><!--end of image section-->
 
