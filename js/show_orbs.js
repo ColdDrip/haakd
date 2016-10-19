@@ -181,9 +181,9 @@ $(document).ready(function(){
 				};
 			} else if(type="myorbs"){
 				for (k in orb_data) {
-					console.log(my_shelf_spot[k], my_shelf_spot[h]);
-					$("." + my_shelf_spot[k]).css("box-shadow", emo_color[orb_data[h][1]][0]);
-					$("." + my_shelf_spot[k]).css("background",emo_color[orb_data[h][1]][1]);
+					console.log(my_shelf_spot[k]);
+					$("." + my_shelf_spot[k]).css("box-shadow", emo_color[orb_data[k][1]][0]);
+					$("." + my_shelf_spot[k]).css("background",emo_color[orb_data[k][1]][1]);
 				}
 			}
 		}
