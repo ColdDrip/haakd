@@ -131,7 +131,7 @@ $(document).ready(function(){
 	//On modal close
 	$('#myModal').on('hidden.bs.modal', function () {
 	  //revert orb to original position
-	  $(".button").animate({
+	  $(".button."+draggablespot).animate({
 	    "opacity":"1",
 	    "left": $(".button").data('originalLeft'),
 	    "top": $(".button").data('originalTop')},
