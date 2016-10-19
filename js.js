@@ -24,14 +24,13 @@ var dragging = false;
     // $(this).addClass("debug");
     $('#myModal').modal({keyboard: false});
     // $(".button."+draggablespot).animate({"opacity":"0"},100);
+
+    $(".button."+draggablespot).animate({"height":"55px","width":"55px"});
     $(".button."+draggablespot).position({
       my: "center",
       at: "center",
       of: ".chute"
     });
-
-    $(".button."+draggablespot).animate({"height":"50px","width":"50px"});
-
 
     $('.dragtext').animate({"opacity":"0"},200);
 
