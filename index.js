@@ -21,7 +21,7 @@ $('#how_it_works1').click(function(){
 });
 
 $('#dreamcatcher1').click(function(){
-  var draggableId = orbs[Math.floor(Math.random()*items.length)][0];
+  var draggableId = orbs[Math.floor(Math.random()*orbs.length)][0];
       //send orb id and get dream contents via ajax
       $.post("../lib/view_dream.php",{orbID:draggableId},function(data,status){
         dream_data = JSON.parse(data, ",");
