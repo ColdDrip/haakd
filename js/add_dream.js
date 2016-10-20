@@ -37,8 +37,8 @@ $(document).ready(function(){
     $(".pensieve_add_dream").fadeIn(2000);
   });
 
-  $("#Emotion").change(
-function(){
+  $("#Emotion").change(function(){
+    console.log("change");
       var emo_color =
       {
           "Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
