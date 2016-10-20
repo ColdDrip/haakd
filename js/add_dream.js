@@ -37,7 +37,8 @@ $(document).ready(function(){
     $(".pensieve_add_dream").fadeIn(2000);
   });
 
-  function add_dream_color(){
+
+  $("#Emotion").change(function(){
     console.log("change");
       var emo_color =
       {
@@ -52,11 +53,9 @@ $(document).ready(function(){
         $("#Story").css("background",emo_color[$("#Emotion option:selected").val()][1]);
         $("#Story").css("box-shadow",emo_color[$("#Emotion option:selected").val()][0]);
         $("#Story").css("color","#0f0f0f");
-    }
-    add_dream_color();
 
-  $("#Emotion").change(
-    add_dream_color();
+
+    }
   );
 
   //When clicking the search image button
