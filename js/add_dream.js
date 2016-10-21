@@ -21,22 +21,45 @@ $(document).ready(function(){
   var finished_orb=false;
 
   //store story when click next
+  var stepcount=1;
   $("#newDreamSubmit").click(function(){
+    if (stepcount==1){
+      stepcount=2;
+      $(".placeholder").fadeOut(0);
+      $(".emotion-control").fadeIn(2000);
+      $(".guidetext").empty();
+      $(".guidetext").append("What is the emotional impact of the dream?");
+
+
+    } else if (stepcount==2){
+      $(".guidetext").empty();
+      $(".guidetext").append("How does the dream like visually?");
     $("#newDreamSubmit").fadeOut(1000);
-    $("#back").fadeOut(1000);
-    $(".emotion-control").hide(1000,function(){
-      $("#image_section") .fadeIn(1000);
+    $(".emotion-control").fadeOut(1000,function(){
+      $(".searchbox") .fadeIn(1000);
     });
     $("#Story").attr("disabled","disabled");
+    $("#Story").attr("cursor","pointer");
+
     user_dream_story=$("#Story").val();
     user_dream_emotion=$("#Emotion").val();
     finished_orb=true;//tracks if the user has completed the orb contents
-    $("#user_dream_orb").draggable({revert:"invalid",cancel:'',snap:".pensieve_add_dream",zindex:10000});
+    $("#user_dream_orb").draggable({revert:"invalid",cancel:'',zindex:10000,scroll:false});
+    $(".large_triangle").css({"margin-top":"40px","margin-left":"437px"});
+
 
     //show pensieve
     $(".pensieve_add_dream").fadeIn(2000);
+    $(".imageholders").fadeIn(2000);
+  }
+
   });
 
+$('#back').click(function(event){
+  event.preventDefault();
+  $('#loading_screen').fadeIn(1000,function(){
+    window.location ="orbs.html"});
+  });
 
   $("#Emotion").change(function(){
     console.log("change");
@@ -270,9 +293,6 @@ $(document).ready(function(){
   $(".pensieve_add_dream").droppable({drop:function(event,ui){
     $(this).addClass("debug2");
     console.log("drop");
-    $("#Story").animate({"width":"10%","height":"10px"},200,function(){});
-    $("#Story").animate({"color":"#000000","background-color":"#ffffff"},200,function(){});
-
     $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
     $(".large_triangle").hide(200);
     $("#image_section").fadeOut(1000);
@@ -280,9 +300,40 @@ $(document).ready(function(){
        //send dream contents via ajax post
     $.post("../lib/add_dream_story.php",{
       Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2});
-      window.location.href = "http://deco1800-pg6.uqcloud.net/index.html";
+
+      $('#loading_screen').fadeIn(1000,function(){
+        window.location ="orbs.html"});
 
 }
+});
+
+// $("#Story").mouseenter(function(){
+//   $(".pensieve_add_dream").addClass("debug");
+// });
+//instruction on hover
+$('.control').mouseenter(function(){
+  $('.impact').animate({"opacity":"1"},200,function(){});
+});
+$('.control').mouseleave(function(){
+  $('.impact').animate({"opacity":"0"},200,function(){});
+});
+$('#searchTerm').mouseenter(function(){
+  $('.search-inst').animate({"opacity":"1"},200,function(){});
+});
+$('#searchTerm').mouseleave(function(){
+  $('.search-inst').animate({"opacity":"0"},200,function(){});
+});
+$('#changeImages1').mouseenter(function(){
+  $('.refresh-img1').animate({"opacity":"1"},200,function(){});
+});
+$('#changeImages1').mouseleave(function(){
+  $('.refresh-img1').animate({"opacity":"0"},200,function(){});
+});
+$('#changeImages2').mouseenter(function(){
+  $('.refresh-img2').animate({"opacity":"1"},200,function(){});
+});
+$('#changeImages2').mouseleave(function(){
+  $('.refresh-img2').animate({"opacity":"0"},200,function(){});
 });
 
 

@@ -23,6 +23,7 @@
 </head>
 
 <body>
+  <div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
 
   <!--particle container-->
   <div id="particles-js"></div>
@@ -41,7 +42,9 @@
       <div class="row">
           <p class="col-xs-12 text-center guidetext">Describe a dream that you had:</p>
       </div>
-
+<div class="row placeholder">
+  <p>a</p>
+</div>
       <div class="row"><!--Emotion Control-->
 
         <div class="col-xs-4 col-xs-offset-4 emotion-control text-center control">
@@ -56,57 +59,56 @@
             <option name="Disgust" value="Disgust">Disgust</option>
           </select>
         </div>
+
+              <!-- <div class="row">
+                <p class="col-xs-4 col-xs-offset-4 impact text-center">Select emotional impact of the dream</p>
+              </div> -->
       </div><!--end of emotion control-->
-      <!-- <div class="row">
-        <p class="col-xs-4 col-xs-offset-4 impact text-center">Select emotional impact of the dream</p>
-      </div> -->
+      <script> $(".emotion-control").hide()</script>
+
+      <div class="row"> <!--search box-->
+      <div class="searchbox col-xs-4 col-xs-offset-4">
+        <form action="#" id="searchTrove">
+          <p class="col-xs-3 col-xs-offset-1">Keyword:</p>
+          <input id="searchTerm" type="text" class="col-md-5" placeholder="search" />
+          <button type="submit" id="searchbtn" class="col-md-3">Search</button>
+        </form>
+      </div>
+    </div><!--end of search box-->
+    <div class="row">
+      <p class=" col-xs-offset-2 col-xs-6 search-inst">use keywords associated to your dream to search for images</p>
+    </div>
+    <script> $(".searchbox").hide()</script>
 
   </div>
 
     <div class="row">
+<div class="imageholders">
+
+      <div class="col-xs-2">
+        <p class="refresh-img1">click to refresh image</p>
+        <a href="#" id="changeImages1"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+        <div id="output1"></div>
+      </div>
+
+      <div class="col-xs-2">
+        <p class="refresh-img2">click to refresh image</p>
+        <a href="#" id="changeImages2"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+        <div id="output2"></div>
+      </div>
+
+  </div>
+  <script> $(".imageholders").hide();</script>
       <div id="user_dream_orb" class="row">
         <textarea rows="5" cols="50" name="Story" id="Story" placeholder="I once had this dream about..."></textarea>
         <div class="large_triangle"></div>
     </div>
+  </div>
+  <script> $("#user_dream_orb").hide();</script>
 
-      <script> $("#user_dream_orb").hide();</script>
 
-      <!--Searching Trove Images-->
-      <div id="image_section">
-        <div class="col-md-4">
-          <div class="row">
-            <div class="searchbox col-md-6 orb-margin">
-              <form action="#" id="searchTrove">
-                <input id="searchTerm" type="text" class="col-md-7" placeholder="search" />
-                <button type="submit" id="searchbtn" class="col-md-3">Search</button>
-              </form>
-              <p class="search-inst">use keywords associated to your dream to search for images</p>
-            </div>
-          </div>
 
-          <!--Image holders-->
-          <div class="row">
-            <div class="col-md-2 orb-margin">
-              <!--Change Image button-->
-              <a href="#" id="changeImages1"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
-              <div id="output1"></div>
-            </div>
-          </div>
-          <!--Change Image button-->
-          <div class="row">
-            <div class="col-md-2 orb-margin">
-              <a href="#" id="changeImages2"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
-              <div id="output2"></div>
-            </div>
-          </div>
-          <p class="refresh-img1">click to refresh image</p>
-          <p class="refresh-img2">click to refresh image</p>
-        </div>
-      </div><!--end of image section-->
-
-    </div>
-
-    <div class="row">
+    <div class="row"><!--back and next button-->
       <!-- Back Button-->
       <div class="backnext col-xs-12">
         <a class="col-xs-2 col-xs-offset-2 text-center" href="orbs.html" id="back">	&lt;&lt; back</a>
@@ -118,7 +120,7 @@
 
 
     <div class="row">
-      <div class="col-xs-2 col-xs-offset-5">
+      <div class="col-xs-4 col-xs-offset-3">
         <div class="pensieve_add_dream">
           <a href"#"></a>
         </div>
@@ -134,4 +136,5 @@
 <script src="js.js"></script>
 
 </body>
+<script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>
 </html>

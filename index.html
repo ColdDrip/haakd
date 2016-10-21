@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Dreamer</title>
+  <title>DREAMER</title>
   <meta charset="utf-8">
 
   <!--JQUERY-->
@@ -25,7 +25,11 @@
 </head>
 
 <body>
+  <div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
+
 <div class="container-fluid">
+  <div id="particles-js"></div>
+  <div id="particles-js2"></div>
   <div class="row">
     <div id="dreamerbig" class="col-xs-6 col-xs-offset-3"><a class="col-xs-12"href="index.html">dreamer.</a></div>
   </div>
@@ -198,6 +202,7 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>
 
 </body>
 </html>

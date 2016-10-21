@@ -22,6 +22,8 @@
 </head>
 <!----->
 <body>
+	<div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
+
 	<!-- view dream modal -->
 	<div class="modal custom fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog " role="document">
@@ -347,5 +349,7 @@
 	<footer class="footer"><div></div></footer>
 
 	<script src="js.js" type="text/javascript"></script>
+	<script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>
+
 </body>
 </html>

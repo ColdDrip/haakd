@@ -158,13 +158,13 @@ text-align: center;
 }
 
 body{
+  background-color: #000000;
   background:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),url('abstract.jpg');
 
     background-size: cover;
-  background-color: #000000;
   margin: 0;
 
   overflow: hidden;
@@ -178,7 +178,7 @@ label{
   font-weight: normal;
 }
 
-textarea,input,a{
+textarea,input,a,#searchbtn{
   outline:none;
 }
 
@@ -370,13 +370,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .large_triangle{
   position:absolute;
   margin-left: 38.7%;
-  margin-top:260px;
+  margin-top:265px;
   border-bottom: 80px solid #000000;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   width: 200px;
   top:280px;
   left:60px;
+  z-index: 1000;
 }
 
 /** Adding a dream button **/
@@ -464,39 +465,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   color: white;
   position:absolute;
   margin: -20px 0px 0 50px;
-  font-family: "Gloria Hallelujah",cursive;
-  opacity: 0;
-}
-
-.impact{
-  font-size: 1em;
-  color: white;
-  /*margin: -25px 0px 0 100px;*/
-  font-family: "Gloria Hallelujah",cursive;
-  opacity:0;
-}
-
-.search-inst{
-  font-size: 1em;
-  color: white;
-  position:absolute;
-  margin: -40px 0px 0 0px;
-  font-family: "Gloria Hallelujah",cursive;
-  opacity: 0;
-}
-.refresh-img1{
-  font-size: 1em;
-  color: white;
-  position:absolute;
-  margin: -340px 0px 0 -80px;
-  font-family: "Gloria Hallelujah",cursive;
-  opacity: 0;
-}
-.refresh-img2{
-  font-size: 1em;
-  color: white;
-  position:absolute;
-  margin: -170px 0px 0 -80px;
   font-family: "Gloria Hallelujah",cursive;
   opacity: 0;
 }

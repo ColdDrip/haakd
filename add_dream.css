@@ -40,17 +40,27 @@ nav{
   display:none;
 
 }
-.emotion-control{
+
+.placeholder{
+  margin-top: 12px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  visibility: hidden;
+}
+
+.emotion-control, .searchbox, .placeholder{
   color:black;
   margin-top: 12px;
   border-radius: 50px;
   background-color: rgb(60,60,60);
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 
-.emotion-control label{
-  color:white;
+.emotion-control label, .searchbox p{
+  color:#ffffff;
+  font-size: 12pt;
+  font-family: "Gloria Hallelujah",cursive;
 }
 /**Back button**/
 #back, #newDreamSubmit{
@@ -72,29 +82,56 @@ nav{
   margin-top: 50px;
 }
 .backnext{
-  margin-top:190px;
+  margin-top:150px;
 }
 
 /*-----------------Add dream story page---------------------*/
-
+.imageholders{
+  position:absolute;
+}
 
 #output1,#output2{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  border-radius: 25px;
   display: block;
   overflow: hidden;
   background-color: #1f1f1f;
+  top:100px;
+}
+#output1{
+  left:100px;
+}
+#output2{
+  left:680px;
 }
 
 
 /** Buttons for refereshing a dream **/
+
+
 #changeImages2, #changeImages1{
   color:#ffffff;
-  background: transparent;
+  background: black;
   border:none;
-  margin-top: 20px;
-  margin-left: 15%;
+  border-radius: 50%;
+  padding: 2px 4px 1px 4px;
+
+}
+
+#changeImages1{
+  position:absolute;
+  top:110px;
+  left:120px;
+  z-index: 1001;
+}
+
+#changeImages2{
+  position:absolute;
+  top:110px;
+  left:1000px;
+  z-index: 1001;
 }
 
 #changeImages2:hover, #changeImages1:hover{
@@ -118,12 +155,6 @@ nav{
 }
 
 /** Style for search image bar **/
-.searchbox{
-  padding:10px;
-  background:#1f1f1f;
-  border-radius: 25px;
-  color: black;
-}
 #searchbtn{
   font-size: 12pt;
 }
@@ -135,12 +166,47 @@ nav{
 /** pensieve **/
 .pensieve_add_dream{
   z-index: 0;
-  padding: 100px 100px 100px 100px;
-  bottom:100px;
+  padding: 200px;
+  margin-left: 75px;
+  bottom:-240px;
   position:fixed;
-  border:1px dashed white;
+  border:2px dashed white;
   border-radius: 50%;
   background: rgba(50,50,50,0.5);
+}
 
+/**hover text**/
 
+.impact{
+  font-size: 1em;
+  color: white;
+  /*margin: -25px 0px 0 100px;*/
+  font-family: "Gloria Hallelujah",cursive;
+  opacity:0;
+}
+
+.search-inst{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+  text-align: center;
+}
+.refresh-img1{
+  z-index: 1001;
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: 70px 0px 0px 100px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
+}
+.refresh-img2{
+  font-size: 1em;
+  color: white;
+  position:absolute;
+  margin: 70px 0px 0 850px;
+  font-family: "Gloria Hallelujah",cursive;
+  opacity: 0;
 }

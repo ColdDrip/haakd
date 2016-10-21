@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 var dragging = false;
   //initialise draggable orb
-  $(".button").draggable({revert:"invalid"});
+  $(".button").draggable({revert:"invalid",scroll:false});
   // $(".button").draggable({snap:".chute"});
   // $(".button").draggable("option","snapMode","inner");
   $(".button").data({
@@ -66,7 +66,22 @@ var dragging = false;
   }
 });
 
+/*------------------------------------------------------*/
+//redirect buttons
+$('.add_button').click(function(event){
+  event.preventDefault();
+  $('#loading_screen').fadeIn(1000,function(){window.location ="add_dream_story.html"});
+});
 
+$('#dreamer').click(function(event){
+  event.preventDefault();
+  $('#loading_screen').fadeIn(1000,function(){window.location ="index.html"});
+});
+
+$('.sign').click(function(event){
+  event.preventDefault();
+  $('#loading_screen').fadeIn(1000,function(){window.location ="orbs.html"});
+});
 /*------------------------------------------------------*/
 //instruction hover
 
@@ -76,30 +91,6 @@ $('.add_button').mouseenter(function(){
 
 $('.add_button').mouseleave(function(){
   $('.clicktoadd').animate({"opacity":"0"},200,function(){});
-});
-$('.control').mouseenter(function(){
-  $('.impact').animate({"opacity":"1"},200,function(){});
-});
-$('.control').mouseleave(function(){
-  $('.impact').animate({"opacity":"0"},200,function(){});
-});
-$('#searchTerm').mouseenter(function(){
-  $('.search-inst').animate({"opacity":"1"},200,function(){});
-});
-$('#searchTerm').mouseleave(function(){
-  $('.search-inst').animate({"opacity":"0"},200,function(){});
-});
-$('#changeImages1').mouseenter(function(){
-  $('.refresh-img1').animate({"opacity":"1"},200,function(){});
-});
-$('#changeImages1').mouseleave(function(){
-  $('.refresh-img1').animate({"opacity":"0"},200,function(){});
-});
-$('#changeImages2').mouseenter(function(){
-  $('.refresh-img2').animate({"opacity":"1"},200,function(){});
-});
-$('#changeImages2').mouseleave(function(){
-  $('.refresh-img2').animate({"opacity":"0"},200,function(){});
 });
 
 /**-------------------------------------------------------------------------**/
