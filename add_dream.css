@@ -1,23 +1,33 @@
 body{
   display:block;
-    color:#ffffff;
-    overflow: hidden;
+  color:#ffffff;
+  overflow: hidden;
 }
-textarea {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    padding:70px;
-    border-color: transparent;;
-    background: rgb(60,60,60); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(60,60,60,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(35,35,35,1) 0%,rgba(30,30,30,1) 89%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-    box-shadow: 0px 0px 30px #0f0f0f;
-    color:#ffffff;
-    resize: none;
-    }
+textarea{
+  margin-left:36%;
+  width:330px;
+  height:330px;
+  border-radius: 100%;
+  padding:70px;
+  border-color: transparent;
+  background: rgb(60,60,60); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(60,60,60,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(40,40,40,1) 89%,rgba(30,30,30,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(35,35,35,1) 0%,rgba(30,30,30,1) 89%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0px 0px 30px #0f0f0f;
+  color:#ffffff;
+  resize: none;
+  z-index: 1000;
+  position:relative;
+}
+.large_orb_container{
+  padding-left:2%;
+  padding-right:2%;
+
+}
+
+
 
 nav{
   display:block;
@@ -31,9 +41,12 @@ nav{
 
 }
 .emotion-control{
-  position: relative;
-  margin-top: 10%;
   color:black;
+  margin-top: 12px;
+  border-radius: 50px;
+  background-color: rgb(60,60,60);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .emotion-control label{
@@ -42,10 +55,8 @@ nav{
 /**Back button**/
 #back, #newDreamSubmit{
   color:#ffffff;
-  position:absolute;
-vertical-align: middle;
-font-size: 20pt;
-font-family: "Gloria Hallelujah",cursive;
+  font-size: 20pt;
+  font-family: "Gloria Hallelujah",cursive;
 }
 #back:hover, #newDreamSubmit:hover{
   color:darkgrey;
@@ -56,6 +67,12 @@ font-family: "Gloria Hallelujah",cursive;
 #newDreamSubmit{
   background-color: transparent;
   border:none;
+}
+#user_dream_orb{
+  margin-top: 50px;
+}
+.backnext{
+  margin-top:190px;
 }
 
 /*-----------------Add dream story page---------------------*/
@@ -88,11 +105,11 @@ font-family: "Gloria Hallelujah",cursive;
 #newDreamImageSubmit, #searchbtn{
   color:#ffffff;
   position:absolute;
-vertical-align: middle;
-font-size: 20pt;
-background-color: transparent;
-border:none;
-font-family: "Gloria Hallelujah",cursive;
+  vertical-align: middle;
+  font-size: 20pt;
+  background-color: transparent;
+  border:none;
+  font-family: "Gloria Hallelujah",cursive;
 }
 
 #newDreamImageSubmit:hover,#searchbtn:hover{

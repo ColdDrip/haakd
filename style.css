@@ -10,9 +10,10 @@
     /*background-repeat:no-repeat;*/
     background-size:cover;
     background-position: 50% 50%;
+    z-index:0;
 }
 
-#particles-js2{ position:absolute; width: 100%; height: 100%; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+#particles-js2{ z-index:0; position:absolute; width: 100%; height: 100%; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 /* Navbar*/
 .mydreamshelve{
@@ -20,6 +21,8 @@
   position:fixed;
 }
 #dreamer{
+  position:relative;
+  z-index: 1000;
   padding-top:50px;
   padding-left:50px;
 
@@ -209,7 +212,7 @@ textarea,input,a{
   position: relative;
   background: #E9E9E9;
   margin-bottom: 10px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .inside-cont{
@@ -365,14 +368,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   margin-left:-5%;
 }
 .large_triangle{
+  position:absolute;
+  margin-left: 38.7%;
+  margin-top:260px;
   border-bottom: 80px solid #000000;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   width: 200px;
-  position: absolute;
   top:280px;
   left:60px;
-
 }
 
 /** Adding a dream button **/
@@ -467,8 +471,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .impact{
   font-size: 1em;
   color: white;
-  position:absolute;
-  margin: -25px 0px 0 100px;
+  /*margin: -25px 0px 0 100px;*/
   font-family: "Gloria Hallelujah",cursive;
   opacity:0;
 }

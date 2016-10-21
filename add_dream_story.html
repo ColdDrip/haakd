@@ -29,99 +29,107 @@
   <div id="particles-js2"></div>
 
   <!--main section-->
-  <div class="container-fluid">
-    <div class="col-xs-2 col-xs-offset-5">
-      <div class="pensieve_add_dream">
-      <a href"#"></a>
-    </div>
-    <script> $(".pensieve_add_dream").hide()</script>
-    </div>
+  <div class="container">
     <div class="row">
-        <nav class="navbar navbar-fixed-top">
-            <div id="dreamer"><a href="index.html">dreamer.</a></div>
-            <!-- <ul class="nav nav-pills pull-right">
-        		  <li role="presentation"><a href="my_dreams.html">My Dreams</a></li>
-        		  <li role="presentation"><a href="about.html">About</a></li>
-        		  <li role="presentation"><a href="how_it_works.html">How It Works</a></li>
-        		  <li role="presentation"><a href="dreamtime.html">Dreamtime</a></li>
-        		</ul> -->
-        </nav>
+        <div id="dreamer">
+          <a href="index.html">dreamer.</a>
+        </div>
     </div>
 
-      <div class="row margin-top">
-        <div class="row orb-margin2">
-            <label for="Story" class="col-xs-12 text-center">Describe a dream that you had:</label>
-          </div>
 
-          <div id="user_dream_orb" class="col-md-4 col-md-offset-3">
-            <textarea rows="5" cols="50" name="Story" id="Story" class="orb-margin" placeholder="I once had this dream about..."></textarea>
-            <div class="large_triangle orb-margin"></div>
-          </div>
-            <script> $("#user_dream_orb").hide();</script>
-          <!--Emotion Control-->
-          <div class="col-md-4 emotion-control">
-            <label for="Emotion">Emotion:</label>
-            <div class="control">
-            <select name="Emotion" id="Emotion" >
-              <option name="Not Sure" value="Not Sure">Not Sure</option>
-              <option name="Joy" value="Joy">Joy</option>
-              <option name="Surprise" value="Surprise">Surprise</option>
-              <option name="Anger" value="Anger">Anger</option>
-              <option name="Fear" value="Fear">Fear</option>
-              <option name="Sadness" value="Sadness">Sadness</option>
-              <option name="Disgust" value="Disgust">Disgust</option>
-            </select>
-            <p class="impact">Select emotional impact of the dream</p>
-            </div>
-          </div>
-          <!--Searching Trove Images-->
-          <div id="image_section">
-            <div class="col-md-4">
-              <div class="row">
-                <div class="searchbox col-md-6 orb-margin">
-                  <form action="#" id="searchTrove">
-                    <input id="searchTerm" type="text" class="col-md-7" placeholder="search" />
-                    <button type="submit" id="searchbtn" class="col-md-3">Search</button>
-                  </form>
-                  <p class="search-inst">use keywords associated to your dream to search for images</p>
-                </div>
-              </div>
-
-              <!--Image holders-->
-              <div class="row">
-                <div class="col-md-2 orb-margin">
-                  <!--Change Image button-->
-                  <a href="#" id="changeImages1"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
-                  <div id="output1"></div>
-                </div>
-              </div>
-              <!--Change Image button-->
-              <div class="row">
-                <div class="col-md-2 orb-margin">
-                  <a href="#" id="changeImages2"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
-                  <div id="output2"></div>
-                </div>
-              </div>
-              <p class="refresh-img1">click to refresh image</p>
-              <p class="refresh-img2">click to refresh image</p>
-            </div>
-          </div><!--end of image section-->
-
-        </div>
-        <div class="row margin-top margin-bottom">
-          <!-- Back Button-->
-          <div class="col-md-2 col-md-offset-2">
-            <a href="index.html" id="back">	&lt;&lt; back</a>
-          </div>
-          <!-- Next Button-->
-          <input type="submit" id="newDreamSubmit" value="next &gt;&gt;"
-          class="col-md-2 col-md-offset-4 text-right"data-dismiss="modal">
-
+    <div class="row">
+      <div class="row">
+          <p class="col-xs-12 text-center guidetext">Describe a dream that you had:</p>
       </div>
+
+      <div class="row"><!--Emotion Control-->
+
+        <div class="col-xs-4 col-xs-offset-4 emotion-control text-center control">
+          <label for="Emotion" class="col-xs-3 col-xs-offset-1">Emotion:</label>
+          <select name="Emotion" id="Emotion" class="col-xs-6">
+            <option name="Not Sure" value="Not Sure">Not Sure</option>
+            <option name="Joy" value="Joy">Joy</option>
+            <option name="Surprise" value="Surprise">Surprise</option>
+            <option name="Anger" value="Anger">Anger</option>
+            <option name="Fear" value="Fear">Fear</option>
+            <option name="Sadness" value="Sadness">Sadness</option>
+            <option name="Disgust" value="Disgust">Disgust</option>
+          </select>
+        </div>
+      </div><!--end of emotion control-->
+      <!-- <div class="row">
+        <p class="col-xs-4 col-xs-offset-4 impact text-center">Select emotional impact of the dream</p>
+      </div> -->
+
+  </div>
+
+    <div class="row">
+      <div id="user_dream_orb" class="row">
+        <textarea rows="5" cols="50" name="Story" id="Story" placeholder="I once had this dream about..."></textarea>
+        <div class="large_triangle"></div>
+    </div>
+
+      <script> $("#user_dream_orb").hide();</script>
+
+      <!--Searching Trove Images-->
+      <div id="image_section">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="searchbox col-md-6 orb-margin">
+              <form action="#" id="searchTrove">
+                <input id="searchTerm" type="text" class="col-md-7" placeholder="search" />
+                <button type="submit" id="searchbtn" class="col-md-3">Search</button>
+              </form>
+              <p class="search-inst">use keywords associated to your dream to search for images</p>
+            </div>
+          </div>
+
+          <!--Image holders-->
+          <div class="row">
+            <div class="col-md-2 orb-margin">
+              <!--Change Image button-->
+              <a href="#" id="changeImages1"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+              <div id="output1"></div>
+            </div>
+          </div>
+          <!--Change Image button-->
+          <div class="row">
+            <div class="col-md-2 orb-margin">
+              <a href="#" id="changeImages2"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+              <div id="output2"></div>
+            </div>
+          </div>
+          <p class="refresh-img1">click to refresh image</p>
+          <p class="refresh-img2">click to refresh image</p>
+        </div>
+      </div><!--end of image section-->
+
+    </div>
+
+    <div class="row">
+      <!-- Back Button-->
+      <div class="backnext col-xs-12">
+        <a class="col-xs-2 col-xs-offset-2 text-center" href="orbs.html" id="back">	&lt;&lt; back</a>
+      <!-- Next Button-->
+      <input type="submit" id="newDreamSubmit" value="next &gt;&gt;"
+      class="col-xs-2 col-xs-offset-4 text-center" data-dismiss="modal">
+    </div>
+  </div>
+
+
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-5">
+        <div class="pensieve_add_dream">
+          <a href"#"></a>
+        </div>
+        <script> $(".pensieve_add_dream").hide()</script>
+      </div>
+    </div>
   </div><!--End of Fluid Container-->
-<div class="container">
+
+  <!-- <div class="container-fluid">
   <footer class="footer"><div></div></footer>
-</div>
+</div> -->
 <script src="js/add_dream.js"></script>
 <script src="js.js"></script>
 
