@@ -143,8 +143,10 @@ text-align: center;
 .logo-container{
   padding-right: 1%;
   padding-top: 2%;
-  color:white;
+}
 
+.logo-container p{
+  color:white;
 
 }
 
