@@ -36,24 +36,34 @@ $('#dreamcatcher1').click(function(){
       function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
         var page_element = "";
         var title = "";
+        var pic1 ="";
+        var pic2 ="";
+
         title = "<p> Orb Number: #" + orbID + "</p>";
         page_element += "<div>";
         page_element += "<p>" + Story + "</p>";
         page_element += "<p>" + Emotion + "</p>";
-        page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_1 + ">" + "</p>";
-        page_element += "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_2 + ">" + "</p>";
         page_element += "</div>";
+
+        pic1 = "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_1 + ">" + "</p>";
+        pic2 = "<p>" + "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_2 + ">" + "</p>";
 
         var title = $.parseHTML(title);
         var html = $.parseHTML(page_element);
-        $('#dreamtime .modal-header').empty();
-        $('#dreamtime .modal-body').empty();
+        var pic1 =$.parseHTML(pic1);
+        var pic2 =$.parseHTML(pic2);
 
-        $('#dreamtime .modal-header').append(title);
-        $('#dreamtime .modal-body').append(html);
+        $('#viewdreamemotion').empty();
+        $('#viewdreamcontent').empty();
+        $('#viewdreamid').empty();
 
+        $('#viewdreamemotion').append();
+        $('#viewdreamcontent').append(html);
+        $('#viewdreamid').append(title);
+        $('#pic1').append(pic1);
+        $('#pic2').append(pic2);
       }
-  $('#dreamtime').modal({keyboard: false});
+  $('#viewdreamorb').fadeIn(1000);
 });
 
 jQuery.fn.rotate = function(degrees) {

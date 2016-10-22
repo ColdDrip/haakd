@@ -21,6 +21,20 @@ textarea{
   z-index: 1000;
   position:relative;
 }
+
+.large_triangle{
+  position:absolute;
+  margin-left: 38.7%;
+  margin-top:265px;
+  border-bottom: 80px solid #000000;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  width: 200px;
+  top:280px;
+  left:60px;
+  z-index: 1000;
+}
+
 .large_orb_container{
   padding-left:2%;
   padding-right:2%;

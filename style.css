@@ -342,9 +342,10 @@ html, body{
 
 /** Large orb when viewing dream or creating dream **/
 .large_orb{
+  position:absolute;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 330px;
+  height: 330px;
   text-align: center;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+89,ededed+100;White+3D+%231 */
   background: rgb(255,255,255); /* Old browsers */
@@ -354,16 +355,60 @@ html, body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
   box-shadow: 0px 0px 30px #ffffff;
   z-index: 1000;
-  margin-left: 30%;
+  margin-left: 38.5%;
+  margin-top:220px;
 }
-.orb-margin{
-  margin-left:18%;
+
+#viewdreamcontent::-webkit-scrollbar {
+    display: none;
 }
-.orb-margin2{
-  margin-left:-5%;
+
+#viewdreamcontent{
+  margin-top: 20px;
+  margin-left:17%;
+  width:200px;
+  height:200px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.large_triangle{
+
+#viewdreamemotion{
+  margin-top:20px;
+}
+
+#viewdreamid{
+  position:fixed;
+  color:white;
+  margin-top: 30px;
+  margin-left:20px;
+}
+
+.picholders{
   position:absolute;
+}
+#pic1,#pic2{
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  border-radius: 25px;
+  display: block;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  top:240px;
+}
+
+#pic1{
+  left:280px;
+}
+#pic2{
+  left:780px;
+}
+/*-------------------------------*/
+
+.large_triangle2{
+  position:fixed;
   margin-left: 38.7%;
   margin-top:265px;
   border-bottom: 80px solid #000000;
