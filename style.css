@@ -378,7 +378,7 @@ html, body{
   position:fixed;
   color:white;
   margin-top: 20px;
-  margin-left:25px;
+  margin-left:30px;
   text-align: center;
 }
 
@@ -408,6 +408,10 @@ html, body{
 }
 #pic2{
   left:780px;
+}
+
+#closebtn{
+  color:white;
 }
 /*-------------------------------*/
 

@@ -23,7 +23,9 @@
 <!----->
 <body>
 	<div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
+
 	<div id="viewdreamorb" style='background:rgba(255,255,255,0.4); z-index:999999; position:fixed; height:100%; width:100%; overflow:hidden'>
+			<div class="closebtn"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></div>
 			<div class="large_orb">
 			<p id="viewdreamcontent">content</p>
 			<div class="large_triangle2">
@@ -48,21 +50,6 @@
 	</div>
 <script>$('#viewdreamorb').hide()</script>
 
-	<!-- view dream modal -->
-	<div class="modal custom fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog " role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel"></h4>
-				</div>
-				<div class="modal-body">
-				</div>
-				<div class="modal-footer">
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- particles.js containers -->
 	<div id="particles-js"></div>
 	<div id="particles-js2"></div>

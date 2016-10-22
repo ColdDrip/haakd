@@ -20,10 +20,6 @@ var dragging = false;
     var draggableId = $(ui.draggable).attr("id");
      draggablespot =$(ui.draggable).attr("class").split(' ')[1];
     console.log(draggableId,draggablespot, $(".button."+draggablespot).css("background"));
-    // $(".chute").css("background",$(".button."+draggablespot).css("background"));
-    // $(this).addClass("debug");
-    $('#myModal').modal({keyboard: false});
-    // $(".button."+draggablespot).animate({"opacity":"0"},100);
 
     $(".button."+draggablespot).position({
       my: "center",
