@@ -116,7 +116,7 @@ $('.add_button').mouseleave(function(){
 
 /*------------------------------------------------------*/
 //scroll toposition
-$( ".inside-cont").scrollLeft( 700 );
+$( ".inside-cont").scrollLeft( 400 );
 /**-------------------------------------------------------------------------**/
 //particles js setting
 particlesJS("particles-js", {
