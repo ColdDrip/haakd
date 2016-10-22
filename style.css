@@ -364,7 +364,7 @@ html, body{
 }
 
 #viewdreamcontent{
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left:17%;
   width:200px;
   height:200px;
@@ -378,7 +378,7 @@ html, body{
   position:fixed;
   color:white;
   margin-top: 30px;
-  margin-left:20px;
+  margin-left:15px;
 }
 
 #viewdreamid{
