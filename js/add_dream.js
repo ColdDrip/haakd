@@ -162,57 +162,53 @@ $('#back').click(function(event){
       var troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
       console.log(troveUrl2);
 
-
-
       updateURL(imageNum,imageNum2);
       printImages();
-
-      //when refreshing image1
-      $("a#changeImages1").click(function changeImages(event) {
-        event.preventDefault();
-        $('#output1').empty();
-
-        imageNum = Math.floor((Math.random()*loadedImages.length));
-        if (imageNum == imageNum2){
-          imageNum = imageNum + 1;
-          console.log("change1-image1",imageNum);
-          console.log("change1-image2",imageNum2);
-          printImages();
-        }else{
-          console.log("change1-1-image1",imageNum);
-          console.log("change1-1-image2",imageNum2);
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
-          updateURL(imageNum,imageNum2);
-          printImages();
-
-        }
-      });
-
-
-      //when refreshing image2
-      $("a#changeImages2").click(function changeImages2(event) {
-        event.preventDefault();
-        $('#output2').empty();
-        imageNum2 = Math.floor((Math.random()*loadedImages.length));
-        if (imageNum == imageNum2){
-          imageNum2 = imageNum2+1;
-          console.log("change2-image1",imageNum);
-          console.log("change2-image2",imageNum2);
-          printImages();
-        }else{
-          console.log("change2-1-image1",imageNum);
-          console.log("change2-1-image2",imageNum2);
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
-          updateURL(imageNum,imageNum2);
-          printImages();
-        }
-      });
     });
   });
 
+  //when refreshing image1
+  $("a#changeImages1").click(function changeImages(event) {
+    event.preventDefault();
+    $('#output1').empty();
 
+    imageNum = Math.floor((Math.random()*loadedImages.length));
+    if (imageNum == imageNum2){
+      imageNum = imageNum + 1;
+      console.log("change1-image1",imageNum);
+      console.log("change1-image2",imageNum2);
+      printImages();
+    }else{
+      console.log("change1-1-image1",imageNum);
+      console.log("change1-1-image2",imageNum2);
+      console.log(contributor1,issued1,title1);
+      console.log(contributor2,issued2,title2);
+      updateURL(imageNum,imageNum2);
+      printImages();
+
+    }
+  });
+
+
+  //when refreshing image2
+  $("a#changeImages2").click(function changeImages2(event) {
+    event.preventDefault();
+    $('#output2').empty();
+    imageNum2 = Math.floor((Math.random()*loadedImages.length));
+    if (imageNum == imageNum2){
+      imageNum2 = imageNum2+1;
+      console.log("change2-image1",imageNum);
+      console.log("change2-image2",imageNum2);
+      printImages();
+    }else{
+      console.log("change2-1-image1",imageNum);
+      console.log("change2-1-image2",imageNum2);
+      console.log(contributor1,issued1,title1);
+      console.log(contributor2,issued2,title2);
+      updateURL(imageNum,imageNum2);
+      printImages();
+    }
+  });
 
   //add two images URL into array and print them out
   function updateURL(imageNum,imageNum2){

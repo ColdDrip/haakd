@@ -113,6 +113,10 @@ $('.add_button').mouseleave(function(){
   $('.clicktoadd').animate({"opacity":"0"},200,function(){});
 });
 
+
+/*------------------------------------------------------*/
+//scroll toposition
+$( ".inside-cont").scrollLeft( 300 );
 /**-------------------------------------------------------------------------**/
 //particles js setting
 particlesJS("particles-js", {
