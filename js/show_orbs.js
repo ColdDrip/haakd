@@ -139,7 +139,7 @@ $(document).ready(function(){
 	/**-------------------------------------------------------------------------**/
 	/**------------------------------------------------------------------------**/
 	//On modal close
-	$('#myModal').on('hidden.bs.modal', function () {
+$("#viewdreamorb").click(function () {
 	  //revert orb to original position
 	  $(".button").animate({
 	    "left": $(".button").data('originalLeft'),
@@ -152,9 +152,8 @@ $(document).ready(function(){
 	  // });
 		dragging=false;
 	  console.log(dragging);
-	  //reset view dream modal content
-	  $('#myModal .modal-header').empty();
-	  $('#myModal .modal-body').empty();
+
+		$("#viewdreamorb").fadeOut(2000);
 	});
 
 		//special orb

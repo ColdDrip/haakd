@@ -28,13 +28,13 @@ $(document).ready(function(){
       $(".placeholder").fadeOut(0);
       $(".emotion-control").fadeIn(2000);
       $(".guidetext").empty();
-      $(".guidetext").append("What is the emotional impact of the dream?");
+      $(".guidetext").append("Which emotion do you most associate with your dream?");
 
 
     } else if (stepcount==2){
       stepcount=3;
       $(".guidetext").empty();
-      $(".guidetext").append("How does the dream like visually?");
+      $(".guidetext").append("Select te pieces of artwork to visually illustrate your dream.");
     $("#newDreamSubmit").fadeOut(1000);
     $(".emotion-control").fadeOut(1000,function(){
       $(".searchbox") .fadeIn(1000);
