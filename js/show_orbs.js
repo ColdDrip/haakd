@@ -111,7 +111,7 @@ $(document).ready(function(){
 			for (var x in taken_orbs) {
 				if (taken_orbs[x][0] == position){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
-					$(this).css("background-size", "90px");
+					$(this).css("background-size", "cover");
 				}
 				// for showing my dreams background
 				// for (var y in my_shelf_spot){
