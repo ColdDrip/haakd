@@ -166,7 +166,7 @@ $('.sign').click(function(event){
 
 //on modal close
 $("#viewdreamorb").click(function () {
-		$("#viewdreamorb").fadeOut(1000);
+		$("#viewdreamorb").fadeOut(500);
 	});
 
 /**-------------------------------------------------------------------------**/

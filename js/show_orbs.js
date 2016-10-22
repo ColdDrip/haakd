@@ -153,7 +153,7 @@ $("#viewdreamorb").click(function () {
 		dragging=false;
 	  console.log(dragging);
 
-		$("#viewdreamorb").fadeOut(1000);
+		$("#viewdreamorb").fadeOut(500);
 	});
 
 		//special orb
