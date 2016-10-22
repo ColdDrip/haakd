@@ -135,6 +135,47 @@ $('.gears').mouseleave(function(){
   $('#gear3').stop()
 });
 
+$('.geartext').mouseenter(function(){
+  $(".geartext").animate({color:"white"},200);
+  rotation+=360;
+
+  $('#gear1').stop().animate(
+    {rotation: rotation},
+    {
+      duration: 2000,
+      step: function(now, fx) {
+        $(this).css({"transform": "rotate("+now+"deg)"});
+      }
+    }
+  );
+  $('#gear2').stop().animate(
+    {rotation: -rotation},
+    {
+      duration: 2000,
+      step: function(now, fx) {
+        $(this).css({"transform": "rotate("+now+"deg)"});
+      }
+    }
+  );
+  $('#gear3').stop().animate(
+    {rotation: rotation},
+    {
+      duration: 2000,
+      step: function(now, fx) {
+        $(this).css({"transform": "rotate("+now+"deg)"});
+      }
+    }
+  );
+
+});
+
+$('.geartext').mouseleave(function(){
+  $(".geartext").animate({color:"gray"},200);
+  $('#gear1').stop()
+  $('#gear2').stop()
+  $('#gear3').stop()
+});
+
 
 $('.about').mouseenter(function(){
   $("#darkorb").animate({top:"-=40px"},200);
@@ -148,12 +189,34 @@ $('.about').mouseleave(function(){
 
 });
 
+$('.abouttext').mouseenter(function(){
+  $("#darkorb").animate({top:"-=40px"},200);
+  $(".abouttext").animate({color:"white"},200);
+
+});
+
+$('.abouttext').mouseleave(function(){
+  $("#darkorb").animate({top:"+=40px"},200);
+  $(".abouttext").animate({color:"gray"},200);
+
+});
+
 $('.catcher').mouseenter(function(){
   $(".catchertext").animate({color:"white"},200);
   $('.catcher').animate({top:"-=30px"})
 });
 
 $('.catcher').mouseleave(function(){
+  $(".catchertext").animate({color:"gray"},200);
+    $('.catcher').animate({top:"+=30px"})
+});
+
+$('.catchertext').mouseenter(function(){
+  $(".catchertext").animate({color:"white"},200);
+  $('.catcher').animate({top:"-=30px"})
+});
+
+$('.catchertext').mouseleave(function(){
   $(".catchertext").animate({color:"gray"},200);
     $('.catcher').animate({top:"+=30px"})
 });
