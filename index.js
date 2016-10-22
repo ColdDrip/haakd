@@ -57,6 +57,8 @@ $('#dreamcatcher1').click(function(){
         $('#viewdreamemotion').empty();
         $('#viewdreamcontent').empty();
         $('#viewdreamid').empty();
+        $('#pic1').empty();
+        $('#pic2').empty();
 
         $('#viewdreamemotion').append(dreamemo);
         $('#viewdreamcontent').append(page_element);
