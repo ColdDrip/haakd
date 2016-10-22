@@ -412,7 +412,7 @@ html, body{
 
 .closebtn{
   position:fixed;
-  height:30px;
+  height:100px;
   top:20px;
   right:20px;
   color:white;
