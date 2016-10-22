@@ -411,6 +411,10 @@ html, body{
 }
 
 #closebtn{
+  position:fixed;
+  height:30px;
+  top:20px;
+  right:20px;
   color:white;
 }
 /*-------------------------------*/
