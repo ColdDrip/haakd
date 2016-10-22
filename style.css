@@ -449,7 +449,7 @@ html, body{
 .clicktoadd{
   font-size: 1.3em;
   color: white;
-  position:absolute;
+  position:fixed;
   margin: -20px 0px 0 150px;
   font-family: "Gloria Hallelujah",cursive;
   opacity: 0;
