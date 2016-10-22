@@ -36,29 +36,30 @@ $('#dreamcatcher1').click(function(){
       function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
         var page_element = "";
         var title = "";
+        var dreamemo="";
         var pic1 ="";
         var pic2 ="";
 
         title = "<p> Orb Number: #" + orbID + "</p>";
-        page_element += "<div>";
         page_element += "<p>" + Story + "</p>";
-        page_element += "<p>" + Emotion + "</p>";
-        page_element += "</div>";
+        dreamemo = "<p> Emotion: " + Story + "</p>";
 
-        pic1 = "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_1 + ">" ;
-        pic2 = "<img class=\"col-xs-6 col-xs-offset-3\" src=" + Image_Path_2 + ">";
 
-        var title = $.parseHTML(title);
-        var html = $.parseHTML(page_element);
-        var pic1 =$.parseHTML(pic1);
-        var pic2 =$.parseHTML(pic2);
+        pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
+        pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
+
+         title = $.parseHTML(title);
+         page_element = $.parseHTML(page_element);
+         pic1 =$.parseHTML(pic1);
+         pic2 =$.parseHTML(pic2);
+         dreamemo=$.parseHTML(dreamemo);
 
         $('#viewdreamemotion').empty();
         $('#viewdreamcontent').empty();
         $('#viewdreamid').empty();
 
-        $('#viewdreamemotion').append();
-        $('#viewdreamcontent').append(html);
+        $('#viewdreamemotion').append(dreamemo);
+        $('#viewdreamcontent').append(page_element);
         $('#viewdreamid').append(title);
         $('#pic1').append(pic1);
         $('#pic2').append(pic2);
