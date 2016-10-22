@@ -32,12 +32,14 @@ $(document).ready(function(){
 
 
     } else if (stepcount==2){
+      stepcount=3;
       $(".guidetext").empty();
       $(".guidetext").append("How does the dream like visually?");
     $("#newDreamSubmit").fadeOut(1000);
     $(".emotion-control").fadeOut(1000,function(){
       $(".searchbox") .fadeIn(1000);
     });
+    $(".dragtext2").fadeIn(2000);
     $("#Story").attr("disabled","disabled");
     $("#Story").attr("cursor","pointer");
 
@@ -55,11 +57,31 @@ $(document).ready(function(){
 
   });
 
+//back button
 $('#back').click(function(event){
   event.preventDefault();
-  $('#loading_screen').fadeIn(1000,function(){
-    window.location ="orbs.html"});
-  });
+
+  if (stepcount=1){
+    $('#loading_screen').fadeIn(1000,function(){
+      window.location ="orbs.html"});
+    } else if (stepcount=2){
+      stepcount=1;
+      $(".emotion-control").fadeOut(1000,function(){
+        $(".placeholder").fadeIn(1000);
+      });
+      $(".guidetext").empty();
+      $(".guidetext").append("Describe a dream that you had");}
+      else if (stepcount=3){
+        stepcount=2;
+        $(".guidetext").empty();
+        $(".guidetext").append("What is the emotional impact of the dream?");
+        $("#newDreamSubmit").fadeIn(1000);
+        $(".searchbox") .fadeOut(1000,function(){
+          $(".emotion-control").fadeIn(1000)
+        });
+
+      }
+    });
 
   $("#Emotion").change(function(){
     console.log("change");

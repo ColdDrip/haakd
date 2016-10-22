@@ -78,10 +78,7 @@ $('#dreamer').click(function(event){
   $('#loading_screen').fadeIn(1000,function(){window.location ="index.html"});
 });
 
-$('.sign').click(function(event){
-  event.preventDefault();
-  $('#loading_screen').fadeIn(1000,function(){window.location ="orbs.html"});
-});
+
 /*------------------------------------------------------*/
 //instruction hover
 

@@ -120,23 +120,25 @@ $('.gears').mouseleave(function(){
 
 
 $('.about').mouseenter(function(){
-  $("#darkorb").animate({"top":"-=40px"},200);
+  $("#darkorb").animate({top:"-=40px"},200);
   $(".abouttext").animate({color:"white"},200);
 
 });
 
 $('.about').mouseleave(function(){
-  $("#darkorb").animate({"top":"+=40px"},200);
+  $("#darkorb").animate({top:"+=40px"},200);
   $(".abouttext").animate({color:"gray"},200);
 
 });
 
 $('.catcher').mouseenter(function(){
   $(".catchertext").animate({color:"white"},200);
+  $('.catcher').animate({top:"-=30px"})
 });
 
 $('.catcher').mouseleave(function(){
   $(".catchertext").animate({color:"gray"},200);
+    $('.catcher').animate({top:"+=30px"})
 });
 
 //redirect Buttons
