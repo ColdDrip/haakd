@@ -163,6 +163,12 @@ $('.sign').click(function(event){
   event.preventDefault();
   $('#loading_screen').fadeIn(1000,function(){window.location ="orbs.html"});
 });
+
+//on modal close
+$("#viewdreamorb").click(function () {
+		$("#viewdreamorb").fadeOut(1000);
+	});
+
 /**-------------------------------------------------------------------------**/
 //particles js setting
 particlesJS("particles-js", {

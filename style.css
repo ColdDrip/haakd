@@ -380,6 +380,7 @@ html, body{
   margin-top: 20px;
   margin-left:30px;
   text-align: center;
+  cursor:pointer;
 }
 
 #viewdreamid{
@@ -416,6 +417,10 @@ html, body{
   top:20px;
   right:20px;
   color:white;
+}
+
+.closebtn:hover{
+  color:darkgray;
 }
 /*-------------------------------*/
 
