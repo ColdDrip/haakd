@@ -87,7 +87,6 @@ var dragging = false;
       $('#viewdreamcontent').append(page_element);
       $('#pic1').append(pic1);
       $('#pic2').append(pic2);
-      }
       $('#viewdreamorb').fadeIn(1000);
 
     }
