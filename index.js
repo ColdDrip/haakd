@@ -49,13 +49,13 @@ $('#dreamcatcher1').click(function(){
             "Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
             "Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"]
           }
-          
+
           $(".large_orb").css("background",emo_color[Emotion][1]);
           $(".large_orb").css("box-shadow",emo_color[Emotion][0]);
 
         title = "<p> Orb Number: #" + orbID + "</p>";
         page_element = "<p>" + Story + "</p>";
-        dreamemo = "<p> Emotion: " + Emotion + "</p>";
+        dreamemo = "<p> Emotion: </p><p>" + Emotion + "</p>";
         pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
         pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
 
