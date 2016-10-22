@@ -410,7 +410,7 @@ html, body{
   left:780px;
 }
 
-#closebtn{
+.closebtn{
   position:fixed;
   height:30px;
   top:20px;
