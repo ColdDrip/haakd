@@ -54,13 +54,11 @@ $('#dreamcatcher1').click(function(){
 
         $('#viewdreamemotion').empty();
         $('#viewdreamcontent').empty();
-        $('#viewdreamid').empty();
         $('#pic1').empty();
         $('#pic2').empty();
 
         $('#viewdreamemotion').append(dreamemo);
         $('#viewdreamcontent').append(page_element);
-        $('#viewdreamid').append(title);
         $('#pic1').append(pic1);
         $('#pic2').append(pic2);
       }
