@@ -42,9 +42,7 @@ $('#dreamcatcher1').click(function(){
 
         title = "<p> Orb Number: #" + orbID + "</p>";
         page_element += "<p>" + Story + "</p>";
-        dreamemo = "<p> Emotion: " + Story + "</p>";
-
-
+        dreamemo = "<p> Emotion: " + Emotion + "</p>";
         pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
         pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
 
