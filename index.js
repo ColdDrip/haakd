@@ -224,7 +224,24 @@ $('.catchertext').mouseleave(function(){
 //redirect Buttons
 $('.sign').click(function(event){
   event.preventDefault();
+  $("#bgmusic").animate({volume: 0}, 1000);
   $('#loading_screen').fadeIn(1000,function(){window.location ="orbs.html"});
+
+});
+
+var ismuted=false;
+$('#musiccontrol').click(function(event){
+  event.preventDefault();
+  if (ismuted==false){
+    $("#bgmusic").animate({volume: 0}, 1000);
+    ismuted=true;
+    $(this).empty().append('<span class=\"glyphicon glyphicon-volume-off\" aria-hidden=\"true\"></span>')
+  } else if (ismuted==true){
+    $("#bgmusic").animate({volume: 1}, 1000);
+    ismuted=false;
+    $(this).empty().append('<span class=\"glyphicon glyphicon-volume-up\" aria-hidden=\"true\"></span>')
+
+  }
 });
 
 //on modal close

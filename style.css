@@ -548,6 +548,17 @@ html, body{
 .toprow{
   margin-top: 50px;
 }
+
+#musiccontrol{
+  color:white;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+#musiccontrol:hover{
+  color:grey;
+
+}
 /*--------------------Debug classes---------------------*/
 .debug{background-color: white;}
 .debug2{background-color: green;}
