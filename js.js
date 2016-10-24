@@ -40,6 +40,15 @@ var dragging = false;
       Emotion = dream_data[2];
       Image_Path_1 = dream_data[3];
       Image_Path_2 = dream_data[4];
+      contributor1 = dream_data[5];
+      contributor1 = dream_data[6];
+      contributor2 = dream_data[7];
+      issued1 = dream_data[8];
+      issued2 = dream_data[9];
+      title1 = dream_data[10];
+      title2 = dream_data[11];
+      troveUrl1 = dream_data[12];
+      troveUrl2 = dream_data[13];
       display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2);
     });
     function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {

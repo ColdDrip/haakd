@@ -9,6 +9,15 @@ $(document).ready(function(){
   var ImageNum;
   var ImageNum2;
 
+  var contributor11;
+  var contributor22;
+  var issued11;
+  var issued22;
+  var title11;
+  var title22;
+  var troveUrl11;
+  var troveUrl22;
+
 
   var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
   var found = 0;
@@ -172,20 +181,32 @@ $('#back').click(function(event){
           imageNum = imageNum + 1;
           console.log("change1-image1",imageNum);
           console.log("change1-image2",imageNum2);
-          printImages();
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
+          issued1 = data.response.zone[0].records.work[imageNum].issued;
+          issued2 = data.response.zone[0].records.work[imageNum2].issued;
+          title1 = data.response.zone[0].records.work[imageNum].title;
+          title2 = data.response.zone[0].records.work[imageNum2].title;
+          troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
+          troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
+          console.log("hi",contributor1);
+          printImages();
+          //console.log(contributor2,issued2,title2);
         }else{
           console.log("change1-1-image1",imageNum);
           console.log("change1-1-image2",imageNum2);
-          updateURL(imageNum,imageNum2);
-          printImages();
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
+          issued1 = data.response.zone[0].records.work[imageNum].issued;
+          issued2 = data.response.zone[0].records.work[imageNum2].issued;
+          title1 = data.response.zone[0].records.work[imageNum].title;
+          title2 = data.response.zone[0].records.work[imageNum2].title;
+          troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
+          troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
+          updateURL(imageNum,imageNum2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2);
+          printImages();
+          console.log("hi",contributor1);
+          //console.log(contributor2,issued2,title2);
 
         }
       });
@@ -200,9 +221,15 @@ $('#back').click(function(event){
           imageNum2 = imageNum2+1;
           console.log("change2-image1",imageNum);
           console.log("change2-image2",imageNum2);
-          printImages();
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
+          issued1 = data.response.zone[0].records.work[imageNum].issued;
+          issued2 = data.response.zone[0].records.work[imageNum2].issued;
+          title1 = data.response.zone[0].records.work[imageNum].title;
+          title2 = data.response.zone[0].records.work[imageNum2].title;
+          troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
+          troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
+          printImages();
           console.log(contributor1,issued1,title1);
           console.log(contributor2,issued2,title2);
         }else{
@@ -210,16 +237,22 @@ $('#back').click(function(event){
           console.log("change2-1-image2",imageNum2);
           console.log(contributor1,issued1,title1);
           console.log(contributor2,issued2,title2);
-          updateURL(imageNum,imageNum2);
-          printImages();
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
+          issued1 = data.response.zone[0].records.work[imageNum].issued;
+          issued2 = data.response.zone[0].records.work[imageNum2].issued;
+          title1 = data.response.zone[0].records.work[imageNum].title;
+          title2 = data.response.zone[0].records.work[imageNum2].title;
+          troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
+          troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
+          updateURL(imageNum,imageNum2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2);
+          printImages();
           console.log(contributor1,issued1,title1);
           console.log(contributor2,issued2,title2);
         }
       });
 
-      updateURL(imageNum,imageNum2);
+      updateURL(imageNum,imageNum2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2);
       printImages();
     });
   });
@@ -227,11 +260,21 @@ $('#back').click(function(event){
 
 
   //add two images URL into array and print them out
-  function updateURL(imageNum,imageNum2){
+  function updateURL(imageNum,imageNum2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2){
     url1 = loadedImages[imageNum];
     url2 = loadedImages[imageNum2];
     Image_Path_1 = url1;
     Image_Path_2 = url2;
+    contributor11 = contributor1;
+    contributor22 = contributor2;
+    issued11 = issued1;
+    issued22 = issued2;
+    title11 = title1;
+    title22 = title2;
+    troveUrl11 = troveUrl1;
+    troveUrl22 = troveUrl2;
+    console.log("first",contributor11);
+    console.log("second",contributor22);
     console.log(Image_Path_1);
     console.log(Image_Path_2);
   }
@@ -340,7 +383,7 @@ $('#back').click(function(event){
 
        //send dream contents via ajax post
     $.post("../lib/add_dream_story.php",{
-      Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2});
+      Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2,contributor11:contributor11,contributor22:contributor22,issued11:issued11,title11:title11,title22:title22,troveUrl11:troveUrl11,troveUrl22:troveUrl22});
 
       $('#loading_screen').fadeIn(1000,function(){
         window.location ="orbs.html"});

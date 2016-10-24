@@ -10,7 +10,7 @@ if($conn === false){
 // Escape user inputs for security
 $orbID = mysqli_real_escape_string($conn, $_POST['orbID']);
 
-$sql = "SELECT `orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2` FROM `Orb` WHERE `orbID` = '".$orbID."'";
+$sql = "SELECT `orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2`, `contributor1`, `contributor2`, `issued1`, `issued2`, `title1`, `title2`, `troveUrl1`, `troveUrl2` FROM `Orb` WHERE `orbID` = '".$orbID."'";
 
 
 $result = mysqli_query($conn, $sql);

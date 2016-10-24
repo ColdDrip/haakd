@@ -25,15 +25,17 @@ $orbID = $row[0];
 
 $Image_Path_1 = mysqli_real_escape_string($conn, $_POST['Image_Path_1']);
 $Image_Path_2 = mysqli_real_escape_string($conn, $_POST['Image_Path_2']);
-$contributor1 = mysqli_real_escape_string($conn, $_POST['contributor1']);
-$contributor2 = mysqli_real_escape_string($conn, $_POST['contributor2']);
-$issued1 = mysqli_real_escape_string($conn, $_POST['issued1']);
-$issued2 = mysqli_real_escape_string($conn, $_POST['issued2']);
-$title1 = mysqli_real_escape_string($conn, $_POST['title1']);
-$title2 = mysqli_real_escape_string($conn, $_POST['title2']);
-$troveUrl1 = mysqli_real_escape_string($conn, $_POST['troveUrl1']);
-$troveUrl2 = mysqli_real_escape_string($conn, $_POST['troveUrl2']);
+$contributor1 = mysqli_real_escape_string($conn, $_POST['contributor11']);
+$contributor2 = mysqli_real_escape_string($conn, $_POST['contributor22']);
+$issued1 = mysqli_real_escape_string($conn, $_POST['issued11']);
+$issued2 = mysqli_real_escape_string($conn, $_POST['issued22']);
+$title1 = mysqli_real_escape_string($conn, $_POST['title11']);
+$title2 = mysqli_real_escape_string($conn, $_POST['title22']);
+$troveUrl1 = mysqli_real_escape_string($conn, $_POST['troveUrl11']);
+$troveUrl2 = mysqli_real_escape_string($conn, $_POST['troveUrl22']);
 
+echo "hi", $title1;
+echo "hi again", $title2;
 
 $sql = "UPDATE Orb SET Image_Path_1 = '".$Image_Path_1."', Image_Path_2 = '".$Image_Path_2."', contributor1 = '".$contributor1."', issued1 = '".$issued1."', title1 = '".$title1."', troveUrl1 = '".$troveUrl1."', contributor2 = '".$contributor2."', issued2 = '".$issued2."', title2 = '".$title2."', troveUrl2 = '".$troveUrl2."' WHERE orbID = '".$orbID."'";
 

@@ -27,8 +27,16 @@ $Emotion = mysqli_real_escape_string($conn, $_POST['Emotion']);
 
 $Image_Path_1 = mysqli_real_escape_string($conn, $_POST['Image_Path_1']);
 $Image_Path_2 = mysqli_real_escape_string($conn, $_POST['Image_Path_2']);
+$contributor1 = mysqli_real_escape_string($conn, $_POST['contributor11']);
+$contributor2 = mysqli_real_escape_string($conn, $_POST['contributor22']);
+$issued1 = mysqli_real_escape_string($conn, $_POST['issued11']);
+$issued2 = mysqli_real_escape_string($conn, $_POST['issued22']);
+$title1 = mysqli_real_escape_string($conn, $_POST['title11']);
+$title2 = mysqli_real_escape_string($conn, $_POST['title22']);
+$troveUrl1 = mysqli_real_escape_string($conn, $_POST['troveUrl11']);
+$troveUrl2 = mysqli_real_escape_string($conn, $_POST['troveUrl22']);
 
-$sql = "INSERT INTO `Orb` (`orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2`) VALUES ('$orbID', '$Story', '$Emotion','$Image_Path_1','$Image_Path_2')";
+$sql = "INSERT INTO `Orb` (`orbID`, `Story`, `Emotion`,`Image_Path_1`, `Image_Path_2`, `contributor1`, `contributor2`, `issued1`, `issued2`, `title1`, `title2`, `troveUrl1`, `troveUrl2`) VALUES ('$orbID', '$Story', '$Emotion', '$Image_Path_1', '$Image_Path_2', '$conrtibutor1', '$contributor2', '$issued1', '$issued2', '$title1', '$title2', '$troveUrl1', '$troveUrl2')";
 
 
 if(mysqli_query($conn, $sql)){
