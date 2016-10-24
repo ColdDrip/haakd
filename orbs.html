@@ -59,7 +59,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<nav class="navbar navbar-fixed-top">
-				<div id="dreamer"><a href="index.html">dreamer.</a></div>
+				<div class="dreamercont"><a id="dreamer" href="index.html">dreamer.</a></div>
 			</nav>
 		</div>
 		<div class="row">
@@ -352,11 +352,18 @@
 					<img src="" alt=""><p>drag orb here to view a dream</p>
 				</div>
 				</div>
-
 			</div>
 		</div>
+	<div class="footer navbar-fixed-bottom">
+		<div class="row">
+			<a class="col-xs-offset-11" href="#" id="musiccontrol"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a>
+			<audio id="bgmusic" src="videoplayback.mp4" autoplay>
+			<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+			<embed src="videoplayback.mp4" width="180" height="90" hidden="true" />
+			</audio>
+		</div>
 	</div>
-	<footer class="footer"><div></div></footer>
+	</div>
 
 	<script src="js.js" type="text/javascript"></script>
 	<script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>

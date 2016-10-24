@@ -32,9 +32,7 @@
   <!--main section-->
   <div class="container">
     <div class="row">
-        <div id="dreamer">
-          <a href="index.html">dreamer.</a>
-        </div>
+      <div class="dreamercont"><a id="dreamer" href="index.html">dreamer.</a></div>
     </div>
 
 
@@ -131,6 +129,15 @@
         $(".pensieve_add_dream").hide();
         $(".dragtext2").hide();
         </script>
+      </div>
+    </div>
+    <div class="footer navbar-fixed-bottom">
+      <div class="row">
+        <a class="col-xs-offset-11" href="#" id="musiccontrol"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a>
+        <audio id="bgmusic" src="videoplayback.mp4" autoplay>
+        <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+        <embed src="videoplayback.mp4" width="180" height="90" hidden="true" />
+        </audio>
       </div>
     </div>
   </div><!--End of Fluid Container-->

@@ -93,11 +93,13 @@ var dragging = false;
 //redirect buttons
 $('.add_button').click(function(event){
   event.preventDefault();
+  $("#bgmusic").animate({volume: 0}, 1000);
   $('#loading_screen').fadeIn(1000,function(){window.location ="add_dream_story.html"});
 });
 
 $('#dreamer').click(function(event){
   event.preventDefault();
+  $("#bgmusic").animate({volume: 0}, 1000);
   $('#loading_screen').fadeIn(1000,function(){window.location ="index.html"});
 });
 
@@ -113,9 +115,24 @@ $('.add_button').mouseleave(function(){
   $('.clicktoadd').animate({"opacity":"0"},200,function(){});
 });
 
+//background music control
+var ismuted=false;
+$('#musiccontrol').click(function(event){
+  event.preventDefault();
+  if (ismuted==false){
+    $("#bgmusic").animate({volume: 0}, 1000);
+    ismuted=true;
+    $(this).empty().append('<span class=\"glyphicon glyphicon-volume-off\" aria-hidden=\"true\"></span>')
+  } else if (ismuted==true){
+    $("#bgmusic").animate({volume: 1}, 1000);
+    ismuted=false;
+    $(this).empty().append('<span class=\"glyphicon glyphicon-volume-up\" aria-hidden=\"true\"></span>')
+
+  }
+});
 
 /*------------------------------------------------------*/
-//scroll toposition
+//scroll left osition
 $( ".inside-cont").scrollLeft( 400 );
 /**-------------------------------------------------------------------------**/
 //particles js setting
