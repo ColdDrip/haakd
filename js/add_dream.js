@@ -60,7 +60,7 @@ $(document).ready(function(){
 //back button
 $('#back').click(function(event){
   event.preventDefault();
-
+  $("#bgmusic").animate({volume: 0}, 1000);
   if (stepcount=1){
     $('#loading_screen').fadeIn(1000,function(){
       window.location ="orbs.html"});
@@ -316,6 +316,7 @@ $('#back').click(function(event){
   //drag to add dream
   $(".pensieve_add_dream").droppable({drop:function(event,ui){
     $(this).addClass("debug2");
+    $("#bgmusic").animate({volume,0},1000);
     console.log("drop");
     $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
     $(".large_triangle").hide(200);
