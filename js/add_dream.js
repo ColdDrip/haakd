@@ -316,7 +316,7 @@ $('#back').click(function(event){
   //drag to add dream
   $(".pensieve_add_dream").droppable({drop:function(event,ui){
     $(this).addClass("debug2");
-    $("#bgmusic").animate({volume,0},1000);
+    $("#bgmusic").animate({volume: 0}, 1000);
     console.log("drop");
     $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
     $(".large_triangle").hide(200);
