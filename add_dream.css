@@ -126,7 +126,7 @@ nav{
 
 #output1_overlay,#output2_overlay{
   background-color: rgba(0,0,0,0.6);
-  visibility:visible;
+  visibility:hidden;
   z-index:300;
 }
 
