@@ -114,7 +114,7 @@ $('#back').click(function(event){
 
   //When clicking the search image button
   $("#searchbtn").click(function searchTrove(event) {
-    console.log("click");
+    // console.log("click");
     event.preventDefault();
 
     loadedImages = [];
@@ -136,40 +136,40 @@ $('#back').click(function(event){
       $('#output2').empty();
 
       console.log(data);
-      console.log(loadedImages.length);
+      // console.log(loadedImages.length);
 
       $.each(data.response.zone[0].records.work, processImages);
        imageNum = Math.floor((Math.random()*loadedImages.length));
        imageNum2 = imageNum + 1;
 
-      console.log(loadedImages.length);
+      // console.log(loadedImages.length);
       console.log("first search image1-1",imageNum);
       console.log("first search image2-2",imageNum2);
 
 
       var contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
-      console.log(contributor1);
+      // console.log(contributor1);
 
       var contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
-      console.log(contributor2);
+      // console.log(contributor2);
 
       var issued1 = data.response.zone[0].records.work[imageNum].issued;
-      console.log(issued1);
+      // console.log(issued1);
 
       var issued2 = data.response.zone[0].records.work[imageNum2].issued;
-      console.log(issued2);
+      // console.log(issued2);
 
       var title1 = data.response.zone[0].records.work[imageNum].title;
-      console.log(title1);
+      // console.log(title1);
 
       var title2 = data.response.zone[0].records.work[imageNum2].title;
-      console.log(title2);
+      // console.log(title2);
 
       var troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
-      console.log(troveUrl1);
+      // console.log(troveUrl1);
 
       var troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
-      console.log(troveUrl2);
+      // console.log(troveUrl2);
 
       //when refreshing image1
       $("a#changeImages1").click(function changeImages(event) {
@@ -219,8 +219,8 @@ $('#back').click(function(event){
         imageNum2 = Math.floor((Math.random()*loadedImages.length));
         if (imageNum == imageNum2){
           imageNum2 = imageNum2+1;
-          console.log("change2-image1",imageNum);
-          console.log("change2-image2",imageNum2);
+          // console.log("change2-image1",imageNum);
+          // console.log("change2-image2",imageNum2);
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
           issued1 = data.response.zone[0].records.work[imageNum].issued;
@@ -230,13 +230,13 @@ $('#back').click(function(event){
           troveUrl1 = data.response.zone[0].records.work[imageNum].troveUrl;
           troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
           printImages();
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
+          // console.log(contributor1,issued1,title1);
+          // console.log(contributor2,issued2,title2);
         }else{
-          console.log("change2-1-image1",imageNum);
-          console.log("change2-1-image2",imageNum2);
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
+          // console.log("change2-1-image1",imageNum);
+          // console.log("change2-1-image2",imageNum2);
+          // console.log(contributor1,issued1,title1);
+          // console.log(contributor2,issued2,title2);
           contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
           contributor2 = data.response.zone[0].records.work[imageNum2].contributor[0];
           issued1 = data.response.zone[0].records.work[imageNum].issued;
@@ -247,8 +247,8 @@ $('#back').click(function(event){
           troveUrl2 = data.response.zone[0].records.work[imageNum2].troveUrl;
           updateURL(imageNum,imageNum2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2);
           printImages();
-          console.log(contributor1,issued1,title1);
-          console.log(contributor2,issued2,title2);
+          // console.log(contributor1,issued1,title1);
+          // console.log(contributor2,issued2,title2);
         }
       });
 
@@ -273,10 +273,10 @@ $('#back').click(function(event){
     title22 = title2;
     troveUrl11 = troveUrl1;
     troveUrl22 = troveUrl2;
-    console.log("first",contributor11);
-    console.log("second",contributor22);
-    console.log(Image_Path_1);
-    console.log(Image_Path_2);
+    // console.log("first",contributor11);
+    // console.log("second",contributor22);
+    // console.log(Image_Path_1);
+    // console.log(Image_Path_2);
 
     if (Image_Path_1 === undefined){
       Image_Path_1 = "default.jpg";
