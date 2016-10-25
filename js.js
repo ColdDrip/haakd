@@ -49,9 +49,9 @@ var dragging = false;
       title2 = dream_data[11];
       troveUrl1 = dream_data[12];
       troveUrl2 = dream_data[13];
-      display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2);
+      display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2,contributor1,contributor2,issued1,issued2,title1,title2,troveUrl1,troveUrl2);
     });
-    function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2) {
+    function display_dream(orbID, Story, Emotion, Image_Path_1, Image_Path_2, Contributor1, Contributor2, Issued1, Issued2, Title1, Title2,TroveUrl1, TroveUrl2) {
       var page_element = "";
       var title = "";
       var dreamemo="";
@@ -67,6 +67,10 @@ var dragging = false;
           "Disgust":["0px 0px 30px #b4ffd8","radial-gradient(ellipse at center, #DFFBE2 0%, #D2FAD6 40%,#B9F8C0 65%, #A0F6A9 100%)"],
           "Not Sure":["0px 0px 30px #ffffff","radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%,#ffffff 65%, #9f9f9f 100%)"]
         }
+        var info1="";
+        var info2="";
+        var link1="";
+        var link2="";
 
         $(".large_orb").css("background",emo_color[Emotion][1]);
         $(".large_orb").css("box-shadow",emo_color[Emotion][0]);
@@ -76,22 +80,35 @@ var dragging = false;
       dreamemo = "<p> Emotion: </p><p>" + Emotion + "</p>";
       pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
       pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
+      info1="<h2>"+Title1+"</h2><p>Contributor: "+Contributor1+" Year: "+Issued1+"</p>"
+      info2="<h2>"+Title2+"</h2><p>Contributor: "+Contributor2+" Year: "+Issued2+"</p>"
+
 
        title = $.parseHTML(title);
        page_element = $.parseHTML(page_element);
        pic1 =$.parseHTML(pic1);
        pic2 =$.parseHTML(pic2);
        dreamemo=$.parseHTML(dreamemo);
+       info1=$.parseHTML(info1);
+       info2=$.parseHTML(info2);
+
 
       $('#viewdreamemotion').empty();
       $('#viewdreamcontent').empty();
       $('#pic1').empty();
       $('#pic2').empty();
+      $('#pic1-overlay p').empty();
+      $('#pic2-overlay p').empty();
 
       $('#viewdreamemotion').append(dreamemo);
       $('#viewdreamcontent').append(page_element);
       $('#pic1').append(pic1);
       $('#pic2').append(pic2);
+      $('#pic1-overlay p').append(info1);
+      $('#pic2-overlay p').append(info2);
+      $('#pic1-overlay a').attr("href",link1);
+      $('#pic2-overlay a').attr("href",link2);
+
       $('#viewdreamorb').fadeIn(1000);
 
     }
