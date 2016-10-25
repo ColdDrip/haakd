@@ -74,13 +74,21 @@ var dragging = false;
         $(".large_orb").css("background",emo_color[Emotion][1]);
         $(".large_orb").css("box-shadow",emo_color[Emotion][0]);
 
-      title = "<p> Orb Number: #" + orbID + "</p>";
+        if (Contributor1==""){Contributor1="Not Available"};
+        if (Contributor2==""){Contributor2="Not Available"};
+        if (Issued1==""){Issued1="Not Available"};
+        if (Issued2==""){Issued2="Not Available"};
+        if (Title1==""){Title1="Not Available"};
+        if (Title2==""){Title2="Not Available"};
+
+
+      title = "<p>Orb Number: #" + orbID + "</p>";
       page_element = "<p>" + Story + "</p>";
-      dreamemo = "<p> Emotion: </p><p>" + Emotion + "</p>";
+      dreamemo = "<p><strong>Emotion:</strong></p><p>" + Emotion + "</p>";
       pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
       pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
-      info1="<p>"+Title1+"</p><p>Contributor: "+Contributor1+"</p><p> Year: "+Issued1+"</p>";
-      info2="<p>"+Title2+"</p><p>Contributor: "+Contributor2+"</p><p> Year: "+Issued2+"</p>";
+      info1="<p>"+Title1+"</p><p><strong>Contributor:</strong> "+Contributor1+"</p><p><strong>Year:</strong>"+Issued1+"</p>";
+      info2="<p>"+Title2+"</p><p><strong>Contributor:</strong> "+Contributor2+"</p><p><strong>Year:</strong>"+Issued2+"</p>";
 
 
        title = $.parseHTML(title);
