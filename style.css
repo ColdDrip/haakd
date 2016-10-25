@@ -426,7 +426,7 @@ html, body{
 }
 
 #pic1-overlay p{
-  margin:5% 25% 5% 5%;
+  margin:8% 20% 5% 5%;
   overflow: hidden;
   overflow-y:scroll;
   word-wrap: break-word;
@@ -434,7 +434,7 @@ html, body{
 }
 
 #pic2-overlay p{
-  margin:5% 5% 5% 20%;
+  margin:8% 5% 5% 20%;
   overflow: hidden;
   overflow-y:scroll;
   word-wrap: break-word;
@@ -449,7 +449,7 @@ html, body{
 
 #pic1-overlay p a:hover, #pic2-overlay p a:hover{
   color:darkgray;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .pic1-holder:hover #pic1-overlay, .pic2-holder:hover #pic2-overlay{
