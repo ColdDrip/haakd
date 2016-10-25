@@ -122,7 +122,7 @@ $(document).ready(function(){
 
 			}
 			for (var y in my_shelf_spot){
-				$(".button.20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"30px"});
+				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"cover"});
 			}
 		}
 	});
