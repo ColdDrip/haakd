@@ -119,15 +119,10 @@ $(document).ready(function(){
 					$(this).css("background-size", "cover");
 				}
 				// for showing my dreams background
-				for (var y in my_shelf_spot){
 
-
-
-
-				$(".button.20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
-				"background-size":"30px"});
-
-		        }
+			}
+			for (var y in my_shelf_spot){
+				$(".button.20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"30px"});
 			}
 		}
 	});
