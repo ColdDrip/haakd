@@ -117,10 +117,10 @@ nav{
   background-color: #1f1f1f;
   top:100px;
 }
-#output1,#output1_overlay{
+#output1,#output1_overlay,#output1_holder{
   left:100px;
 }
-#output2,#output2_overlay{
+#output2,#output2_overlay,#output2_holder{
   left:680px;
 }
 
