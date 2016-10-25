@@ -360,8 +360,8 @@ $('#back').click(function(event){
     if (title11==""){title11="not available"};
     if (title22==""){title22="not available"};
 
-    info1="<p>"+Title1+"</p><p><b>Contributor: </b>"+contributor11+"</p><p><b>Year: </b>"+issued11+"</p>";
-    info2="<p>"+Title2+"</p><p><b>Contributor: </b>"+contributor22+"</p><p><b>Year: </b>"+issued22+"</p>";
+    info1="<p>"+title11+"</p><p><b>Contributor: </b>"+contributor11+"</p><p><b>Year: </b>"+issued11+"</p>";
+    info2="<p>"+title22+"</p><p><b>Contributor: </b>"+contributor22+"</p><p><b>Year: </b>"+issued22+"</p>";
     info1=$.parseHTML(info1);
     info2=$.parseHTML(info2);
 
