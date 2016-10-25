@@ -130,7 +130,7 @@ nav{
   z-index:300;
 }
 
-#output2_overlay p{
+#output1_overlay p{
   margin:5% 30% 5% 5%;
   overflow: hidden;
   word-wrap: break-word;
@@ -144,7 +144,7 @@ nav{
   white-space: normal;
 }
 
-.output1_holder:hover #output2_overlay, .output2_holder:hover #output2_overlay{
+.output1_holder:hover #output1_overlay, .output2_holder:hover #output2_overlay{
  visibility: visible;
 opacity: 1;
 }
