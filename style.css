@@ -363,7 +363,7 @@ html, body{
   z-index: 1001;
   /*margin-left: 38.5%;*/
   margin-top:15%;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-left: 65px;
 
 }
@@ -427,7 +427,6 @@ html, body{
 
 #pic1-overlay p{
   margin:5% 20% 5% 5%;
-  padding-top: 5%;
   overflow: hidden;
   overflow-y:scroll;
   word-wrap: break-word;
@@ -436,7 +435,6 @@ html, body{
 
 #pic2-overlay p{
   margin:5% 5% 5% 20%;
-  padding-top: 5%;
   overflow: hidden;
   overflow-y:scroll;
   word-wrap: break-word;
