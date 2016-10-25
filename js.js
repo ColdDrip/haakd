@@ -97,17 +97,17 @@ var dragging = false;
       $('#viewdreamcontent').empty();
       $('#pic1').empty();
       $('#pic2').empty();
-      $('#pic1-overlay p').empty();
-      $('#pic2-overlay p').empty();
+      $('#pic1-overlay>p').empty();
+      $('#pic2-overlay>p').empty();
 
       $('#viewdreamemotion').append(dreamemo);
       $('#viewdreamcontent').append(page_element);
       $('#pic1').append(pic1);
       $('#pic2').append(pic2);
-      $('#pic1-overlay p').append(info1);
-      $('#pic2-overlay p').append(info2);
-      $('#pic1-overlay a').attr("href",link1);
-      $('#pic2-overlay a').attr("href",link2);
+      $('#pic1-overlay>p').append(info1);
+      $('#pic2-overlay>p').append(info2);
+      $('#pic1-overlay p a').attr("href",link1);
+      $('#pic2-overlay p a').attr("href",link2);
 
       $('#viewdreamorb').fadeIn(1000);
 
