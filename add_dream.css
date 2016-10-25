@@ -131,14 +131,14 @@ nav{
 }
 
 #output1_overlay p{
-  margin:5% 30% 5% 5%;
+  margin:10% 20% 5% 5%;
   overflow: hidden;
   word-wrap: break-word;
   white-space: normal;
 }
 
 #output2_overlay p{
-  margin:5% 5% 5% 20%;
+  margin:10% 5% 5% 20%;
   overflow: hidden;
   word-wrap: break-word;
   white-space: normal;
