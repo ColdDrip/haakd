@@ -368,8 +368,12 @@ html, body{
 
 }
 
-#viewdreamcontent::-webkit-scrollbar,#pic1-overlay p::-webkit-scrollbar, #pic2-overlay p::-webkit-scrollbar {
+#viewdreamcontent::-webkit-scrollbar {
     display: none;
+}
+
+#pic1-overlay::-webkit-scrollbar, #pic2-overlay::-webkit-scrollbar{
+  background: transparent;
 }
 
 #viewdreamcontent{
@@ -423,7 +427,10 @@ html, body{
   visibility: hidden;
   color:white;
   opacity: 0;
+  overflow-y: scroll;
 }
+
+
 
 #pic1-overlay p{
   margin:5% 20% 5% 5%;
