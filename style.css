@@ -424,14 +424,13 @@ html, body{
   color:white;
   opacity: 0;
   overflow-y: scroll;
-}
+  }
 
 
 
 #pic1-overlay p{
   margin:5% 20% 5% 5%;
   overflow: hidden;
-  overflow-y:scroll;
   word-wrap: break-word;
   white-space: normal;
 }
@@ -439,7 +438,6 @@ html, body{
 #pic2-overlay p{
   margin:5% 5% 5% 20%;
   overflow: hidden;
-  overflow-y:scroll;
   word-wrap: break-word;
   white-space: normal;
 }
