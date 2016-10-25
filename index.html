@@ -27,32 +27,46 @@
 <body>
   <div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
 
-  <div id="viewdreamorb" style='background:rgba(0,0,0,0.4); z-index:999999; position:fixed; height:100%; width:100%; overflow:hidden'>
-     <div class="closebtn btn-lg"><span class="glyphicon glyphicon-remove" aria-hidden="true"></div>
-      <div class="large_orb">
-      <p id="viewdreamcontent">content</p>
-      <div class="large_triangle2">
-        <p id="viewdreamemotion"> Emotion: Joy </p>
-      </div>
-  </div>
-  <div class="picholders">
+  <div class="container" id="viewdreamorb" style='background:rgba(0,0,0,0.4); z-index:999998; position:fixed; height:100%; width:100%; overflow:hidden'>
+		<div class="closebtn btn-lg"><span class="glyphicon glyphicon-remove" aria-hidden="true"></div>
+<div class="row">
+	<div class="row">
+			<div class="col-xs-2 col-xs-offset-4 col-lg-offset-4 large_orb">
+				<p id="viewdreamcontent">content</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-5 large_triangle2">
+				<p id="viewdreamemotion"> Emotion: </p>
+			</div>
+		</div>
+		</div>
+			<div class="col-xs-8 col-lg-10 col-xs-offset-0 col-lg-offset-1 picholders">
 
-        <div class="col-xs-2">
-          <div id="pic1">
-            <p>hello</p>
-          </div>
-        </div>
+				<div class="col-xs-3 col-xs-offset-1 col-lg-offset-1 pic1-holder">
+					<div id="pic1">
+						<p>hello</p>
+					</div>
+					<div id="pic1-overlay">
+						<p>picoverlay</p>
+						<p><a href="#">View on Trove</a></p>
+					</div>
+				</div>
 
-        <div class="col-xs-2">
-          <div id="pic2">
-            <p>hellow</p>
-          </div>
-        </div>
+				<div class="col-xs-3 col-xs-offset-10 col-lg-offset-3 pic2-holder">
+					<div id="pic2">
+						<p>hello</p>
+					</div>
+					<div id="pic2-overlay">
+						<p>picoverlay</p>
+						<p><a href="#">View on Trove</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script>$('#viewdreamorb').hide()</script>
 
-    </div>
-</div>
 
-<script>$('#viewdreamorb').hide()</script>
 
 <div class="container-fluid">
   <div id="particles-js"></div>
@@ -61,17 +75,6 @@
     <div id="dreamerbig" class="col-xs-6 col-xs-offset-3"><a class="col-xs-12"href="index.html">dreamer.</a></div>
   </div>
   <div class="row">
-    		<!-- <ul>
-    			<li role="presentation"><a href="http://deco1800-pg6.uqcloud.net/">Home</a></li>
-          <li role="presentation"><a href="orbs.html">Orbs</a></li>
-    		  <li role="presentation"><a href="my_dreams.html">My Dreams</a></li>
-    		  <li role="presentation"><a id="about1" href="#">About</a></li>
-    		  <li role="presentation"><a id="how_it_works1" href="#">How It Works</a></li>
-    		  <li role="presentation"><a id="dreamtime1" href="#">Dreamtime</a></li>
-    		</ul> -->
-    <!-- <button id="about" onclick="about()">About</button>
-    <button id="how_it_works" onclick="works()">How It Works</button>
-    <button id="dreamtime" onclick="dreamtime()">Dreamtime</button> -->
 <div class="col-xs-12 outside-cont">
     <div class="about col-xs-2 col-xs-offset-3" id="about1">
 
@@ -140,9 +143,7 @@
 
         <p>We were inspired to create Dreamer after recognizing the mismatch between the ways in which dreams are portrayed in film and media and the ways in which dream-related applications are designed. In film and literature, dreams are often presented in very magical ways …yet most dream-related web applications present dreams in rather boring ways. These websites look more like pinboards and forums. While they may make dream sharing and dream exploration easy and convenient, they can be quite bland both in terms of visual design and interactions. In addition to this, the photos these websites utilize do not add any additional meaning to dreams and are typically overly literal. With Dreamer, we aim to change up the experience of sharing and exploring dreams on a web-based platform. We do this by purposefully connecting Trove artwork to users’ dreams to add new dimensions to these dreams. This provides Dreamer users with with a more visually rich experience that augments their own content.</p>
 
-        <p>Dreamer’s visual design has largely been inspired by the Pixar animated movie Inside Out, J.K. Rowling’s Harry Potter series, and the website I Remember. The application draws upon dream representations in film in media in order to construct a magical user experience. The employment of exploratory navigation is intended to make users feel as if they are immersed within an actual setting with shelves of glowing orbs, freely exploring dreams like one might explore books within a library.</p>
-
-        <p>In “Art, dreams and active imagination: A post-Jungian approach to transference and the image,” Joy Schaverien writes, “[D]reams ... are ultimately elusive, transient and can only be communicated if translated into the shared medium of spoken language. There is no public manifestation of an imagined event. However visualizations and dreams can sometimes be conveyed in pictures and, unlike mental imagery or dreams, art objects have a real, concrete, existence in the public arena. A picture is an object offered for the shared gaze and therefore it may be a bridge between inner and outer, between private and public experience.” Dreamer augments users’ dream descriptions by utilizing Trove’s artwork. Since, as Schaverien states, artwork has a “real, concrete, existence,” we believe that offering users complimentary artwork can allow for more meaning-making of rather “elusive” content.</p>
+        <p>Dreamer’s visual design has largely been inspired by the Pixar animated movie <a href="https://en.wikipedia.org/wiki/Inside_Out_(2015_film)">Inside Out</a>, J.K. Rowling’s <a href="http://harrypotter.wikia.com/wiki/Hall_of_Prophecy">Harry Potter</a> series, and the website <a href="http://i-remember.fr/en/">I Remember</a>. The application draws upon dream representations in film in media in order to construct a magical user experience. The employment of exploratory navigation is intended to make users feel as if they are immersed within an actual setting with shelves of glowing orbs, freely exploring dreams like one might explore books within a library.</p>
 
         <p>With Dreamer, we hope to stimulate creativity amongst our audience by creating an alluring and immersive user experience through unique interactions and aesthetic appeal augmented by the wealth of artwork present within the Trove library.</p>
       </div>
@@ -160,48 +161,24 @@
         <h4 class="modal-title" id="myModalLabel">How It Works</h4>
       </div>
       <div class="modal-body">
-        <h3>Defining Dreamer's Core Aspects</h3>
-        <p>Dreamer has three core aspects: orbs, the Dream Library, and the Pensieve.</p>
+        <p>Dreamer has four core aspects: orbs (which contain dreams), the dream library (which contains orbs), the pensieve, and the dreamcatcher.</p>
 
-        <!-- <insert orb graphic><insert Dream Library graphic><insert Pensieve graphic> -->
 
-        <p>Each orb represents a unique dream created by a Dreamer user. Any dream that you create on Dreamer will manifest in the form of an orb.</p>
+<p>Each orb represents a unique dream created by a Dreamer user.</p>
 
-        <p>The Dream Library, located at Dreamer’s homepage, is where all user-created dreams are stored as orbs on shelves.</p>
 
-        <p>The Pensieve serves as a device for viewing dreams within the Dream Library and saving dreams to the Dream Library. Its name is a reference to the object of the same name in the Harry Potter series, which enabled non-participants to view others memories from a third-person perspective. To view dreams and publish your own created dreams, you must drag an orb to the Pensieve.</p>
+<p>When you’re in the dream library, you can create your own dream by clicking the add a dream button. You’ll be prompted to type out your dream, select the emotion you most associate with it, and choose two relevant images of artwork based on your own search keywords. Once you’re happy with the images, drag the orb to the pensieve to save your dream.</p>
 
-        <h3>How to Use Dreamer</h3>
-        <p>Dreamer can be used for two functions: adding dreams and exploring dreams.</p>
 
-        <!-- <insert share dreams icon> <insert explore dreams icon> -->
+<p>You can find your dream within the dream library represented by the orb with the dashed line around it. Or, as the first orb within the "my dreams" row.</p>
 
-        <h4>Adding Dreams</h4>
-        <p>To add a dream, press the “add a dream” icon featured in the top right corner of the application. You will then be prompted to add a descriptive narrative of your dream, select the emotion you most associate with the dream, and choose two relevant images of artwork (sourced from Trove) based on your own selected keyword(s). Once these tasks have been completed, drag the orb to the Pensieve. This will send the orb to the Dream Library where it will emit a brighter glow than other orbs to indicate its position to you. Your dream will now be viewable by other Dreamer users.</p>
 
-        <!-- <insert add a dream graphic> -->
+<p>To view a dream, all you need to do is drag an orb to the pensieve.</p>
 
-        <h4>Exploring Dreams</h4>
-        <p>Explore the dream library by pressing your left and right arrow keys to peruse all shelves. Orbs will appear in the color associated with the dream they represent. Special orbs featuring Australian Aboriginal artwork and Dreamtime stories will appear in gold. Hovering over each orb will give you a preview of one of the images of artwork associated with the dream the orb represents.</p>
 
-        <p>To view a dream, drag any orb on the shelves to the Pensieve.</p>
+<p>To view random dreams, you can also click on the dreamcatcher here on the homepage.</p>
 
-        <!-- <insert view a dream graphic> -->
-
-        <p>To view your own dreams, visit the My Dreams page and drag any orb on the shelves to the Pensieve.</p>
-
-        <!-- <insert view your own dream graphic> -->
-
-        <p>The Pensieve will make visible all content associated with the dream the orb represents.</p>
-
-        <h3>Use of Dreamer</h3>
-        <p>Montague Ullman, notable psychoanalyst and founder of the Dream Laboratory, posits that “dream sharing bring[s] about rationality and connectedness in a highly irrational and disconnected world.”</p>
-
-        <!-- <insert connectedness graphic> -->
-
-        <p>Dreamer is designed for people desiring to share their dreams and be inspired by the dreams of others. It can also serve as a unique method of exploring artwork for art enthusiasts.</p>
-
-        <p>In "Portents or Confessions: Authoritative Readings of a Dream Text,” Robin Wagner-Pacifici and Harold Bershady illuminate the ability of dream sharing to serve as a mechanism for fostering solidarity. They offer the perspective that dreams that are shared can in some way be viewed as “gifts.” From this perspective, Dreamer can be seen as platform for encouraging users to be both givers and receivers.</p>
+<p>Sweet dreams!</p>
       </div>
       <div class="modal-footer">
       </div>

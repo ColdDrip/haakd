@@ -277,6 +277,13 @@ $('#back').click(function(event){
     console.log("second",contributor22);
     console.log(Image_Path_1);
     console.log(Image_Path_2);
+
+    if (Image_Path_1 === undefined){
+      Image_Path_1 = "default.jpg";
+    }
+    if (Image_Path_2 === undefined){
+      Image_Path_2 = "default.jpg";
+    }
   }
 
   function processImages(index, troveItem) {
