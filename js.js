@@ -107,7 +107,7 @@ var dragging = false;
       $('#pic1-overlay p').first().append(info1);
       $('#pic2-overlay p').first().append(info2);
       $('#pic1-overlay p:nth-child(2) a').attr("href",link1);
-      $('#pic2-overlay pnth-child(2) a').attr("href",link2);
+      $('#pic2-overlay p:nth-child(2) a').attr("href",link2);
 
       $('#viewdreamorb').fadeIn(1000);
 
