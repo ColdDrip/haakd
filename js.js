@@ -110,6 +110,7 @@ var dragging = false;
       $('#pic2-overlay p:nth-child(2) a').attr("href",link2);
 
       $('#viewdreamorb').fadeIn(1000);
+      console.log("c1: "+Contributor1+"t1: "+Title1+"I1: "+Issued1+"c2: "+Contributor2+"t2: "+Title2+"I2: "+Issued2);
 
     }
   }
