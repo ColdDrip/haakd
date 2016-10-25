@@ -79,8 +79,8 @@ var dragging = false;
       dreamemo = "<p> Emotion: </p><p>" + Emotion + "</p>";
       pic1 = "<img class=\"col-xs-12\" src=" + Image_Path_1 + ">" ;
       pic2 = "<img class=\"col-xs-12\" src=" + Image_Path_2 + ">";
-      info1="<p>"+Title1+"</p><p>Contributor: "+Contributor1+" Year: "+Issued1+"</p>"
-      info2="<p>"+Title2+"</p><p>Contributor: "+Contributor2+" Year: "+Issued2+"</p>"
+      info1="<p>"+Title1+"</p><p>Contributor: "+Contributor1+"</p><p> Year: "+Issued1+"</p>";
+      info2="<p>"+Title2+"</p><p>Contributor: "+Contributor2+"</p><p> Year: "+Issued2+"</p>";
 
 
        title = $.parseHTML(title);
@@ -105,8 +105,8 @@ var dragging = false;
       $('#pic2').append(pic2);
       $('#pic1-overlay p').first().append(info1);
       $('#pic2-overlay p').first().append(info2);
-      $('#pic1-overlay p:nth-child(2) a').attr("href",link1);
-      $('#pic2-overlay p:nth-child(2) a').attr("href",link2);
+      $('#pic1-overlay p:nth-child(2) a').attr("href",TroveUrl1);
+      $('#pic2-overlay p:nth-child(2) a').attr("href",TroveUrl2);
 
       $('#viewdreamorb').fadeIn(1000);
       console.log("c1: "+Contributor1+"t1: "+Title1+"I1: "+Issued1+"c2: "+Contributor2+"t2: "+Title2+"I2: "+Issued2);
