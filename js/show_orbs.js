@@ -123,7 +123,7 @@ $(document).ready(function(){
 			}
 			for (var y in my_dreams_dic){
 				if (my_dreams_dic[y][0] == position){
-				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"cover"});}
+				$(this).css({"background-image":"url("+my_dreams_dic[200+y][2]+")","background-size":"cover"});}
 			}
 		}
 	});
