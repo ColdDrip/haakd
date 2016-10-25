@@ -112,7 +112,6 @@ $(document).ready(function(){
 			$('.dragtext').animate({"opacity":"1"},200,function(){});
 			$(this).animate({"top":"-=10px"},200,function(){});
 			var position = $(this).attr("class").split(' ')[1];
-			if ($(this).attr("id")<200){
 			for (var x in taken_orbs) {
 				if (taken_orbs[x][0] == position){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
@@ -120,11 +119,12 @@ $(document).ready(function(){
 					$(this).css("background-size", "cover");
 				}
 				// for showing my dreams background
-			}}else if($(this).attr("id")>=200){
-			for (var y in my_shelf_spot){
-				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"cover"});
+
 			}
-		}
+			for (var y in my_shelf_spot){
+				if (my_dreams_dic[y][0]==position){
+				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"cover"});}
+			}
 		}
 	});
 
