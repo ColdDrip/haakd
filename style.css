@@ -368,12 +368,8 @@ html, body{
 
 }
 
-#viewdreamcontent::-webkit-scrollbar {
+#viewdreamcontent::-webkit-scrollbar,#pic1-overlay::-webkit-scrollbar, #pic2-overlay::-webkit-scrollbar {
     display: none;
-}
-
-#pic1-overlay::-webkit-scrollbar, #pic2-overlay::-webkit-scrollbar{
-  background: transparent;
 }
 
 #viewdreamcontent{
