@@ -419,7 +419,7 @@ html, body{
   width: 350px;
   height: 250px;
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(0,0,0,0.6);
   visibility: hidden;
   color:white;
   opacity: 0;
