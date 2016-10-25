@@ -144,7 +144,7 @@ nav{
   white-space: normal;
 }
 
-.output1:hover #output1_overlay, .output2:hover #output2_overlay{
+#output1_overlay:hover, #output2_overlay:hover{
  visibility: visible;
 opacity: 1;
 }
