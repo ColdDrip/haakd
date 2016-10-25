@@ -9,22 +9,25 @@ $(document).ready(function(){
 	//getting my recent dreams
 	var my_dreams_data;
 	var my_dreams_dic={};
-	var my_shelf_spot = ['my1','my2','my3','my4','my5','my6']
+	var my_shelf_spot = ['200','201','202','203','204','205']
 
 
 
 	$.get("../lib/get_my_dreams.php",function(data){
+	    console.log("data",data);
 		my_dreams_data = JSON.parse(data,",");
+		console.log("mydream1111",my_dreams_dic);
 		for (i in my_dreams_data){
-			my_dreams_dic[my_shelf_spot[i]] = [my_dreams_data[i][1],my_dreams_data[i][1],my_dreams_data[i][2],my_dreams_data[i][3],my_dreams_data[i][4]]
+			my_dreams_dic[my_shelf_spot[i]] = [my_shelf_spot[i],my_dreams_data[i][1],my_dreams_data[i][3],my_dreams_data[i][0]]
 			$("."+ my_shelf_spot[i]).attr("id",my_dreams_data[i][0]);
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
+			
 
 		}
 		colors(my_dreams_dic,"myorbs");
-		console.log(my_dreams_dic);
+		console.log("mydream",my_dreams_dic);
 	});
 
 	//colors(my_dreams_data,"myorbs");
@@ -74,7 +77,7 @@ $(document).ready(function(){
 		}
 		//console.log("orbs map",orbs_map);
 
-		console.log(taken_orbs);
+		console.log("takenorb",taken_orbs);
 
 		//console.log("taken orbs", taken_orbs);
 		for (var j in taken_orbs){
@@ -103,6 +106,7 @@ $(document).ready(function(){
 	});
 
 	$('.button').mouseenter(function(){
+	
 	  if (dragging==false && $(this).attr("id")!=""){
 	    console.log('mouse enter');
 			$('.dragtext').animate({"opacity":"1"},200,function(){});
@@ -111,16 +115,19 @@ $(document).ready(function(){
 			for (var x in taken_orbs) {
 				if (taken_orbs[x][0] == position){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
+					
 					$(this).css("background-size", "cover");
 				}
 				// for showing my dreams background
-				// for (var y in my_shelf_spot){
-				// 	if(position==y){
-				// 	console.log($("."+y).attr("id"));
-				// 	$("."+y).css({"background-image":"url("+my_dreams_dic[position.attr("id")][3]+")",
-				// "background-size":"30px"});
-				// }
-			//}
+				for (var y in my_shelf_spot){
+				
+				
+				
+				
+				$(".20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
+				"background-size":"30px"});
+				
+		        }
 			}
 		}
 	});

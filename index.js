@@ -229,6 +229,8 @@ $('.sign').click(function(event){
 
 });
 
+
+//Music control
 var ismuted=false;
 $('#musiccontrol').click(function(event){
   event.preventDefault();
