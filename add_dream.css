@@ -120,7 +120,7 @@ nav{
 #output1,#output1_overlay{
   left:100px;
 }
-#output2,#output2_overlay,#output2_holder{
+#output2,#output2_overlay{
   left:680px;
 }
 
@@ -128,10 +128,6 @@ nav{
   background-color: rgba(0,0,0,0.6);
   visibility:hidden;
   z-index:300;
-}
-
-#output2_holder{
-  z-index:700;
 }
 
 #output1_overlay p{
