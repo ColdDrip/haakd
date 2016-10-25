@@ -113,8 +113,8 @@ var dragging = false;
       $('#pic2').append(pic2);
       $('#pic1-overlay p').first().append(info1);
       $('#pic2-overlay p').first().append(info2);
-      $('#pic1-overlay p:nth-child(2) a').attr("href",TroveUrl1);
-      $('#pic2-overlay p:nth-child(2) a').attr("href",TroveUrl2);
+      // $('#pic1-overlay p:nth-child(2) a').attr("href",TroveUrl1);
+      // $('#pic2-overlay p:nth-child(2) a').attr("href",TroveUrl2);
 
       $('#viewdreamorb').fadeIn(1000);
       console.log("c1: "+Contributor1+"t1: "+Title1+"I1: "+Issued1+"c2: "+Contributor2+"t2: "+Title2+"I2: "+Issued2);

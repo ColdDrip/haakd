@@ -104,8 +104,8 @@ $('#dreamcatcher1').click(function(){
         $('#pic2').append(pic2);
         $('#pic1-overlay p').first().append(info1);
         $('#pic2-overlay p').first().append(info2);
-        $('#pic1-overlay p:nth-child(2) a').attr("href",TroveUrl1);
-        $('#pic2-overlay p:nth-child(2) a').attr("href",TroveUrl2);
+        // $('#pic1-overlay p:nth-child(2) a').attr("href",TroveUrl1);
+        // $('#pic2-overlay p:nth-child(2) a').attr("href",TroveUrl2);
 
       }
   $('#viewdreamorb').fadeIn(1000);

@@ -147,6 +147,7 @@ $('#back').click(function(event){
       console.log("first search image2-2",imageNum2);
 
 
+
       var contributor1 = data.response.zone[0].records.work[imageNum].contributor[0];
       // console.log(contributor1);
 
