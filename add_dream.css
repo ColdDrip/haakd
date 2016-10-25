@@ -107,7 +107,7 @@ nav{
   position:absolute;
 }
 
-#output1,#output2,#output2_overlay{
+#output1,#output2,#output2_overlay,#output1_overlay{
   position: absolute;
   width: 350px;
   height: 250px;
@@ -117,15 +117,35 @@ nav{
   background-color: #1f1f1f;
   top:100px;
 }
-#output1{
+#output1,#output1_overlay{
   left:100px;
 }
 #output2,#output2_overlay{
   left:680px;
 }
 
-#output2_overlay{
-  background-color: red;
+#output1_overlay,#output2_overlay{
+  background-color: rgba(0,0,0,0.6);
+  visibility: hidden;
+}
+
+#output2_overlay p{
+  margin:5% 30% 5% 5%;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#output2_overlay p{
+  margin:5% 5% 5% 20%;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.output1_holder:hover #output2_overlay, .output2_holder:hover #output2_overlay{
+ visibility: visible;
+opacity: 1;
 }
 
 
