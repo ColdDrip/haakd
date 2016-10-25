@@ -348,6 +348,23 @@ $('#back').click(function(event){
   }
 
   function printImages() {
+    var info1="";
+    var info2="";
+    var link1="";
+    var link2="";
+
+    if (contributor11==""){contributor11="not available"};
+    if (contributor22==""){contributor22="not available"};
+    if (issued11==""){issued11="not available"};
+    if (issued22==""){issued22="not available"};
+    if (title11==""){title11="not available"};
+    if (title22==""){title22="not available"};
+
+    info1="<p>"+Title1+"</p><p><b>Contributor: </b>"+contributor11+"</p><p><b>Year: </b>"+issued11+"</p>";
+    info2="<p>"+Title2+"</p><p><b>Contributor: </b>"+contributor22+"</p><p><b>Year: </b>"+issued22+"</p>";
+    info1=$.parseHTML(info1);
+    info2=$.parseHTML(info2);
+
     // Print out all images
     var image1 = new Image();
     image1.src = url1;
@@ -357,6 +374,8 @@ $('#back').click(function(event){
     image1.style.verticalAlign = "middle";
     $("#output1").append(image1);
 
+    $("#output1_overlay p").empty().append(info1);
+
     var image2 = new Image();
     image2.src = url2;
     image2.style.display = "inline-block";
@@ -365,6 +384,8 @@ $('#back').click(function(event){
     image2.style.verticalAlign = "middle";
 
     $("#output2").append(image2);
+    $("#output2_overlay p").empty().append(info2);
+
 
   }
 

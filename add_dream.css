@@ -107,7 +107,7 @@ nav{
   position:absolute;
 }
 
-#output1,#output2{
+#output1,#output2,#output2_overlay{
   position: absolute;
   width: 350px;
   height: 250px;
@@ -120,8 +120,12 @@ nav{
 #output1{
   left:100px;
 }
-#output2{
+#output2,#output2_overlay{
   left:680px;
+}
+
+#output2_overlay{
+  background-color: red;
 }
 
 
