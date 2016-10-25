@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$("."+ my_shelf_spot[i]).css("opacity","1");
 			$("."+ my_shelf_spot[i]).css("cursor","pointer");
 			$("."+ my_shelf_spot[i]).attr("onclick","");
-			
+
 
 		}
 		colors(my_dreams_dic,"myorbs");
@@ -106,7 +106,7 @@ $(document).ready(function(){
 	});
 
 	$('.button').mouseenter(function(){
-	
+
 	  if (dragging==false && $(this).attr("id")!=""){
 	    console.log('mouse enter');
 			$('.dragtext').animate({"opacity":"1"},200,function(){});
@@ -115,18 +115,18 @@ $(document).ready(function(){
 			for (var x in taken_orbs) {
 				if (taken_orbs[x][0] == position){
 					$(this).css("background-image", "url("+taken_orbs[x][2]+")");
-					
+
 					$(this).css("background-size", "cover");
 				}
 				// for showing my dreams background
 				for (var y in my_shelf_spot){
-				
-				
-				
-				
-				$(".20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
+
+
+
+
+				$(".button.20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
 				"background-size":"30px"});
-				
+
 		        }
 			}
 		}
@@ -139,7 +139,7 @@ $(document).ready(function(){
 			$('.dragtext').animate({"opacity":"0"},200,function(){});
 			$(this).css("background-image", "");
 			colors(taken_orbs,"normal");
-			colors(my_dreams_data,"myorbs");
+			colors(my_dreams_dic,"myorbs");
 			special();
 		}
 	});
