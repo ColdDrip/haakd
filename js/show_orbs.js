@@ -121,9 +121,9 @@ $(document).ready(function(){
 				// for showing my dreams background
 
 			}
-			for (var y in my_shelf_spot){
+			for (var y in my_dreams_dic){
 				if (my_dreams_dic[y][0] == position){
-				$(this).css({"background-image":"url("+my_dreams_dic[y][2]+")","background-size":"cover"});}
+				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")","background-size":"cover"});}
 			}
 		}
 	});
