@@ -99,6 +99,7 @@ nav{
 }
 .backnext{
   margin-top:150px;
+  z-index: 200;
 }
 
 /*-----------------Add dream story page---------------------*/
@@ -233,4 +234,12 @@ nav{
   font-family: "Gloria Hallelujah",cursive;
   z-index:999;
   padding:10px;
+  margin-top: 10%;
+}
+
+.pen2{
+  z-index: 10003;
+  height: 170%;
+  position: fixed;
+  margin-top: -13%;
 }
