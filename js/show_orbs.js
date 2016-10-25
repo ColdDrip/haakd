@@ -124,7 +124,7 @@ $(document).ready(function(){
 
 
 
-				$(".button.20"+y).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
+				$(this).css({"background-image":"url("+my_dreams_dic["20"+y][2]+")",
 				"background-size":"30px"});
 
 		        }
