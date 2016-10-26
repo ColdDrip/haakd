@@ -63,7 +63,6 @@ $(document).ready(function(){
     $(".pensieve_add_dream").fadeIn(2000);
     $(".pen2").fadeIn(2000);
     $(".imageholders").fadeIn(2000);
-    console.log(user_dream_story+" "+user_dream_emotion+" "+Image_Path_1+" "+Image_Path_2+" "+finished_orb);
   }
 
   });
@@ -409,6 +408,7 @@ $('#back').click(function(event){
     $(this).addClass("debug2");
     $("#bgmusic").animate({volume: 0}, 1000);
     console.log("drop");
+    console.log(user_dream_story+" "+user_dream_emotion+" "+Image_Path_1+" "+Image_Path_2+" "+finished_orb);
     $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
     $(".large_triangle").hide(200);
     $("#image_section").fadeOut(1000);
