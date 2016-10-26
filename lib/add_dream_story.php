@@ -36,7 +36,7 @@ $title2 = mysqli_real_escape_string($conn, $_POST['title22']);
 $troveUrl1 = mysqli_real_escape_string($conn, $_POST['troveUrl11']);
 $troveUrl2 = mysqli_real_escape_string($conn, $_POST['troveUrl22']);
 
-$sql = "INSERT INTO 'Orb' ('orbID', 'Story', 'Emotion','Image_Path_1', 'Image_Path_2', 'contributor1', 'contributor2', 'issued1', 'issued2', 'title1', 'title2', 'troveUrl1', 'troveUrl2') VALUES ('$orbID', '$Story', '$Emotion', '$Image_Path_1', '$Image_Path_2', '$conrtibutor1', '$contributor2', '$issued1', '$issued2', '$title1', '$title2', '$troveUrl1', '$troveUrl2')";
+$sql = "INSERT INTO 'Orb' ('orbID', 'Story', 'Emotion','Image_Path_1', 'Image_Path_2', 'contributor1', 'contributor2', 'issued1', 'issued2', 'title1', 'title2', 'troveUrl1', 'troveUrl2') VALUES ('$orbID', '$Story', '$Emotion', '$Image_Path_1', '$Image_Path_2', '$contributor1', '$contributor2', '$issued1', '$issued2', '$title1', '$title2', '$troveUrl1', '$troveUrl2')";
 
 
 if(mysqli_query($conn, $sql)){
