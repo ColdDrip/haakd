@@ -63,7 +63,7 @@ $(document).ready(function(){
     $(".pensieve_add_dream").fadeIn(2000);
     $(".pen2").fadeIn(2000);
     $(".imageholders").fadeIn(2000);
-    console.log(user_dream_story+" " user_dream_emotion+" "+Image_Path_1+" "+Image_Path_2+" "+finished_orb);
+    console.log(user_dream_story+" "+user_dream_emotion+" "+Image_Path_1+" "+Image_Path_2+" "+finished_orb);
   }
 
   });
