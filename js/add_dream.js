@@ -417,6 +417,7 @@ $('#back').click(function(event){
 
       $('#loading_screen').fadeIn(1000,function(){
         window.location ="orbs.html"});
+        console.log("added");
 
 }
 });
