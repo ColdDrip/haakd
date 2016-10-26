@@ -275,6 +275,7 @@ $('#back').click(function(event){
     title22 = title2;
     troveUrl11 = troveUrl1;
     troveUrl22 = troveUrl2;
+    console.log("prnt");
     // console.log("first",contributor11);
     // console.log("second",contributor22);
     // console.log(Image_Path_1);
