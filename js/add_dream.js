@@ -411,11 +411,11 @@ $('#back').click(function(event){
     $(".user_dream_orb").animate({"top":"+=20px"},200,function(){});
     $(".large_triangle").hide(200);
     $("#image_section").fadeOut(1000);
+    console.log("added");
+
 
        //send dream contents via ajax post
-    $.post("../lib/add_dream_story.php",{
-      Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2,contributor11:contributor11,contributor22:contributor22,issued11:issued11,issued22:issued22,title11:title11,title22:title22,troveUrl11:troveUrl11,troveUrl22:troveUrl22});
-      console.log("added");
+    $.post("../lib/add_dream_story.php",{Story:user_dream_story,Emotion:user_dream_emotion,Image_Path_1:Image_Path_1,Image_Path_2:Image_Path_2,contributor11:contributor11,contributor22:contributor22,issued11:issued11,issued22:issued22,title11:title11,title22:title22,troveUrl11:troveUrl11,troveUrl22:troveUrl22});
 
       $('#loading_screen').fadeIn(1000,function(){
         window.location ="orbs.html"});
