@@ -96,7 +96,7 @@ $('#back').click(function(event){
 
   $("#Emotion").change(large_orb_color());
 
-  function large_orb_color (){
+  function large_orb_color(){
       var emo_color =
       {
           "Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
