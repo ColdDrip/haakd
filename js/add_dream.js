@@ -94,7 +94,9 @@ $('#back').click(function(event){
       }
     });
 
-  $("#Emotion").change(large_orb_color());
+  $("#Emotion").change(function(){
+    large_orb_color();
+  });
 
   function large_orb_color(){
       var emo_color =
