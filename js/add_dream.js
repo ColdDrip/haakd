@@ -38,6 +38,8 @@ $(document).ready(function(){
       $(".emotion-control").fadeIn(2000);
       $(".guidetext").empty();
       $(".guidetext").append("Which emotion do you most associate with your dream?");
+      large_orb_color ();
+
 
 
     } else if (stepcount==2){
@@ -109,8 +111,6 @@ $('#back').click(function(event){
         $("#Story").css("box-shadow",emo_color[$("#Emotion option:selected").val()][0]);
         $("#Story").css("color","#0f0f0f");
     }
-    large_orb_color ();
-
 
   //When clicking the search image button
   $("#searchbtn").click(function searchTrove(event) {
