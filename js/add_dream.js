@@ -62,7 +62,6 @@ $(document).ready(function(){
     //show pensieve
     $(".pensieve_add_dream").fadeIn(2000);
     $(".pen2").fadeIn(2000);
-    $(".imageholders").fadeIn(2000);
   }
 
   });
@@ -117,6 +116,8 @@ $('#back').click(function(event){
   $("#searchbtn").click(function searchTrove(event) {
     // console.log("click");
     event.preventDefault();
+    $(".imageholders").fadeIn(2000);
+
 
     loadedImages = [];
     var url1;
