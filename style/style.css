@@ -167,7 +167,7 @@ body{
   background:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ),url('abstract.jpg');
+    ),url('../images/abstract.jpg');
 
     background-size: cover;
   margin: 0;

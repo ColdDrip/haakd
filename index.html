@@ -5,217 +5,221 @@
   <title>DREAMER</title>
   <meta charset="utf-8">
 
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300" rel="stylesheet">
+
   <!--JQUERY-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300" rel="stylesheet">
-  <script src="index.js"></script>
+
+  <script src="js/index.js"></script>
 </head>
 
 <body>
   <div id='loading_screen' style='background:black; position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0; z-index:999999;'></div>
 
   <div class="container" id="viewdreamorb" style='background:rgba(0,0,0,0.4); z-index:999998; position:fixed; height:100%; width:100%; overflow:hidden'>
-		<div class="closebtn btn-lg"><span class="glyphicon glyphicon-remove" aria-hidden="true"></div>
-<div class="row">
-	<div class="row">
-			<div class="col-xs-2 col-xs-offset-4 col-lg-offset-4 large_orb">
-				<p id="viewdreamcontent">content</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-offset-5 large_triangle2">
-				<p id="viewdreamemotion"> Emotion: </p>
-			</div>
-		</div>
-		</div>
-			<div class="col-xs-8 col-lg-10 col-xs-offset-0 col-lg-offset-1 picholders">
+    <div class="closebtn btn-lg"><span class="glyphicon glyphicon-remove" aria-hidden="true"></div>
+      <div class="row">
+        <div class="row">
+          <div class="col-xs-2 col-xs-offset-4 col-lg-offset-4 large_orb">
+            <p id="viewdreamcontent">content</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-offset-5 large_triangle2">
+            <p id="viewdreamemotion"> Emotion: </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-8 col-lg-10 col-xs-offset-0 col-lg-offset-1 picholders">
 
-				<div class="col-xs-3 col-xs-offset-1 col-lg-offset-1 pic1-holder">
-					<div id="pic1">
-						<p>hello</p>
-					</div>
-					<div id="pic1-overlay">
-						<p>picoverlay</p>
-						<!-- <p><a href="#">View on Trove</a></p> -->
-					</div>
-				</div>
+        <div class="col-xs-3 col-xs-offset-1 col-lg-offset-1 pic1-holder">
+          <div id="pic1">
+            <p>hello</p>
+          </div>
+          <div id="pic1-overlay">
+            <p>picoverlay</p>
+            <!-- <p><a href="#">View on Trove</a></p> -->
+          </div>
+        </div>
 
-				<div class="col-xs-3 col-xs-offset-10 col-lg-offset-3 pic2-holder">
-					<div id="pic2">
-						<p>hello</p>
-					</div>
-					<div id="pic2-overlay">
-						<p>picoverlay</p>
-						<!-- <p><a href="#">View on Trove</a></p> -->
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="col-xs-3 col-xs-offset-10 col-lg-offset-3 pic2-holder">
+          <div id="pic2">
+            <p>hello</p>
+          </div>
+          <div id="pic2-overlay">
+            <p>picoverlay</p>
+            <!-- <p><a href="#">View on Trove</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
     <script>$('#viewdreamorb').hide()</script>
 
 
 
-<div class="container-fluid">
-  <div id="particles-js"></div>
-  <div id="particles-js2"></div>
-  <div class="row">
-    <div id="dreamerbig" class="col-xs-6 col-xs-offset-3"><a class="col-xs-12"href="index.html">dreamer.</a></div>
-  </div>
-  <div class="row">
-<div class="col-xs-12 outside-cont">
-    <div class="about col-xs-2 col-xs-offset-3" id="about1">
-
-    <div class="row">
-      <img id="darkorb" src="orb.png" alt="" class="col-xs-4 col-xs-offset-4">
-      <img id="pillar" src="pillar.png" class="col-xs-6 col-xs-offset-3">
-    </div>
-  </div>
-    <div class="gears col-xs-2" id="how_it_works1">
+    <div class="container-fluid">
+      <div id="particles-js"></div>
+      <div id="particles-js2"></div>
       <div class="row">
-      <img id="gear3" src="gear1.png" alt="" class="col-xs-4 col-xs-offset-4">
-    </div>
-    <div class="row">
-      <img id="gear2" src="gear1.png" alt="" class="col-xs-6">
-    </div>
-    <div class="row">
-      <img id="gear1" src="gear1.png" alt="" class="col-xs-10 col-xs-offset-1">
-    </div>
-  </div>
-    <div class="catcher col-xs-2">
-      <img src="dreamcatcher.png" alt=""class="col-xs-6 col-xs-offset-3" id="dreamcatcher1">
-    </div>
-    <div class="moreDream col-xs-2">
-      <a href="orbs.html" class="sign">dream library ></a>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- <div class="footer navbar-fixed-bottom"></div> -->
-</div> <!--  container ends -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="navtitle col-xs-12">
+        <div id="dreamerbig" class="col-xs-6 col-xs-offset-3"><a class="col-xs-12"href="index.html">dreamer.</a></div>
+      </div>
       <div class="row">
-    <p class="abouttext col-xs-2 col-xs-offset-3" href="#">about dreamer</p>
-    <p class="geartext col-xs-2">how it works</p>
-    <p class="catchertext col-xs-2">dreamcatcher</p>
-    <p class="col-xs-2"></p>
-  </div>
-    <div class="logo-container row">
-    <p class="powered col-xs-1 col-xs-offset-11" style="text-align:left">powered by</p>
-    <img class="col-xs-1 col-xs-offset-11" src="trove-white-logo.png" alt="">
-  </div>
-  <div class="row">
-    <a class="col-xs-offset-11" href="#" id="musiccontrol"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a>
-    <audio id="bgmusic" src="videoplayback.mp4" autoplay>
-    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
-    <embed src="videoplayback.mp4" width="180" height="90" hidden="true" />
-    </audio>
-  </div>
-  </div>
-</div>
-</div>
+        <div class="col-xs-12 outside-cont">
+          <div class="about col-xs-2 col-xs-offset-3" id="about1">
 
-
-<div class="modal custom fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog " role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">About</h4>
+            <div class="row">
+              <img id="darkorb" src="images/orb.png" alt="" class="col-xs-4 col-xs-offset-4">
+              <img id="pillar" src="images/pillar.png" class="col-xs-6 col-xs-offset-3">
+            </div>
+          </div>
+          <div class="gears col-xs-2" id="how_it_works1">
+            <div class="row">
+              <img id="gear3" src="images/gear1.png" alt="" class="col-xs-4 col-xs-offset-4">
+            </div>
+            <div class="row">
+              <img id="gear2" src="images/gear1.png" alt="" class="col-xs-6">
+            </div>
+            <div class="row">
+              <img id="gear1" src="images/gear1.png" alt="" class="col-xs-10 col-xs-offset-1">
+            </div>
+          </div>
+          <div class="catcher col-xs-2">
+            <img src="images/dreamcatcher.png" alt=""class="col-xs-6 col-xs-offset-3" id="dreamcatcher1">
+          </div>
+          <div class="moreDream col-xs-2">
+            <a href="orbs.html" class="sign">dream library ></a>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Dreamer is web-based application created by Team HAAKD as part of the course DECO7180 Design Computing Studio 1 - Interactive Technology. The application enables users to share and explore dreams in a predominantly visual manner through the incorporation of artwork from Trove, a database maintained by the National Library of Australia.</p>
+    </div>
 
-        <p>We were inspired to create Dreamer after recognizing the mismatch between the ways in which dreams are portrayed in film and media and the ways in which dream-related applications are designed. In film and literature, dreams are often presented in very magical ways …yet most dream-related web applications present dreams in rather boring ways. These websites look more like pinboards and forums. While they may make dream sharing and dream exploration easy and convenient, they can be quite bland both in terms of visual design and interactions. In addition to this, the photos these websites utilize do not add any additional meaning to dreams and are typically overly literal. With Dreamer, we aim to change up the experience of sharing and exploring dreams on a web-based platform. We do this by purposefully connecting Trove artwork to users’ dreams to add new dimensions to these dreams. This provides Dreamer users with with a more visually rich experience that augments their own content.</p>
-
-        <p>Dreamer’s visual design has largely been inspired by the Pixar animated movie <a href="https://en.wikipedia.org/wiki/Inside_Out_(2015_film)">Inside Out</a>, J.K. Rowling’s <a href="http://harrypotter.wikia.com/wiki/Hall_of_Prophecy">Harry Potter</a> series, and the website <a href="http://i-remember.fr/en/">I Remember</a>. The application draws upon dream representations in film in media in order to construct a magical user experience. The employment of exploratory navigation is intended to make users feel as if they are immersed within an actual setting with shelves of glowing orbs, freely exploring dreams like one might explore books within a library.</p>
-
-        <p>With Dreamer, we hope to stimulate creativity amongst our audience by creating an alluring and immersive user experience through unique interactions and aesthetic appeal augmented by the wealth of artwork present within the Trove library.</p>
-      </div>
-      <div class="modal-footer">
+    <!-- <div class="footer navbar-fixed-bottom"></div> -->
+  </div> <!--  container ends -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="navtitle col-xs-12">
+        <div class="row">
+          <p class="abouttext col-xs-2 col-xs-offset-3" href="#">about dreamer</p>
+          <p class="geartext col-xs-2">how it works</p>
+          <p class="catchertext col-xs-2">dreamcatcher</p>
+          <p class="col-xs-2"></p>
+        </div>
+        <div class="logo-container row">
+          <p class="powered col-xs-1 col-xs-offset-11" style="text-align:left">powered by</p>
+          <img class="col-xs-1 col-xs-offset-11" src="images/trove-white-logo.png" alt="">
+        </div>
+        <div class="row">
+          <a class="col-xs-offset-11" href="#" id="musiccontrol"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a>
+          <audio id="bgmusic" src="videoplayback.mp4" autoplay>
+            <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+            <embed src="videoplayback.mp4" width="180" height="90" hidden="true" />
+          </audio>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="modal custom fade" id="how_it_works" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog " role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">How It Works</h4>
-      </div>
-      <div class="modal-body">
-        <p>Dreamer has four core aspects: orbs (which contain dreams), the dream library (which contains orbs), the pensieve, and the dreamcatcher.</p>
 
 
-<p>Each orb represents a unique dream created by a Dreamer user.</p>
+  <div class="modal custom fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">About</h4>
+        </div>
+        <div class="modal-body">
+          <p>Dreamer is web-based application created by Team HAAKD as part of the course DECO7180 Design Computing Studio 1 - Interactive Technology. The application enables users to share and explore dreams in a predominantly visual manner through the incorporation of artwork from Trove, a database maintained by the National Library of Australia.</p>
 
+          <p>We were inspired to create Dreamer after recognizing the mismatch between the ways in which dreams are portrayed in film and media and the ways in which dream-related applications are designed. In film and literature, dreams are often presented in very magical ways …yet most dream-related web applications present dreams in rather boring ways. These websites look more like pinboards and forums. While they may make dream sharing and dream exploration easy and convenient, they can be quite bland both in terms of visual design and interactions. In addition to this, the photos these websites utilize do not add any additional meaning to dreams and are typically overly literal. With Dreamer, we aim to change up the experience of sharing and exploring dreams on a web-based platform. We do this by purposefully connecting Trove artwork to users’ dreams to add new dimensions to these dreams. This provides Dreamer users with with a more visually rich experience that augments their own content.</p>
 
-<p>When you’re in the dream library, you can create your own dream by clicking the add a dream button. You’ll be prompted to type out your dream, select the emotion you most associate with it, and choose two relevant images of artwork based on your own search keywords. Once you’re happy with the images, drag the orb to the pensieve to save your dream.</p>
+          <p>Dreamer’s visual design has largely been inspired by the Pixar animated movie <a href="https://en.wikipedia.org/wiki/Inside_Out_(2015_film)">Inside Out</a>, J.K. Rowling’s <a href="http://harrypotter.wikia.com/wiki/Hall_of_Prophecy">Harry Potter</a> series, and the website <a href="http://i-remember.fr/en/">I Remember</a>. The application draws upon dream representations in film in media in order to construct a magical user experience. The employment of exploratory navigation is intended to make users feel as if they are immersed within an actual setting with shelves of glowing orbs, freely exploring dreams like one might explore books within a library.</p>
 
-
-<p>You can find your dream within the dream library represented by the orb with the dashed line around it. Or, as the first orb within the "my dreams" row.</p>
-
-
-<p>To view a dream, all you need to do is drag an orb to the pensieve.</p>
-
-
-<p>To view random dreams, you can also click on the dreamcatcher here on the homepage.</p>
-
-<p>Sweet dreams!</p>
-      </div>
-      <div class="modal-footer">
+          <p>With Dreamer, we hope to stimulate creativity amongst our audience by creating an alluring and immersive user experience through unique interactions and aesthetic appeal augmented by the wealth of artwork present within the Trove library.</p>
+        </div>
+        <div class="modal-footer">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal custom fade" id="dreamtime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog " role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Dreamtime</h4>
-      </div>
-      <div class="modal-body">
-        <!-- References from which the text was taken directly from:
-        https://en.wikipedia.org/wiki/Dreamtime
-        https://en.wikipedia.org/wiki/Dreaming_(Australian_Aboriginal_art) -->
-        <p>In Australian Aboriginal art, a Dreaming is a totemistic design or artwork, which can be owned by a tribal group or individual.</p>
+  <div class="modal custom fade" id="how_it_works" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">How It Works</h4>
+        </div>
+        <div class="modal-body">
+          <p>Dreamer has four core aspects: orbs (which contain dreams), the dream library (which contains orbs), the pensieve, and the dreamcatcher.</p>
 
-        <p>A Dreaming is a story owned by different tribes and their members that explains the creation of life, people and animals. A Dreaming story (e.g. Kangaroo Dreaming, or Shark Dreaming, or Honey Ant Dreaming) is passed on protectively as it is owned and is a form of intellectual property. In the modern context, an Aborigine cannot relate, or paint someone else's dreaming or creation story without prior permission of the Dreaming's owner. Someone's dreaming story must be respected, as the individual holds the knowledge to that Dreaming story. Certain behavioural constraints are associated with dreaming ownership; for instance, if a Dreaming is painted without authorisation, such action can meet with accusations of "stealing" someone else's Dreaming.</p>
 
-        <p>Dreaming represents many Aboriginal concepts of "time out of time,” or "everywhen,” when the land was inhabited by ancestral figures, often of heroic proportions or with supernatural abilities.</p>
+          <p>Each orb represents a unique dream created by a Dreamer user.</p>
 
-        <p>The term "Dreaming" is based on the root of the term <em>altjira</em> (<em>alcheringa</em>) used by the Aranda people, although it has since been pointed out that the rendition is based on a mistranslation. Anthropologist William Edward Hanley Stanner introduced the derived term of "Dreamtime" in the 1970s.</p>
 
-        <p>Dreamtime is commonly used as a term for the animist creation narrative of indigenous Australians for a personal, or group, creation and for what may be understood as the "timeless time" of formative creation and perpetual creating. In addition, the term applies to places and localities on indigenous Australian traditional land (and throughout nontraditional Australia) where the uncreated creation spirits and totemic ancestors, or <em>genii loci</em>, reside.</p>
+          <p>When you’re in the dream library, you can create your own dream by clicking the add a dream button. You’ll be prompted to type out your dream, select the emotion you most associate with it, and choose two relevant images of artwork based on your own search keywords. Once you’re happy with the images, drag the orb to the pensieve to save your dream.</p>
 
-        <p>In Dreamtime, an individual's entire ancestry exists as one, culminating in the idea that all worldly knowledge is accumulated through one's ancestors. Dreamtime laid down the patterns of life for the Aboriginal people.</p>
-      </div>
-      <div class="modal-footer">
+
+          <p>You can find your dream within the dream library represented by the orb with the dashed line around it. Or, as the first orb within the "my dreams" row.</p>
+
+
+          <p>To view a dream, all you need to do is drag an orb to the pensieve.</p>
+
+
+          <p>To view random dreams, you can also click on the dreamcatcher here on the homepage.</p>
+
+          <p>Sweet dreams!</p>
+        </div>
+        <div class="modal-footer">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>
+  <div class="modal custom fade" id="dreamtime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Dreamtime</h4>
+        </div>
+        <div class="modal-body">
+          <!-- References from which the text was taken directly from:
+          https://en.wikipedia.org/wiki/Dreamtime
+          https://en.wikipedia.org/wiki/Dreaming_(Australian_Aboriginal_art) -->
+          <p>In Australian Aboriginal art, a Dreaming is a totemistic design or artwork, which can be owned by a tribal group or individual.</p>
+
+          <p>A Dreaming is a story owned by different tribes and their members that explains the creation of life, people and animals. A Dreaming story (e.g. Kangaroo Dreaming, or Shark Dreaming, or Honey Ant Dreaming) is passed on protectively as it is owned and is a form of intellectual property. In the modern context, an Aborigine cannot relate, or paint someone else's dreaming or creation story without prior permission of the Dreaming's owner. Someone's dreaming story must be respected, as the individual holds the knowledge to that Dreaming story. Certain behavioural constraints are associated with dreaming ownership; for instance, if a Dreaming is painted without authorisation, such action can meet with accusations of "stealing" someone else's Dreaming.</p>
+
+          <p>Dreaming represents many Aboriginal concepts of "time out of time,” or "everywhen,” when the land was inhabited by ancestral figures, often of heroic proportions or with supernatural abilities.</p>
+
+          <p>The term "Dreaming" is based on the root of the term <em>altjira</em> (<em>alcheringa</em>) used by the Aranda people, although it has since been pointed out that the rendition is based on a mistranslation. Anthropologist William Edward Hanley Stanner introduced the derived term of "Dreamtime" in the 1970s.</p>
+
+          <p>Dreamtime is commonly used as a term for the animist creation narrative of indigenous Australians for a personal, or group, creation and for what may be understood as the "timeless time" of formative creation and perpetual creating. In addition, the term applies to places and localities on indigenous Australian traditional land (and throughout nontraditional Australia) where the uncreated creation spirits and totemic ancestors, or <em>genii loci</em>, reside.</p>
+
+          <p>In Dreamtime, an individual's entire ancestry exists as one, culminating in the idea that all worldly knowledge is accumulated through one's ancestors. Dreamtime laid down the patterns of life for the Aboriginal people.</p>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">$('#loading_screen').fadeOut(2000);</script>
 
 </body>
 </html>
