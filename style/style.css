@@ -615,6 +615,14 @@ opacity: 1;
   text-shadow: 0 1px 0 grey;
 
 }
+
+#howitworks{
+
+  width: 60%;
+  display: block;
+  margin: auto;
+
+}
 /*--------------------Debug classes---------------------*/
 .debug{background-color: white;}
 .debug2{background-color: green;}
