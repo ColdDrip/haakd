@@ -50,7 +50,7 @@ $('#dreamcatcher1').click(function(){
         var emo_color =
         {
             "Joy":["0px 0px 30px #fffdb7","radial-gradient(ellipse at center, #FFFAE0 0%, #FFF9D9 40%,#FFF3AC 65%, #FFEF8D 100%)"],
-            "Surprise":["0px 0px 30px #fefcea","radial-gradient(ellipse at center, #fefcea 0%, #FCF6BF 40%,#fac8ae 65%, #fac8ae 100%)"],
+            "Surprise":["0px 0px 30px #fefcea","radial-gradient(ellipse at center, #fefcea 0%, #F9E0D4 40%,#fac8ae 65%, #fac8ae 100%)"],
             "Anger":["0px 0px 30px #ffc4c4","radial-gradient(ellipse at center, #FFF0F1 0%, #FFDBDE 40%,#FFB1B7 65%, #FF959C 100%)"],
             "Fear":["0px 0px 30px #ddb4ff","radial-gradient(ellipse at center, #F5F2FF 0%, #E6DCFF 40%,#CDBAFF 65%, #C3ABFF 100%)"],
             "Sadness":["0px 0px 30px #b7d1ff","radial-gradient(ellipse at center, #EDF7FF 0%, #D4ECFF 40%,#A1D6FF 65%, #7EC7FF 100%)"],
