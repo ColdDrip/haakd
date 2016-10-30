@@ -602,6 +602,19 @@ opacity: 1;
   color:grey;
 
 }
+
+.close{
+  color: grey;
+  text-shadow: 0 1px 0 grey;
+  opacity: 1;
+}
+
+.close:hover{
+  color:white;
+  opacity: 1;
+  text-shadow: 0 1px 0 grey;
+
+}
 /*--------------------Debug classes---------------------*/
 .debug{background-color: white;}
 .debug2{background-color: green;}
